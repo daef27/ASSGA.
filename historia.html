@@ -3,168 +3,360 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>História - ASSGA</title>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
-:root {
-  --azul-principal: #003366;
-  --azul-claro: #73e2c6;
-  --azul-suave: #e3f2fd;
-  --branco: #ffffff;
+
+:root{
+    --azul:#003366;
+    --verde:#73e2c6;
+    --azul-claro:#e3f2fd;
+    --branco:#fff;
 }
 
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: var(--branco);
-  color: #333;
-  text-align: center;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
 }
 
-/* TÍTULOS */
-h2 {
-  margin-top: 50px;
-  font-size: 32px;
-  color: var(--azul-principal);
-  position: relative;
+body{
+    background:#fff;
+    color:#333;
 }
 
-h2::after {
-  content: "";
-  width: 60px;
-  height: 4px;
-  background: var(--azul-claro);
-  display: block;
-  margin: 10px auto;
-  border-radius: 5px;
+/* =======================
+HEADER
+======================= */
+
+header{
+    background:var(--azul);
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    position:sticky;
+    top:0;
+    z-index:999;
 }
 
-/* HISTÓRIA */
-.historia-texto {
-  max-width: 800px;
-  margin: 30px auto;
-  padding: 30px;
-  font-size: 18px;
-  background: var(--azul-suave);
-  border-radius: 15px;
-  line-height: 1.6;
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:12px;
 }
 
-/* RESPONSÁVEIS */
-.responsaveis {
-  padding: 60px 20px;
+.logo-area img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    object-fit:cover;
 }
 
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  margin-top: 40px;
+.logo{
+    font-size:24px;
+    font-weight:bold;
 }
 
-.card {
-  background: var(--branco);
-  width: 260px;
-  border-radius: 15px;
-  padding: 25px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  transition: 0.4s ease;
-  opacity: 0;
-  transform: translateY(40px);
-  border-top: 5px solid var(--azul-claro);
+.menu{
+    list-style:none;
+    display:flex;
+    gap:25px;
 }
 
-.card img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 15px;
-  border: 4px solid var(--azul-claro);
+.menu a{
+    color:#fff;
+    text-decoration:none;
+    transition:.3s;
 }
 
-.card h3 {
-  margin: 10px 0 5px;
-  color: var(--azul-principal);
+.menu a:hover{
+    color:#ffd700;
 }
 
-.card p {
-  color: #555;
-  font-weight: 500;
+.menu-toggle{
+    display:none;
+    font-size:30px;
+    cursor:pointer;
 }
 
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+/* =======================
+TÍTULOS
+======================= */
+
+h2{
+    text-align:center;
+    margin-top:50px;
+    color:var(--azul);
+    font-size:32px;
 }
 
-/* FOOTER */
-footer {
-  margin-top: 60px;
-  padding: 20px;
-  background: var(--azul-principal);
-  color: white;
-  font-weight: 500;
+h2::after{
+    content:"";
+    width:60px;
+    height:4px;
+    background:var(--verde);
+    display:block;
+    margin:10px auto;
+    border-radius:10px;
 }
+
+/* =======================
+HISTÓRIA
+======================= */
+
+.historia-texto{
+    max-width:900px;
+    margin:30px auto;
+    padding:30px;
+    background:var(--azul-claro);
+    border-radius:15px;
+    line-height:1.8;
+    font-size:18px;
+}
+
+/* =======================
+RESPONSÁVEIS
+======================= */
+
+.responsaveis{
+    padding:60px 20px;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:260px;
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    border-top:5px solid var(--verde);
+    transition:.4s;
+    opacity:0;
+    transform:translateY(40px);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid var(--verde);
+}
+
+.card h3{
+    margin:15px 0 5px;
+    color:var(--azul);
+}
+
+/* =======================
+FOOTER
+======================= */
+
+footer{
+    background:var(--azul);
+    color:#fff;
+    text-align:center;
+    padding:20px;
+    margin-top:60px;
+}
+
+/* =======================
+TABLET
+======================= */
+
+@media (max-width:992px){
+
+.menu{
+    gap:15px;
+}
+
+}
+
+/* =======================
+CELULAR
+======================= */
+
+@media (max-width:768px){
+
+header{
+    padding:15px;
+}
+
+.logo{
+    font-size:20px;
+}
+
+.logo-area img{
+    width:50px;
+    height:50px;
+}
+
+.menu-toggle{
+    display:block;
+}
+
+.menu{
+    display:none;
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:var(--azul);
+    flex-direction:column;
+}
+
+.menu.active{
+    display:flex;
+}
+
+.menu li{
+    border-top:1px solid rgba(255,255,255,.15);
+}
+
+.menu a{
+    display:block;
+    padding:15px;
+    text-align:center;
+}
+
+.historia-texto{
+    margin:20px;
+    padding:20px;
+    font-size:16px;
+}
+
+.card{
+    width:100%;
+    max-width:340px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
+<header>
+
+<div class="logo-area">
+<img src="src/imagens/Assga_foto.jpg" alt="Logo">
+<div class="logo">ASSGA</div>
+</div>
+
+<div class="menu-toggle" onclick="toggleMenu()">
+☰
+</div>
+
+<nav>
+<ul class="menu" id="menu">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="historia.html">História</a></li>
+
+<li><a href="esportiva.html">Esportiva</a></li>
+
+<li><a href="evento.html">Eventos</a></li>
+
+<li><a href="estatuto.html">Estatuto</a></li>
+
+<li><a href="diretoria.html">Diretoria</a></li>
+
+</ul>
+</nav>
+
+</header>
+
 <h2>Nossa História</h2>
 
 <section class="historia-texto">
-  <h2>Sobre a ASSGA</h2>
-  <p>
-    A ASSGA foi fundada com o objetivo de promover o esporte,
-    integração social e desenvolvimento comunitário.
-    Ao longo dos anos, tornou-se referência na região,
-    formando atletas e fortalecendo a comunidade.
-  </p>
+
+<h2>Sobre a ASSGA</h2>
+
+<p>
+
+A ASSGA foi fundada com o objetivo de promover o esporte, a integração social e o fortalecimento da comunidade surda de São Gonçalo do Amarante. Ao longo dos anos, a associação passou a desenvolver atividades esportivas, culturais, sociais e educacionais, incentivando a inclusão, a acessibilidade e a valorização da Língua Brasileira de Sinais (Libras).
+
+</p>
+
 </section>
 
 <section class="responsaveis">
-  <h2>Responsáveis</h2>
 
-  <div class="cards">
+<h2>Responsáveis</h2>
 
-    <div class="card">
-      <img src="imagens/foto2.jpg" alt="Presidente">
-      <h3>Nome do Presidente</h3>
-      <p>Presidente</p>
-    </div>
+<div class="cards">
 
-    <div class="card">
-      <img src="imagens/foto3.jpg" alt="Diretor">
-      <h3>Nome do Diretor</h3>
-      <p>Diretor Esportivo</p>
-    </div>
+<div class="card">
+<img src="imagens/foto2.jpg">
+<h3>Nome do Presidente</h3>
+<p>Presidente</p>
+</div>
 
-    <div class="card">
-      <img src="imagens/foto1.jpg" alt="Coordenador">
-      <h3>Nome do Coordenador</h3>
-      <p>Coordenador</p>
-    </div>
+<div class="card">
+<img src="imagens/foto3.jpg">
+<h3>Nome do Diretor</h3>
+<p>Diretor Esportivo</p>
+</div>
 
-  </div>
+<div class="card">
+<img src="imagens/foto1.jpg">
+<h3>Nome do Coordenador</h3>
+<p>Coordenador</p>
+</div>
+
+</div>
+
 </section>
 
 <footer>
-  © 2026 ASSGA - Todos os direitos reservados
+
+© 2026 ASSGA - Todos os direitos reservados
+
 </footer>
 
 <script>
-window.addEventListener("load", () => {
-  const cards = document.querySelectorAll(".card");
 
-  cards.forEach((card, index) => {
-    setTimeout(() => {
-      card.style.opacity = "1";
-      card.style.transform = "translateY(0)";
-    }, index * 300);
-  });
+function toggleMenu(){
+
+document.getElementById("menu").classList.toggle("active");
+
+}
+
+window.onload=function(){
+
+const cards=document.querySelectorAll(".card");
+
+cards.forEach((card,index)=>{
+
+setTimeout(()=>{
+
+card.style.opacity="1";
+card.style.transform="translateY(0)";
+
+},index*300);
+
 });
+
+}
+
 </script>
 
 </body>

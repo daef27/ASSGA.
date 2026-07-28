@@ -3,271 +3,433 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Estatuto - ASSGA</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
 /* ================= RESET ================= */
 
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Segoe UI', sans-serif;
-  scroll-behavior:smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+    scroll-behavior:smooth;
 }
 
 body{
-  background:#f4f7fb;
-  color:#333;
+    background:#f4f7fb;
+    color:#333;
 }
 
-/* ================= HEADER ================= */
+/* ================= MENU SUPERIOR ================= */
 
 header{
-  background:linear-gradient(90deg,#001f3f,#0059b3);
-  color:white;
-  padding:25px;
-  text-align:center;
-  box-shadow:0 4px 15px rgba(0,0,0,0.2);
+    background:linear-gradient(90deg,#001f3f,#0059b3);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 4px 15px rgba(0,0,0,.2);
 }
 
-header h1{
-  font-size:28px;
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-area img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.logo{
+    color:#fff;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.menu{
+    list-style:none;
+    display:flex;
+    gap:22px;
+}
+
+.menu li{
+    list-style:none;
+}
+
+.menu a{
+    color:#fff;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:#73e2c6;
+}
+
+.menu-toggle{
+    display:none;
+    color:#fff;
+    font-size:30px;
+    cursor:pointer;
+}
+
+/* ================= TÍTULO ================= */
+
+.titulo{
+    background:linear-gradient(90deg,#001f3f,#0059b3);
+    color:#fff;
+    text-align:center;
+    padding:30px 20px;
+}
+
+.titulo h1{
+    font-size:30px;
 }
 
 /* ================= LAYOUT ================= */
 
 .container{
-  display:flex;
-  max-width:1200px;
-  margin:40px auto;
-  gap:30px;
-  padding:0 20px;
+    display:flex;
+    max-width:1200px;
+    margin:40px auto;
+    gap:30px;
+    padding:0 20px;
 }
 
 /* ================= MENU LATERAL ================= */
 
 .menu-lateral{
-  width:250px;
-  background:white;
-  padding:20px;
-  border-radius:15px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.1);
-  position:sticky;
-  top:20px;
-  height:fit-content;
+    width:250px;
+    background:#fff;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+    position:sticky;
+    top:90px;
+    height:fit-content;
 }
 
 .menu-lateral h3{
-  margin-bottom:15px;
-  color:#003366;
+    margin-bottom:15px;
+    color:#003366;
 }
 
 .menu-lateral ul{
-  list-style:none;
+    list-style:none;
 }
 
 .menu-lateral li{
-  padding:10px;
-  margin-bottom:8px;
-  cursor:pointer;
-  border-radius:8px;
-  transition:0.3s;
+    padding:10px;
+    margin-bottom:8px;
+    cursor:pointer;
+    border-radius:8px;
+    transition:.3s;
 }
 
 .menu-lateral li:hover,
 .menu-lateral li.ativo{
-  background:#0059b3;
-  color:white;
+    background:#0059b3;
+    color:#fff;
 }
 
 .menu-lateral button{
-  margin-top:20px;
-  width:100%;
-  padding:10px;
-  border:none;
-  border-radius:8px;
-  background:#003366;
-  color:white;
-  cursor:pointer;
-  transition:0.3s;
-}
-
-.menu-lateral button:hover{
-  background:#0059b3;
+    margin-top:20px;
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    background:#003366;
+    color:#fff;
+    cursor:pointer;
 }
 
 /* ================= CONTEÚDO ================= */
 
 .conteudo{
-  flex:1;
+    flex:1;
 }
 
 .conteudo section{
-  background:white;
-  padding:30px;
-  border-radius:15px;
-  margin-bottom:25px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.05);
-  transition:0.3s;
-}
-
-.conteudo section:hover{
-  transform:translateY(-3px);
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    margin-bottom:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
 }
 
 .conteudo h2{
-  margin-bottom:15px;
-  color:#003366;
+    color:#003366;
+    margin-bottom:15px;
 }
 
 .conteudo p{
-  line-height:1.8;
-  text-align:justify;
+    line-height:1.8;
+    text-align:justify;
 }
 
 /* ================= FOOTER ================= */
 
 footer{
-  background:#001f3f;
-  color:white;
-  text-align:center;
-  padding:20px;
-  margin-top:40px;
+    background:#001f3f;
+    color:#fff;
+    text-align:center;
+    padding:20px;
 }
 
 /* ================= RESPONSIVO ================= */
 
 @media(max-width:900px){
 
-  .container{
+.container{
     flex-direction:column;
-  }
+}
 
-  .menu-lateral{
+.menu-lateral{
     width:100%;
     position:relative;
-  }
+    top:0;
+}
 
 }
 
-@media(max-width:480px){
+@media(max-width:768px){
 
-  header h1{
+header{
+    padding:15px;
+}
+
+.logo-area img{
+    width:50px;
+    height:50px;
+}
+
+.logo{
     font-size:20px;
-  }
+}
 
-  .conteudo section{
-    padding:20px;
-  }
+.menu-toggle{
+    display:block;
+}
+
+.menu{
+    display:none;
+    position:absolute;
+    top:80px;
+    left:0;
+    width:100%;
+    background:#003366;
+    flex-direction:column;
+}
+
+.menu.active{
+    display:flex;
+}
+
+.menu li{
+    border-top:1px solid rgba(255,255,255,.15);
+    text-align:center;
+}
+
+.menu a{
+    display:block;
+    padding:15px;
+}
 
 }
 
 </style>
+
 </head>
 
 <body>
 
 <header>
-  <h1>Estatuto da ASSGA</h1>
+
+<div class="logo-area">
+<img src="src/imagens/Assga_foto.jpg" alt="ASSGA">
+<div class="logo">ASSGA</div>
+</div>
+
+<div class="menu-toggle" onclick="toggleMenu()">
+☰
+</div>
+
+<nav>
+
+<ul class="menu" id="menu">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="historia.html">História</a></li>
+
+<li><a href="esportiva.html">Esportiva</a></li>
+
+<li><a href="evento.html">Eventos</a></li>
+
+<li><a href="estatuto.html">Estatuto</a></li>
+
+<li><a href="diretoria.html">Diretoria</a></li>
+
+</ul>
+
+</nav>
+
 </header>
+
+<section class="titulo">
+<h1>Estatuto da ASSGA</h1>
+</section>
 
 <div class="container">
 
-  <!-- MENU -->
-  <aside class="menu-lateral">
-    <h3>Capítulos</h3>
-    <ul>
-      <li onclick="scrollToSection('cap1')" id="btn-cap1">Capítulo I</li>
-      <li onclick="scrollToSection('cap2')" id="btn-cap2">Capítulo II</li>
-      <li onclick="scrollToSection('cap3')" id="btn-cap3">Capítulo III</li>
-      <li onclick="scrollToSection('cap4')" id="btn-cap4">Capítulo IV</li>
-    </ul>
-    <button onclick="imprimirEstatuto()">Imprimir Estatuto</button>
-  </aside>
+<aside class="menu-lateral">
 
-  <!-- CONTEÚDO -->
-  <main class="conteudo">
+<h3>Capítulos</h3>
 
-    <section id="cap1">
-      <h2>Capítulo I – Da Denominação</h2>
-      <p>
-        A ASSGA é uma associação civil sem fins lucrativos, com duração por tempo indeterminado, 
-        com sede e foro nesta cidade, regendo-se pelo presente Estatuto e pela legislação vigente.
-      </p>
-    </section>
+<ul>
 
-    <section id="cap2">
-      <h2>Capítulo II – Dos Objetivos</h2>
-      <p>
-        A associação tem como finalidade promover atividades sociais, culturais e esportivas,
-        incentivar a participação comunitária e desenvolver ações voltadas ao bem-estar social.
-      </p>
-    </section>
+<li onclick="scrollToSection('cap1')" id="btn-cap1">Capítulo I</li>
 
-    <section id="cap3">
-      <h2>Capítulo III – Dos Associados</h2>
-      <p>
-        São associados todos aqueles que forem admitidos conforme regulamento interno,
-        respeitando os direitos e deveres estabelecidos neste Estatuto.
-      </p>
-    </section>
+<li onclick="scrollToSection('cap2')" id="btn-cap2">Capítulo II</li>
 
-    <section id="cap4">
-      <h2>Capítulo IV – Da Diretoria</h2>
-      <p>
-        A diretoria será composta por Presidente, Vice-Presidente, Secretário e Tesoureiro,
-        eleitos em assembleia geral, com mandato conforme regulamento.
-      </p>
-    </section>
+<li onclick="scrollToSection('cap3')" id="btn-cap3">Capítulo III</li>
 
-  </main>
+<li onclick="scrollToSection('cap4')" id="btn-cap4">Capítulo IV</li>
+
+</ul>
+
+<button onclick="imprimirEstatuto()">
+Imprimir Estatuto
+</button>
+
+</aside>
+
+<main class="conteudo">
+  <section id="cap1">
+  <h2>Capítulo I – Da Denominação</h2>
+  <p>
+    A ASSGA é uma associação civil sem fins lucrativos, com duração por tempo
+    indeterminado, com sede e foro nesta cidade, regendo-se pelo presente
+    Estatuto e pela legislação vigente.
+  </p>
+</section>
+
+<section id="cap2">
+  <h2>Capítulo II – Dos Objetivos</h2>
+  <p>
+    A associação tem como finalidade promover atividades sociais, culturais,
+    esportivas e educacionais, incentivar a participação comunitária e
+    desenvolver ações voltadas ao bem-estar social, inclusão e acessibilidade
+    da comunidade surda.
+  </p>
+</section>
+
+<section id="cap3">
+  <h2>Capítulo III – Dos Associados</h2>
+  <p>
+    São associados todos aqueles que forem admitidos conforme regulamento
+    interno, respeitando os direitos, deveres e normas estabelecidas neste
+    Estatuto.
+  </p>
+</section>
+
+<section id="cap4">
+  <h2>Capítulo IV – Da Diretoria</h2>
+  <p>
+    A Diretoria será composta por Presidente, Vice-Presidente, Secretário,
+    Tesoureiro e demais cargos previstos no Estatuto, eleitos em Assembleia
+    Geral para mandato conforme regulamento da associação.
+  </p>
+</section>
+
+</main>
 
 </div>
 
 <footer>
-  © 2026 ASSGA - Todos os direitos reservados
+
+<div>
+    © 2026 ASSGA - Associação dos Surdos de São Gonçalo do Amarante
+</div>
+
 </footer>
 
 <script>
 
+/* ================= MENU RESPONSIVO ================= */
+
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+}
+
 /* ================= SCROLL ================= */
 
 function scrollToSection(id){
-  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+    document.getElementById(id).scrollIntoView({
+        behavior:"smooth"
+    });
 }
 
-/* ================= MENU ATIVO ================= */
+/* ================= MENU LATERAL ATIVO ================= */
 
-const sections = document.querySelectorAll("section");
+const sections = document.querySelectorAll(".conteudo section");
 const menuItems = document.querySelectorAll(".menu-lateral li");
 
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll",()=>{
 
-  let current = "";
+    let current="";
 
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 100;
-    if(pageYOffset >= sectionTop){
-      current = section.getAttribute("id");
-    }
-  });
+    sections.forEach(section=>{
 
-  menuItems.forEach(li=>{
-    li.classList.remove("ativo");
-    if(li.id === "btn-" + current){
-      li.classList.add("ativo");
-    }
-  });
+        const sectionTop=section.offsetTop-120;
+
+        if(window.scrollY>=sectionTop){
+            current=section.getAttribute("id");
+        }
+
+    });
+
+    menuItems.forEach(item=>{
+
+        item.classList.remove("ativo");
+
+        if(item.id==="btn-"+current){
+            item.classList.add("ativo");
+        }
+
+    });
 
 });
 
 /* ================= IMPRIMIR ================= */
 
 function imprimirEstatuto(){
-  window.print();
+    window.print();
 }
+
+/* ================= FECHAR MENU MOBILE ================= */
+
+document.querySelectorAll(".menu a").forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+        document.getElementById("menu").classList.remove("active");
+
+    });
+
+});
 
 </script>
 
