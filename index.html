@@ -41,22 +41,26 @@ header{
     justify-content:space-between;
     align-items:center;
     padding:15px 30px;
-    position:relative;
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-area img{
+    width:56px;
+    height:68px;
+    object-fit:cover;
 }
 
 .logo{
-    font-size:22px;
+    font-size:24px;
     font-weight:bold;
-    margin-left:90px;
-}
-
-.io{
-    width:70px;
-    height:85px;
-    object-fit:cover;
-    margin-top:-8px;
-    position:absolute;
-    left:20px;
 }
 
 .menu{
@@ -260,14 +264,13 @@ footer{
         padding:15px;
     }
 
-    .logo{
-        margin-left:80px;
-        font-size:20px;
+.logo-area img{
+        width:56px;
+        height:68px;
     }
 
-    .io{
-        width:60px;
-        height:75px;
+    .logo{
+        font-size:20px;
     }
 
     .menu{
@@ -308,15 +311,13 @@ footer{
         padding:15px;
     }
 
-    .logo{
-        margin-left:60px;
-        font-size:18px;
+.logo-area img{
+        width:56px;
+        height:68px;
     }
 
-    .io{
-        width:50px;
-        height:65px;
-        left:10px;
+    .logo{
+        font-size:20px;
     }
 
     .menu-toggle{
@@ -383,8 +384,8 @@ footer{
 <body>
 
 <header>
-  <div>
-    <img class="io" src="src/imagens/Assga_foto.jpg">
+  <div class="logo-area">
+    <img src="src/imagens/Assga_foto.jpg" alt="ASSGA">
     <div class="logo">ASSGA</div>
   </div>
 
