@@ -65,17 +65,33 @@ header{
 .menu{
     list-style: none;
     display: flex;
-    gap:25px;
+    gap:12px;
+    margin-left:auto;
+    align-items:center;
+}
+
+.menu li{
+    position:relative;
 }
 
 .menu a{
+    display:block;
     color:#fff;
     text-decoration: none;
+    font-weight:600;
+    padding:10px 18px;
+    border-radius:30px;
+    border:2px solid rgba(255,255,255,.25);
+    background:linear-gradient(135deg,rgba(115,226,198,.35),rgba(0,224,255,.25));
     transition:.3s;
 }
 
-.menu a: hover{
-    color:#ffd700;
+.menu a:hover{
+    color:#003366;
+    border-color:#ffd700;
+    background:linear-gradient(135deg,#ffd700,#00e0ff);
+    box-shadow:0 6px 18px rgba(0,224,255,.4);
+    transform:translateY(-2px);
 }
 
 .menu-toggle{
