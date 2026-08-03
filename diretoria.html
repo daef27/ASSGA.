@@ -26,16 +26,68 @@ body{
 header{
   background:linear-gradient(90deg,#001f3f,#0059b3);
   color:white;
-  padding:30px 20px;
-  text-align:center;
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:1000;
   box-shadow:0 4px 15px rgba(0,0,0,0.2);
 }
 
-header h1{
+.logo-area{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo-area img{
+  width:72px;
+  height:88px;
+  object-fit:cover;
+}
+
+.logo{
+  font-size:24px;
+  font-weight:bold;
+}
+
+.menu{
+  list-style:none;
+  display:flex;
+  gap:22px;
+}
+
+.menu a{
+  color:#fff;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.menu a:hover{
+  color:#73e2c6;
+}
+
+.menu-toggle{
+  display:none;
+  color:#fff;
+  font-size:30px;
+  cursor:pointer;
+}
+
+/* ================= SUBTITULO DA DIRETORIA ================= */
+
+.diretor-titulo{
+  text-align:center;
+  padding:30px 20px;
+}
+
+.diretor-titulo h1{
   margin-bottom:10px;
 }
 
-header p{
+.diretor-titulo p{
   font-size:16px;
 }
 
@@ -127,11 +179,79 @@ footer{
   margin-top:40px;
 }
 
-/* ================= RESPONSIVO ================= */
+/* ================= TABLET (768-1023px) ================= */
 
-@media(max-width:768px){
+@media(min-width:768px) and (max-width:1023px){
 
-  header h1{
+  header{
+    padding:15px;
+  }
+
+  .logo{
+    font-size:20px;
+  }
+
+  .logo-area img{
+    width:60px;
+    height:75px;
+  }
+
+  .menu{
+    gap:12px;
+  }
+
+  .menu a{
+    font-size:14px;
+  }
+
+}
+
+/* ================= CELULAR (até 767px) ================= */
+
+@media(max-width:767px){
+
+  header{
+    padding:15px;
+  }
+
+  .logo{
+    font-size:20px;
+  }
+
+  .logo-area img{
+    width:50px;
+    height:50px;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .menu{
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    top:80px;
+    left:0;
+    width:100%;
+    background:#003366;
+  }
+
+  .menu.active{
+    display:flex;
+  }
+
+  .menu li{
+    border-top:1px solid rgba(255,255,255,.15);
+    text-align:center;
+  }
+
+  .menu a{
+    display:block;
+    padding:15px;
+  }
+
+  .diretor-titulo h1{
     font-size:22px;
   }
 
@@ -147,6 +267,30 @@ footer{
 <body>
 
 <header>
+
+<div class="logo-area">
+  <img src="src/imagens/Assga_foto.jpg" alt="ASSGA">
+  <div class="logo">ASSGA</div>
+</div>
+
+<div class="menu-toggle" onclick="toggleMenu()">
+  ☰
+</div>
+
+<nav>
+  <ul class="menu" id="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="historia.html">História</a></li>
+    <li><a href="esportiva.html">Esportiva</a></li>
+    <li><a href="evento.html">Eventos</a></li>
+    <li><a href="estatuto.html">Estatuto</a></li>
+    <li><a href="diretoria.html">Diretoria</a></li>
+  </ul>
+</nav>
+
+</header>
+
+<section class="diretor-titulo">
   <h1>Diretoria da ASSGA</h1>
   <p>
     Gestões:
@@ -154,7 +298,7 @@ footer{
     <span class="ano" onclick="filtrarAno(2025,this)">2025</span> |
     <span class="ano" onclick="filtrarAno(2026,this)">2026</span>
   </p>
-</header>
+</section>
 
 <section class="diretoria-container">
 
@@ -193,6 +337,18 @@ footer{
 </footer>
 
 <script>
+
+/* ================= MENU MOBILE ================= */
+
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("active");
+}
+
+document.querySelectorAll(".menu a").forEach(link=>{
+  link.addEventListener("click",()=>{
+    document.getElementById("menu").classList.remove("active");
+  });
+});
 
 /* ================= FILTRO POR ANO ================= */
 
