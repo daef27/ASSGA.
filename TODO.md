@@ -15,4 +15,4 @@ Deixar todas as páginas do site responsivas para celular e notebook/desktop, pa
 - [x] **8. `diretoria.html`** - Adicionar gestão 2027 (botão filtro + card Presidente 2027)
 - [x] **9. Todas as páginas** - Padronizar logo `.logo-area img` para 56x68 px (desktop, tablet e celular)
 - [x] **10. Todas as páginas** - Envolver a logo `Assga_foto.jpg` com link para `index.html`
-
+- [x] **11. Todas as páginas** - Efeito hover do menu funcionando em todos os tamanhos (celular, tablet e notebook) via `:hover`, `:active` e `:focus`
