@@ -3,278 +3,300 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>História - ASSGA</title>
 
-<title>Estatuto - ASSGA</title>
-
+<link rel="icon" href="src/imagens/Assga_foto.jpg" type="image/jpeg">
+<link rel="shortcut icon" href="src/imagens/Assga_foto.jpg" type="image/jpeg">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-
-/* ================= RESET ================= */
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
-    scroll-behavior:smooth;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body{
-    background:#f4f7fb;
-    color:#333;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    overflow-x:hidden;
 }
 
-/* ================= MENU SUPERIOR ================= */
+h2{
+    text-align:center;
+    margin:40px 0;
+    color:#003366;
+    font-size: 2.5em;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
 
 header{
-    background:linear-gradient(90deg,#001f3f,#0059b3);
+    background: linear-gradient(135deg, #003366 0%, #004aad 100%);
+    color:#fff;
     display:flex;
     justify-content:space-between;
     align-items:center;
     padding:15px 30px;
     position:sticky;
     top:0;
-    z-index:1000;
-    box-shadow:0 4px 15px rgba(0,0,0,.2);
+    z-index:999;
+    box-shadow: 0 8px 32px rgba(0, 51, 102, 0.3);
 }
 
 .logo-area{
     display:flex;
     align-items:center;
-    gap:12px;
+    gap:15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo-area:hover {
+    transform: scale(1.05);
 }
 
 .logo-area img{
-    width: 56px;
-    height: 68px;
-    object-fit: cover;
+    width:56px;
+    height:68px;
+    object-fit:cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .logo{
-    color:#fff;
-    font-size:24px;
-    font-weight:bold;
+    font-size:28px;
+    font-weight:900;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #ffd700, #ffed4e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .menu{
     list-style:none;
     display:inline-grid;
     grid-auto-flow:column;
-    gap:12px;
+    gap:15px;
     margin-left:auto;
     align-items:center;
 }
 
 .menu li{
-    list-style:none;
     position:relative;
 }
 
 .menu a {
     display: block;
-    color: #000;
+    color: #fff;
     text-decoration: none;
     font-size: 15px;
-    font-weight: 600;
-    padding: 10px 18px;
-    border-radius: 10px;
-    transition: .4s;
+    font-weight: 700;
+    padding: 12px 20px;
+    border-radius: 25px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
 }
 
 @media (hover: hover){
-.menu a:hover{
+.menu a:hover {
     color:#003366;
-    border-color:#fdfdfd;
-    background:linear-gradient(135deg,#fcfcfb);
-    box-shadow:0 6px 18px #003366;
-    transform:translateY(-2px);
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+    box-shadow: 0 8px 24px rgba(255, 215, 0, 0.4);
+    transform: translateY(-3px);
 }
 }
 
 .menu a:active,
 .menu a:focus{
     color:#003366;
-    border-color:#fdfdfd;
-    background:linear-gradient(135deg,#fcfcfb);
-    box-shadow:0 6px 18px #003366;
-    transform:translateY(-2px);
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+    box-shadow: 0 8px 24px rgba(255, 215, 0, 0.4);
+    transform: translateY(-3px);
 }
 
 .menu-toggle{
     display:none;
-    color:#fff;
-    font-size:30px;
+    font-size:28px;
     cursor:pointer;
+    transition: transform 0.3s ease;
 }
 
-/* ================= TÍTULO ================= */
-
-.titulo{
-    background:linear-gradient(90deg,#001f3f,#0059b3);
-    color:#fff;
-    text-align:center;
-    padding:30px 20px;
+.menu-toggle:hover {
+    transform: rotate(90deg);
 }
 
-.titulo h1{
-    font-size:30px;
-}
-
-/* ================= LAYOUT ================= */
-
-.container{
-    display:flex;
-    max-width:1200px;
+.historia-container{
+    max-width:1000px;
     margin:40px auto;
-    gap:30px;
     padding:0 20px;
 }
 
-/* ================= MENU LATERAL ================= */
-
-.menu-lateral{
-    width:250px;
-    background:#fff;
-    padding:20px;
+.historia-texto{
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+    padding:40px;
     border-radius:15px;
-    box-shadow:0 10px 30px rgba(0,0,0,.1);
-    position:sticky;
-    top:90px;
-    height:fit-content;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    line-height: 1.8;
+    color: #555;
+    border-left: 5px solid #004aad;
 }
 
-.menu-lateral h3{
-    margin-bottom:15px;
-    color:#003366;
+.historia-texto h3{
+    color: #003366;
+    font-size: 1.5em;
+    margin-bottom: 20px;
 }
 
-.menu-lateral ul{
-    list-style:none;
+.historia-texto p{
+    margin-bottom: 15px;
+    font-size: 1.05em;
 }
 
-.menu-lateral li{
-    padding:10px;
-    margin-bottom:8px;
-    cursor:pointer;
-    border-radius:8px;
-    transition:.3s;
+.responsaveis{
+    padding:60px 20px;
+    background: linear-gradient(135deg, #e9eef5 0%, #d4e1ed 100%);
+    margin-top: 40px;
 }
 
-.menu-lateral li:hover,
-.menu-lateral li.ativo{
-    background:#0059b3;
-    color:#fff;
+.cards{
+    display: flex;
+    justify-content: center;
+    gap:30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.menu-lateral button{
-    margin-top:20px;
-    width:100%;
-    padding:10px;
-    border:none;
-    border-radius:8px;
-    background:#003366;
-    color:#fff;
-    cursor:pointer;
-}
-
-/* ================= CONTEÚDO ================= */
-
-.conteudo{
-    flex:1;
-}
-
-.conteudo section{
-    background:#fff;
+.card{
+    width:280px;
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
     padding:30px;
     border-radius:15px;
-    margin-bottom:25px;
-    box-shadow:0 10px 30px rgba(0,0,0,.05);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    border-top: 4px solid #004aad;
+    text-align:center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.conteudo h2{
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 16px 48px rgba(0, 74, 173, 0.2);
+    border-top-color: #ffd700;
+}
+
+.card img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit: cover;
+    border:4px solid #004aad;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover img{
+    transform: scale(1.1);
+}
+
+.card h3{
+    margin:15px 0 5px;
     color:#003366;
-    margin-bottom:15px;
+    font-size: 1.2em;
 }
 
-.conteudo p{
-    line-height:1.8;
-    text-align:justify;
+.card p{
+    color: #666;
 }
-
-/* ================= FOOTER ================= */
 
 footer{
-    background:#001f3f;
+    background: linear-gradient(135deg, #003366 0%, #002244 100%);
     color:#fff;
-    text-align:center;
-    padding:20px;
+    padding:30px 20px;
+    margin-top: 50px;
+    text-align: center;
 }
 
-/* ================= RESPONSIVO ================= */
-
-@media(max-width:900px){
-
-.container{
-    flex-direction:column;
+.footer-redes a{
+    color:#fff;
+    margin-left:15px;
+    font-size:24px;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
-.menu-lateral{
-    width:100%;
-    position:relative;
-    top:0;
+.footer-redes a:hover{
+    color:#ffd700;
+    transform: translateY(-5px) scale(1.2);
 }
 
+@media (max-width:767px){
+    header{
+        padding:15px;
+    }
+
+    .logo-area img{
+        width:48px;
+        height:60px;
+    }
+
+    .logo{
+        font-size:18px;
+    }
+
+    .menu-toggle{
+        display:block;
+        margin-left:auto;
+    }
+
+    .menu{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:75px;
+        left:15px;
+        right:15px;
+        width: calc(100% - 30px);
+        background: linear-gradient(135deg, rgba(0, 51, 102, 0.95), rgba(0, 74, 173, 0.95));
+        border-radius: 12px;
+        padding: 15px;
+        backdrop-filter: blur(10px);
+    }
+
+    .menu.active{
+        display:flex;
+    }
+
+    .menu li{
+        padding:10px 0;
+        text-align:center;
+        width: 100%;
+    }
+
+    .menu a {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .historia-texto{
+        padding: 25px;
+    }
+
+    .card{
+        width:100%;
+        max-width: 340px;
+    }
 }
-
-@media(max-width:768px){
-
-header{
-    padding:15px;
-}
-
-.logo-area img{
-    width:56px;
-    height:68px;
-}
-
-.logo{
-    font-size:20px;
-}
-
-.menu-toggle{
-    display:block;
-    margin-left:auto;
-}
-
-.menu{
-    display:none;
-    flex-direction:column;
-    position:absolute;
-    top:80px;
-    left:169px;
-    width:91%;
-    background:#f2f4f57a;
-}
-
-.menu.active{
-    display:flex;
-}
-
-.menu li{
-    border-top:1px solid rgba(255,255,255,.15);
-    text-align:center;
-}
-
-.menu a{
-    display:block;
-    padding:15px;
-}
-
-}
-
 </style>
-
 </head>
 
 <body>
@@ -282,7 +304,7 @@ header{
 <header>
 
 <div class="logo-area">
-    <a href="index.html"><img src="src/imagens/Assga_foto.jpg" alt="ASSGA"></a>
+    <a href="index.html"><img src="src/imagens/Assga_foto.jpg" alt="Logo"></a>
 <div class="logo">ASSGA</div>
 </div>
 
@@ -291,7 +313,6 @@ header{
 </div>
 
 <nav>
-
 <ul class="menu" id="menu">
 
 <li><a href="index.html">Home</a></li>
@@ -307,153 +328,45 @@ header{
 <li><a href="diretoria.html">Diretoria</a></li>
 
 </ul>
-
 </nav>
 
 </header>
 
-<section class="titulo">
-<h1>Estatuto da ASSGA</h1>
+<h2>Estatuto</h2>
+
+
 </section>
-
-<div class="container">
-
-<aside class="menu-lateral">
-
-<h3>Capítulos</h3>
-
-<ul>
-
-<li onclick="scrollToSection('cap1')" id="btn-cap1">Capítulo I</li>
-
-<li onclick="scrollToSection('cap2')" id="btn-cap2">Capítulo II</li>
-
-<li onclick="scrollToSection('cap3')" id="btn-cap3">Capítulo III</li>
-
-<li onclick="scrollToSection('cap4')" id="btn-cap4">Capítulo IV</li>
-
-</ul>
-
-<button onclick="imprimirEstatuto()">
-Imprimir Estatuto
-</button>
-
-</aside>
-
-<main class="conteudo">
-  <section id="cap1">
-  <h2>Capítulo I – Da Denominação</h2>
-  <p>
-    A ASSGA é uma associação civil sem fins lucrativos, com duração por tempo
-    indeterminado, com sede e foro nesta cidade, regendo-se pelo presente
-    Estatuto e pela legislação vigente.
-  </p>
-</section>
-
-<section id="cap2">
-  <h2>Capítulo II – Dos Objetivos</h2>
-  <p>
-    A associação tem como finalidade promover atividades sociais, culturais,
-    esportivas e educacionais, incentivar a participação comunitária e
-    desenvolver ações voltadas ao bem-estar social, inclusão e acessibilidade
-    da comunidade surda.
-  </p>
-</section>
-
-<section id="cap3">
-  <h2>Capítulo III – Dos Associados</h2>
-  <p>
-    São associados todos aqueles que forem admitidos conforme regulamento
-    interno, respeitando os direitos, deveres e normas estabelecidas neste
-    Estatuto.
-  </p>
-</section>
-
-<section id="cap4">
-  <h2>Capítulo IV – Da Diretoria</h2>
-  <p>
-    A Diretoria será composta por Presidente, Vice-Presidente, Secretário,
-    Tesoureiro e demais cargos previstos no Estatuto, eleitos em Assembleia
-    Geral para mandato conforme regulamento da associação.
-  </p>
-</section>
-
-</main>
-
-</div>
 
 <footer>
 
-<div>
-    © 2026 ASSGA - Associação dos Surdos de São Gonçalo do Amarante
-</div>
+© 2026 ASSGA - Todos os direitos reservados
 
 </footer>
 
 <script>
 
-/* ================= MENU RESPONSIVO ================= */
-
 function toggleMenu(){
-    document.getElementById("menu").classList.toggle("active");
+
+document.getElementById("menu").classList.toggle("active");
+
 }
 
-/* ================= SCROLL ================= */
+window.onload=function(){
 
-function scrollToSection(id){
-    document.getElementById(id).scrollIntoView({
-        behavior:"smooth"
-    });
-}
+const cards=document.querySelectorAll(".card");
 
-/* ================= MENU LATERAL ATIVO ================= */
+cards.forEach((card,index)=>{
 
-const sections = document.querySelectorAll(".conteudo section");
-const menuItems = document.querySelectorAll(".menu-lateral li");
+setTimeout(()=>{
 
-window.addEventListener("scroll",()=>{
+card.style.opacity="1";
+card.style.transform="translateY(0)";
 
-    let current="";
-
-    sections.forEach(section=>{
-
-        const sectionTop=section.offsetTop-120;
-
-        if(window.scrollY>=sectionTop){
-            current=section.getAttribute("id");
-        }
-
-    });
-
-    menuItems.forEach(item=>{
-
-        item.classList.remove("ativo");
-
-        if(item.id==="btn-"+current){
-            item.classList.add("ativo");
-        }
-
-    });
+},index*300);
 
 });
 
-/* ================= IMPRIMIR ================= */
-
-function imprimirEstatuto(){
-    window.print();
 }
-
-/* ================= FECHAR MENU MOBILE ================= */
-
-document.querySelectorAll(".menu a").forEach(link=>{
-
-    link.addEventListener("click",()=>{
-
-        document.getElementById("menu").classList.remove("active");
-
-    });
-
-});
 
 </script>
 

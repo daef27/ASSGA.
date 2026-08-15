@@ -1,258 +1,300 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>História Esportiva - ASSGA</title>
+<title>Esportiva - ASSGA</title>
+
+<link rel="icon" href="src/imagens/Assga_foto.jpg" type="image/jpeg">
+<link rel="shortcut icon" href="src/imagens/Assga_foto.jpg" type="image/jpeg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial, sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body{
-  background:linear-gradient(135deg,#003366,#0059b3);
-  color:#fff;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    overflow-x:hidden;
+}
+
+h2{
+    text-align:center;
+    margin:40px 0;
+    color:#003366;
+    font-size: 2.5em;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
 
 header{
-  background:#003366;
-  color:#fff;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 30px;
-  position:sticky;
-  top:0;
-  z-index:999;
+    background: linear-gradient(135deg, #003366 0%, #004aad 100%);
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    position:sticky;
+    top:0;
+    z-index:999;
+    box-shadow: 0 8px 32px rgba(0, 51, 102, 0.3);
 }
 
 .logo-area{
-  display:flex;
-  align-items:center;
-  gap:12px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo-area:hover {
+    transform: scale(1.05);
 }
 
 .logo-area img{
-  width:56px;
-  height:68px;
-  object-fit:cover;
+    width:56px;
+    height:68px;
+    object-fit:cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .logo{
-  font-size:24px;
-  font-weight:bold;
+    font-size:28px;
+    font-weight:900;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #ffd700, #ffed4e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .menu{
-  list-style:none;
-  display:inline-grid;
-  grid-auto-flow:column;
-  gap:12px;
-  margin-left:auto;
-  align-items:center;
+    list-style:none;
+    display:inline-grid;
+    grid-auto-flow:column;
+    gap:15px;
+    margin-left:auto;
+    align-items:center;
 }
 
 .menu li{
-  position:relative;
+    position:relative;
 }
 
 .menu a {
     display: block;
-    color: #000;
+    color: #fff;
     text-decoration: none;
     font-size: 15px;
-    font-weight: 600;
-    padding: 10px 18px;
-    border-radius: 10px;
-    transition: .4s;
+    font-weight: 700;
+    padding: 12px 20px;
+    border-radius: 25px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
 }
 
 @media (hover: hover){
-.menu a:hover{
-  color:#003366;
-  border-color:#fdfdfd;
-  background:linear-gradient(135deg,#fcfcfb);
-  box-shadow:0 6px 18px #003366;
-  transform:translateY(-2px);
+.menu a:hover {
+    color:#003366;
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+    box-shadow: 0 8px 24px rgba(255, 215, 0, 0.4);
+    transform: translateY(-3px);
 }
 }
 
 .menu a:active,
 .menu a:focus{
-  color:#003366;
-  border-color:#fdfdfd;
-  background:linear-gradient(135deg,#fcfcfb);
-  box-shadow:0 6px 18px #003366;
-  transform:translateY(-2px);
+    color:#003366;
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+    box-shadow: 0 8px 24px rgba(255, 215, 0, 0.4);
+    transform: translateY(-3px);
 }
 
 .menu-toggle{
-  display:none;
-  color:#fff;
-  font-size:30px;
-  cursor:pointer;
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+    transition: transform 0.3s ease;
 }
 
-/* TITULO */
-.esportivo-titulo{
-  text-align:center;
-  padding:30px 20px;
+.menu-toggle:hover {
+    transform: rotate(90deg);
 }
 
-.esportivo-titulo h1{
-  font-size:28px;
+.historia-container{
+    max-width:1000px;
+    margin:40px auto;
+    padding:0 20px;
 }
 
-.container{
-  padding:20px;
-  max-width:1100px;
-  margin:auto;
+.historia-texto{
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+    padding:40px;
+    border-radius:15px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    line-height: 1.8;
+    color: #555;
+    border-left: 5px solid #004aad;
 }
 
-section{
-  background:#fff;
-  color:#333;
-  padding:25px;
-  border-radius:12px;
-  margin-bottom:25px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+.historia-texto h3{
+    color: #003366;
+    font-size: 1.5em;
+    margin-bottom: 20px;
 }
 
-h2{
-  margin-bottom:15px;
-  color:#003366;
+.historia-texto p{
+    margin-bottom: 15px;
+    font-size: 1.05em;
 }
 
-p{
-  margin-bottom:15px;
-  line-height:1.6;
+.responsaveis{
+    padding:60px 20px;
+    background: linear-gradient(135deg, #e9eef5 0%, #d4e1ed 100%);
+    margin-top: 40px;
 }
 
-/* GALERIA */
-.galeria{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:15px;
+.cards{
+    display: flex;
+    justify-content: center;
+    gap:30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.galeria img{
-  width:100%;
-  border-radius:10px;
-  cursor:pointer;
-  transition:0.3s;
+.card{
+    width:280px;
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+    padding:30px;
+    border-radius:15px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    border-top: 4px solid #004aad;
+    text-align:center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.galeria img:hover{
-  transform:scale(1.05);
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 16px 48px rgba(0, 74, 173, 0.2);
+    border-top-color: #ffd700;
 }
 
-/* MODAL */
-.modal{
-  display:none;
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.8);
-  justify-content:center;
-  align-items:center;
+.card img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit: cover;
+    border:4px solid #004aad;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
 }
 
-.modal img{
-  max-width:90%;
-  max-height:80%;
-  border-radius:10px;
+.card:hover img{
+    transform: scale(1.1);
+}
+
+.card h3{
+    margin:15px 0 5px;
+    color:#003366;
+    font-size: 1.2em;
+}
+
+.card p{
+    color: #666;
 }
 
 footer{
-  text-align:center;
-  padding:20px;
-  background:#002244;
-  margin-top:30px;
+    background: linear-gradient(135deg, #003366 0%, #002244 100%);
+    color:#fff;
+    padding:30px 20px;
+    margin-top: 50px;
+    text-align: center;
 }
 
-/* ================= TABLET (768-1023px) ================= */
-
-@media(min-width:768px) and (max-width:1023px){
-
-  header{
-    padding:15px;
-  }
-
-  .logo{
-    font-size:20px;
-  }
-
-  .logo-area img{
-    width:56px;
-    height:68px;
-  }
-
-  .menu{
-    gap:12px;
-  }
-
-  .menu a{
-    font-size:14px;
-  }
-
+.footer-redes a{
+    color:#fff;
+    margin-left:15px;
+    font-size:24px;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
-/* ================= CELULAR (até 767px) ================= */
+.footer-redes a:hover{
+    color:#ffd700;
+    transform: translateY(-5px) scale(1.2);
+}
 
-@media(max-width:767px){
+@media (max-width:767px){
+    header{
+        padding:15px;
+    }
 
-  header{
-    padding:15px;
-  }
+    .logo-area img{
+        width:48px;
+        height:60px;
+    }
 
-  .logo{
-    font-size:20px;
-  }
+    .logo{
+        font-size:18px;
+    }
 
-  .logo-area img{
-    width:56px;
-    height:68px;
-  }
+    .menu-toggle{
+        display:block;
+        margin-left:auto;
+    }
 
-.menu-toggle{
-    display:block;
-    margin-left:auto;
-  }
+    .menu{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:75px;
+        left:15px;
+        right:15px;
+        width: calc(100% - 30px);
+        background: linear-gradient(135deg, rgba(0, 51, 102, 0.95), rgba(0, 74, 173, 0.95));
+        border-radius: 12px;
+        padding: 15px;
+        backdrop-filter: blur(10px);
+    }
 
-.menu{
-    display:none;
-    flex-direction:column;
-    position:absolute;
-    top:80px;
-    left:169px;
-    width:91%;
-    background:#f2f4f57a;
-  }
+    .menu.active{
+        display:flex;
+    }
 
-  .menu.active{
-    display:flex;
-  }
+    .menu li{
+        padding:10px 0;
+        text-align:center;
+        width: 100%;
+    }
 
-  .menu li{
-    border-top:1px solid rgba(255,255,255,.15);
-    text-align:center;
-  }
+    .menu a {
+        width: 100%;
+    }
 
-  .menu a{
-    display:block;
-    padding:15px;
-  }
+    h2 {
+        font-size: 1.8em;
+    }
 
-  .esportivo-titulo h1{
-    font-size:22px;
-  }
+    .historia-texto{
+        padding: 25px;
+    }
 
+    .card{
+        width:100%;
+        max-width: 340px;
+    }
 }
 </style>
 </head>
@@ -262,103 +304,69 @@ footer{
 <header>
 
 <div class="logo-area">
-  <a href="index.html"><img src="src/imagens/Assga_foto.jpg" alt="ASSGA"></a>
-  <div class="logo">ASSGA</div>
+    <a href="index.html"><img src="src/imagens/Assga_foto.jpg" alt="Logo"></a>
+<div class="logo">ASSGA</div>
 </div>
 
 <div class="menu-toggle" onclick="toggleMenu()">
-  ☰
+☰
 </div>
 
 <nav>
-  <ul class="menu" id="menu">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="historia.html">História</a></li>
-    <li><a href="esportiva.html">Esportiva</a></li>
-    <li><a href="evento.html">Eventos</a></li>
-    <li><a href="estatuto.html">Estatuto</a></li>
-    <li><a href="diretoria.html">Diretoria</a></li>
-  </ul>
+<ul class="menu" id="menu">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="historia.html">História</a></li>
+
+<li><a href="esportiva.html">Esportiva</a></li>
+
+<li><a href="evento.html">Eventos</a></li>
+
+<li><a href="estatuto.html">Estatuto</a></li>
+
+<li><a href="diretoria.html">Diretoria</a></li>
+
+</ul>
 </nav>
 
 </header>
 
-<div class="esportivo-titulo">
-  <h1>Departamento Esportivo - ASSGA</h1>
-  <p>História, Objetivo e Momentos Especiais</p>
-</div>
+<h2>Atividades Esportivas</h2>
 
-<div class="container">
-
-  <!-- OBJETIVO -->
-  <section>
-    <h2>Nosso Objetivo</h2>
-    <p>
-      O Departamento Esportivo da ASSGA tem como objetivo promover a prática
-      esportiva, incentivar a disciplina, fortalecer a união da comunidade
-      e desenvolver talentos locais.
-    </p>
-
-    <p>
-      Através do esporte, buscamos transformar vidas, estimular a saúde,
-      o respeito e o trabalho em equipe.
-    </p>
-  </section>
-
-  <!-- HISTÓRIA -->
-  <section>
-    <h2>Nossa História</h2>
-
-    <p><strong>2024:</strong> Início de uma nova fase com organização de campeonatos internos e fortalecimento das equipes.</p>
-
-    <p><strong>2025:</strong> Participação em competições municipais e conquista de importantes resultados para a associação.</p>
-
-    <p><strong>2026:</strong> Expansão do projeto esportivo, inclusão de novos atletas e ampliação das atividades sociais.</p>
-  </section>
-
-  <!-- GALERIA -->
-  <section>
-    <h2>Galeria de Fotos</h2>
-
-    <div class="galeria">
-      <img src="src/imagens/foto1.jpg" onclick="abrirModal(this.src)">
-      <img src="src/imagens/foto2.jpg" onclick="abrirModal(this.src)">
-      <img src="src/imagens/foto3.jpg" onclick="abrirModal(this.src)">
-    </div>
-
-  </section>
-
-</div>
-
-<!-- MODAL -->
-<div class="modal" id="modal" onclick="fecharModal()">
-  <img id="imagemModal">
-</div>
 
 <footer>
-  © 2026 Departamento Esportivo - ASSGA
+
+© 2026 ASSGA - Todos os direitos reservados
+
 </footer>
 
 <script>
+
 function toggleMenu(){
-  document.getElementById("menu").classList.toggle("active");
+
+document.getElementById("menu").classList.toggle("active");
+
 }
 
-document.querySelectorAll(".menu a").forEach(link=>{
-  link.addEventListener("click",()=>{
-    document.getElementById("menu").classList.remove("active");
-  });
+window.onload=function(){
+
+const cards=document.querySelectorAll(".card");
+
+cards.forEach((card,index)=>{
+
+setTimeout(()=>{
+
+card.style.opacity="1";
+card.style.transform="translateY(0)";
+
+},index*300);
+
 });
 
-function abrirModal(src){
-  document.getElementById("modal").style.display = "flex";
-  document.getElementById("imagemModal").src = src;
 }
 
-function fecharModal(){
-  document.getElementById("modal").style.display = "none";
-}
 </script>
 
 </body>
-</html> 
+</html>

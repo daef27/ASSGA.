@@ -3,32 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>História - ASSGA</title>
 
-<title>Eventos - ASSGA</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="icon" href="src/imagens/Assga_foto.jpg" type="image/jpeg">
+<link rel="shortcut icon" href="src/imagens/Assga_foto.jpg" type="image/jpeg">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body{
-    background:linear-gradient(135deg,#003366,#0055aa);
-    min-height:100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    overflow-x:hidden;
 }
 
-/* ===========================
-HEADER
-=========================== */
+h2{
+    text-align:center;
+    margin:40px 0;
+    color:#003366;
+    font-size: 2.5em;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
 
 header{
-    background:#003366;
+    background: linear-gradient(135deg, #003366 0%, #004aad 100%);
+    color:#fff;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -36,31 +45,44 @@ header{
     position:sticky;
     top:0;
     z-index:999;
+    box-shadow: 0 8px 32px rgba(0, 51, 102, 0.3);
 }
 
 .logo-area{
     display:flex;
     align-items:center;
-    gap:12px;
+    gap:15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo-area:hover {
+    transform: scale(1.05);
 }
 
 .logo-area img{
-    width: 56px;
-    height: 68px;
-    object-fit: cover;
+    width:56px;
+    height:68px;
+    object-fit:cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .logo{
-    color:#fff;
-    font-size:24px;
-    font-weight:700;
+    font-size:28px;
+    font-weight:900;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #ffd700, #ffed4e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .menu{
     list-style:none;
     display:inline-grid;
     grid-auto-flow:column;
-    gap:12px;
+    gap:15px;
     margin-left:auto;
     align-items:center;
 }
@@ -71,275 +93,210 @@ header{
 
 .menu a {
     display: block;
-    color: #000;
+    color: #fff;
     text-decoration: none;
     font-size: 15px;
-    font-weight: 600;
-    padding: 10px 18px;
-    border-radius: 10px;
-    transition: .4s;
+    font-weight: 700;
+    padding: 12px 20px;
+    border-radius: 25px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
 }
 
 @media (hover: hover){
-.menu a:hover{
+.menu a:hover {
     color:#003366;
-    border-color:#fdfdfd;
-    background:linear-gradient(135deg,#fcfcfb);
-    box-shadow:0 6px 18px #003366;
-    transform:translateY(-2px);
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+    box-shadow: 0 8px 24px rgba(255, 215, 0, 0.4);
+    transform: translateY(-3px);
 }
 }
 
 .menu a:active,
 .menu a:focus{
     color:#003366;
-    border-color:#fdfdfd;
-    background:linear-gradient(135deg,#fcfcfb);
-    box-shadow:0 6px 18px #003366;
-    transform:translateY(-2px);
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+    box-shadow: 0 8px 24px rgba(255, 215, 0, 0.4);
+    transform: translateY(-3px);
 }
 
 .menu-toggle{
     display:none;
-    color:#fff;
-    font-size:30px;
+    font-size:28px;
     cursor:pointer;
+    transition: transform 0.3s ease;
 }
 
-/* ===========================
-TÍTULO
-=========================== */
-
-.titulo{
-    text-align:center;
-    color:#fff;
-    padding:40px 20px;
+.menu-toggle:hover {
+    transform: rotate(90deg);
 }
 
-.titulo h1{
-    font-size:38px;
+.historia-container{
+    max-width:1000px;
+    margin:40px auto;
+    padding:0 20px;
 }
 
-.titulo p{
-    margin-top:10px;
+.historia-texto{
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+    padding:40px;
+    border-radius:15px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    line-height: 1.8;
+    color: #555;
+    border-left: 5px solid #004aad;
 }
 
-h2{
-    text-align:center;
-    color:#fff;
-    font-size:30px;
-    margin-bottom:40px;
+.historia-texto h3{
+    color: #003366;
+    font-size: 1.5em;
+    margin-bottom: 20px;
 }
 
-h2::after{
-    content:"";
-    width:90px;
-    height:4px;
-    background:#00e0ff;
-    display:block;
-    margin:10px auto;
-    border-radius:10px;
+.historia-texto p{
+    margin-bottom: 15px;
+    font-size: 1.05em;
 }
 
-/* ===========================
-CARDS
-=========================== */
+.responsaveis{
+    padding:60px 20px;
+    background: linear-gradient(135deg, #e9eef5 0%, #d4e1ed 100%);
+    margin-top: 40px;
+}
 
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+.cards{
+    display: flex;
+    justify-content: center;
     gap:30px;
-    padding-bottom:60px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .card{
-    background:rgba(255,255,255,.12);
-    backdrop-filter:blur(15px);
-    border-radius:20px;
-    overflow:hidden;
-    color:#fff;
-    box-shadow:0 10px 25px rgba(0,0,0,.25);
-    transition:.4s;
+    width:280px;
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+    padding:30px;
+    border-radius:15px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    border-top: 4px solid #004aad;
+    text-align:center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .card:hover{
-    transform:translateY(-10px);
+    transform: translateY(-10px);
+    box-shadow: 0 16px 48px rgba(0, 74, 173, 0.2);
+    border-top-color: #ffd700;
 }
 
 .card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit: cover;
+    border:4px solid #004aad;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
 }
 
-.card-content{
-    padding:25px;
+.card:hover img{
+    transform: scale(1.1);
 }
 
-.categoria{
-    display:inline-block;
-    background:#00e0ff;
+.card h3{
+    margin:15px 0 5px;
     color:#003366;
-    padding:5px 14px;
-    border-radius:30px;
-    font-size:12px;
-    font-weight:700;
-    margin-bottom:15px;
+    font-size: 1.2em;
 }
 
-.card-content h3{
-    margin-bottom:10px;
+.card p{
+    color: #666;
 }
-
-.card-content p{
-    margin-bottom:15px;
-}
-
-.info{
-    font-size:14px;
-    margin-bottom:18px;
-    line-height:1.7;
-}
-
-button{
-    border:none;
-    background:linear-gradient(45deg,#00e0ff,#00aaff);
-    color:#003366;
-    padding:12px 20px;
-    border-radius:30px;
-    cursor:pointer;
-    font-weight:bold;
-    transition:.3s;
-}
-
-button:hover{
-    transform:scale(1.05);
-}
-
-/* ===========================
-MODAL
-=========================== */
-
-.modal{
-    display:none;
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.7);
-    justify-content:center;
-    align-items:center;
-    z-index:9999;
-}
-
-.modal-content{
-    width:90%;
-    max-width:450px;
-    background:#fff;
-    border-radius:20px;
-    padding:30px;
-    text-align:center;
-}
-
-.modal-content h3{
-    color:#003366;
-    margin-bottom:15px;
-}
-
-.modal-content p{
-    color:#555;
-    margin-bottom:20px;
-}
-
-.close{
-    background:#003366;
-    color:#fff;
-}
-
-/* ===========================
-FOOTER
-=========================== */
 
 footer{
-    background:#003366;
+    background: linear-gradient(135deg, #003366 0%, #002244 100%);
     color:#fff;
-    text-align:center;
-    padding:20px;
+    padding:30px 20px;
+    margin-top: 50px;
+    text-align: center;
 }
 
-/* ===========================
-TABLET
-=========================== */
-
-@media(max-width:992px){
-
-.menu{
-    gap:15px;
+.footer-redes a{
+    color:#fff;
+    margin-left:15px;
+    font-size:24px;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
+.footer-redes a:hover{
+    color:#ffd700;
+    transform: translateY(-5px) scale(1.2);
 }
 
-/* ===========================
-CELULAR
-=========================== */
+@media (max-width:767px){
+    header{
+        padding:15px;
+    }
 
-@media(max-width:768px){
+    .logo-area img{
+        width:48px;
+        height:60px;
+    }
 
-header{
-    padding:15px;
+    .logo{
+        font-size:18px;
+    }
+
+    .menu-toggle{
+        display:block;
+        margin-left:auto;
+    }
+
+    .menu{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:75px;
+        left:15px;
+        right:15px;
+        width: calc(100% - 30px);
+        background: linear-gradient(135deg, rgba(0, 51, 102, 0.95), rgba(0, 74, 173, 0.95));
+        border-radius: 12px;
+        padding: 15px;
+        backdrop-filter: blur(10px);
+    }
+
+    .menu.active{
+        display:flex;
+    }
+
+    .menu li{
+        padding:10px 0;
+        text-align:center;
+        width: 100%;
+    }
+
+    .menu a {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .historia-texto{
+        padding: 25px;
+    }
+
+    .card{
+        width:100%;
+        max-width: 340px;
+    }
 }
-
-.logo-area img{
-    width:56px;
-    height:68px;
-}
-
-.logo{
-    font-size:20px;
-}
-
-.menu-toggle{
-    display:block;
-    margin-left:auto;
-}
-
-.menu{
-    display:none;
-    flex-direction:column;
-    position:absolute;
-    top:80px;
-    left:169px;
-    width:91%;
-    background:#f2f4f57a;
-}
-
-.menu.active{
-    display:flex;
-}
-
-.menu li{
-    text-align:center;
-    border-top:1px solid rgba(255,255,255,.15);
-}
-
-.menu a{
-    display:block;
-    padding:15px;
-}
-
-.titulo h1{
-    font-size:28px;
-}
-
-.container{
-    width:95%;
-}
-
-}
-
 </style>
-
 </head>
 
 <body>
@@ -347,7 +304,7 @@ header{
 <header>
 
 <div class="logo-area">
-    <a href="index.html"><img src="src/imagens/Assga_foto.jpg" alt="ASSGA"></a>
+    <a href="index.html"><img src="src/imagens/Assga_foto.jpg" alt="Logo"></a>
 <div class="logo">ASSGA</div>
 </div>
 
@@ -356,7 +313,6 @@ header{
 </div>
 
 <nav>
-
 <ul class="menu" id="menu">
 
 <li><a href="index.html">Home</a></li>
@@ -372,142 +328,16 @@ header{
 <li><a href="diretoria.html">Diretoria</a></li>
 
 </ul>
-
 </nav>
 
 </header>
 
-<section class="titulo">
+<h2>Eventos</h2>
 
-<h1>ASSGA - Eventos</h1>
-
-<p>Programação oficial e eventos institucionais</p>
-
-</section>
-
-<h2>Próximos Eventos</h2>
-
-<div class="container">
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1508606572321-901ea443707f">
-
-<div class="card-content">
-
-<span class="categoria">Esportivo</span>
-
-<h3>Campeonato Esportivo</h3>
-
-<p>Competição anual entre associados.</p>
-
-<div class="info">
-
-📅 15/03/2026<br>
-
-⏰ 14:00<br>
-
-📍 Quadra Central ASSGA
-
-</div>
-
-<button onclick="abrirModal('Campeonato Esportivo','Evento esportivo com premiação e confraternização.')">
-
-Saiba Mais
-
-</button>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30">
-
-<div class="card-content">
-
-<span class="categoria">Social</span>
-
-<h3>Festa de Confraternização</h3>
-
-<p>Momento especial para celebrar juntos.</p>
-
-<div class="info">
-
-📅 10/04/2026<br>
-
-⏰ 19:00<br>
-
-📍 Salão de Eventos
-
-</div>
-
-<button onclick="abrirModal('Festa de Confraternização','Evento social com música ao vivo e jantar especial.')">
-
-Saiba Mais
-
-</button>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1515169067868-5387ec356754">
-
-<div class="card-content">
-
-<span class="categoria">Profissional</span>
-
-<h3>Curso Profissionalizante</h3>
-
-<p>Capacitação e crescimento profissional.</p>
-
-<div class="info">
-
-📅 05/05/2026<br>
-
-⏰ 18:30<br>
-
-📍 Auditório ASSGA
-
-</div>
-
-<button onclick="abrirModal('Curso Profissionalizante','Curso com certificado e instrutores especializados.')">
-
-Saiba Mais
-
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="modal" id="modal">
-
-<div class="modal-content">
-
-<h3 id="tituloModal"></h3>
-
-<p id="descricaoModal"></p>
-
-<button class="close" onclick="fecharModal()">
-
-Fechar
-
-</button>
-
-</div>
-
-</div>
 
 <footer>
 
-© 2026 ASSGA - Associação dos Surdos de São Gonçalo do Amarante
+© 2026 ASSGA - Todos os direitos reservados
 
 </footer>
 
@@ -519,29 +349,20 @@ document.getElementById("menu").classList.toggle("active");
 
 }
 
-function abrirModal(titulo,descricao){
+window.onload=function(){
 
-document.getElementById("tituloModal").innerHTML=titulo;
+const cards=document.querySelectorAll(".card");
 
-document.getElementById("descricaoModal").innerHTML=descricao;
+cards.forEach((card,index)=>{
 
-document.getElementById("modal").style.display="flex";
+setTimeout(()=>{
 
-}
+card.style.opacity="1";
+card.style.transform="translateY(0)";
 
-function fecharModal(){
+},index*300);
 
-document.getElementById("modal").style.display="none";
-
-}
-
-window.onclick=function(e){
-
-if(e.target==document.getElementById("modal")){
-
-fecharModal();
-
-}
+});
 
 }
 
