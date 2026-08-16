@@ -15,6 +15,7 @@
 <link
     rel="icon"
     href="src/imagens/Assga_foto.jpg"
+    type="image/jpeg"
 >
 
 <style>
@@ -25,7 +26,7 @@
 
 *{
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
 }
 
 html{
@@ -386,7 +387,7 @@ input[type="text"]:focus{
 
 
 /* =====================================================
-   BOTÃO COPIAR PIX
+   BOTÃO COPIAR
 ===================================================== */
 
 .btn-copiar{
@@ -408,13 +409,11 @@ input[type="text"]:focus{
     font-weight:bold;
 
     cursor:pointer;
-
 }
 
 .btn-copiar:hover{
 
     background:#20b957;
-
 }
 
 
@@ -430,9 +429,11 @@ input[type="text"]:focus{
 
     border-radius:12px;
 
-    padding:15px;
+    padding:20px;
 
     border:1px solid #ddd;
+
+    text-align:center;
 }
 
 .qr-container p{
@@ -446,13 +447,11 @@ input[type="text"]:focus{
 
 #qrCode{
 
-    width:220px;
+    width:240px;
 
-    height:220px;
+    min-height:240px;
 
-    max-width:100%;
-
-    margin:auto;
+    margin:15px auto;
 
     display:flex;
 
@@ -465,16 +464,63 @@ input[type="text"]:focus{
 
 #qrCode img{
 
-    width:220px;
+    width:230px !important;
 
-    height:220px;
-
-    max-width:100%;
+    height:230px !important;
 }
 
 
 /* =====================================================
-   VALOR PIX
+   COPIA E COLA
+===================================================== */
+
+.copia-cola{
+
+    margin-top:20px;
+
+    text-align:left;
+}
+
+.copia-cola label{
+
+    margin-top:0;
+
+    margin-bottom:7px;
+}
+
+#pixCopiaCola{
+
+    width:100%;
+
+    min-height:100px;
+
+    resize:none;
+
+    padding:12px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    font-size:12px;
+
+    line-height:1.4;
+
+    color:#333;
+
+    background:#f8f9fa;
+}
+
+.btn-copiar-codigo{
+
+    margin-top:10px;
+
+    background:#004aad;
+}
+
+
+/* =====================================================
+   VALOR
 ===================================================== */
 
 .pix-valor{
@@ -622,17 +668,6 @@ button:hover{
     font-size:16px;
 
     font-weight:bold;
-
-    transition:all .3s ease;
-}
-
-.btn-voltar:hover{
-
-    transform:translateY(-2px);
-
-    box-shadow:
-        0 6px 18px
-        rgba(0,51,102,.25);
 }
 
 
@@ -834,6 +869,20 @@ button:hover{
     .btn-copiar{
 
         width:100%;
+    }
+
+    #qrCode{
+
+        width:220px;
+
+        min-height:220px;
+    }
+
+    #qrCode img{
+
+        width:210px !important;
+
+        height:210px !important;
     }
 
 }
@@ -1043,14 +1092,14 @@ escaneie o QR Code.
 </p>
 
 
-<!-- CHAVE -->
+<!-- CHAVE PIX -->
 
 <div class="pix-chave">
 
 <input
     type="text"
     id="pixChave"
-    value=""
+    value="assgar2019@gmail.com"
     readonly
 >
 
@@ -1077,37 +1126,69 @@ R$ <span id="pixValor">100,00</span>
 </div>
 
 
-<!-- QR CODE -->
+<!-- ==================================================
+     QR CODE
+================================================== -->
 
 <div class="qr-container">
 
 <p>
-📱 Escaneie o QR Code
+📱 Escaneie o QR Code PIX
 </p>
 
 <div id="qrCode">
 
-    <span>
-        QR Code PIX
-    </span>
+<span>
+Gerando QR Code...
+</span>
 
 </div>
-
-</div>
-
 
 <p style="
     font-size:13px;
     color:#666;
-    margin-top:15px;
+    font-weight:normal;
 ">
 
-Chave PIX:
 <strong>
-
+ASSGA
 </strong>
 
+<br>
+
+assgar2019@gmail.com
+
 </p>
+
+</div>
+
+
+<!-- ==================================================
+     PIX COPIA E COLA
+================================================== -->
+
+<div class="copia-cola">
+
+<label for="pixCopiaCola">
+📋 PIX Copia e Cola
+</label>
+
+<textarea
+    id="pixCopiaCola"
+    readonly
+></textarea>
+
+<button
+    type="button"
+    class="btn-copiar-codigo"
+    onclick="copiarCodigoPix()"
+>
+
+📋 Copiar PIX Copia e Cola
+
+</button>
+
+</div>
 
 </div>
 
@@ -1132,7 +1213,7 @@ participar da promoção e receber o bônus.
 <strong>
 
 ⚠️ Promoção limitada às primeiras
-100 ou 50 pessoas, conforme disponibilidade.
+100 pessoas, conforme disponibilidade.
 
 </strong>
 
@@ -1335,6 +1416,13 @@ CNPJ:
 </div>
 
 
+<!-- ==================================================
+     QR CODE JS
+================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+
 <script>
 
 /* =====================================================
@@ -1345,8 +1433,31 @@ const LIMITE_VAGAS = 100;
 
 const VALOR = 100;
 
+
+/*
+   CHAVE PIX DA ASSGA
+*/
+
 const CHAVE_PIX =
-    "";
+    "assgar2019@gmail.com";
+
+
+/*
+   Nome do recebedor.
+   O BR Code limita o nome a 25 caracteres.
+*/
+
+const NOME_PIX =
+    "ASSGA";
+
+
+/*
+   Cidade do recebedor.
+   Limite de 15 caracteres no BR Code.
+*/
+
+const CIDADE_PIX =
+    "SAO GONCALO DO AMARANTE";
 
 
 /* =====================================================
@@ -1480,7 +1591,7 @@ function mostrarMensagem(
 
 
 /* =====================================================
-   FORMATAR CPF
+   CPF
 ===================================================== */
 
 document
@@ -1522,7 +1633,7 @@ document
 
 
 /* =====================================================
-   FORMATAR TELEFONE
+   TELEFONE
 ===================================================== */
 
 document
@@ -1565,7 +1676,7 @@ document
 
 
 /* =====================================================
-   COPIAR PIX
+   COPIAR CHAVE PIX
 ===================================================== */
 
 function copiarPix(){
@@ -1587,7 +1698,7 @@ function copiarPix(){
         function(){
 
             mostrarMensagem(
-                "❌ Não foi possível copiar automaticamente.",
+                "❌ Não foi possível copiar.",
                 "erro"
             );
 
@@ -1598,9 +1709,296 @@ function copiarPix(){
 
 
 /* =====================================================
-   QR CODE
+   PIX BR CODE
 ===================================================== */
 
+
+/*
+   Campo TLV
+*/
+
+function campo(id, valor){
+
+    return (
+        id
+        +
+        String(valor.length)
+        .padStart(2,"0")
+        +
+        valor
+    );
+
+}
+
+
+/*
+   CRC16-CCITT
+*/
+
+function calcularCRC16(payload){
+
+    let crc = 0xFFFF;
+
+
+    for(
+        let i = 0;
+        i < payload.length;
+        i++
+    ){
+
+        crc ^=
+            payload.charCodeAt(i)
+            << 8;
+
+
+        for(
+            let j = 0;
+            j < 8;
+            j++
+        ){
+
+            if(
+                crc & 0x8000
+            ){
+
+                crc =
+                    (
+                        crc << 1
+                    )
+                    ^
+                    0x1021;
+
+            }
+            else{
+
+                crc =
+                    crc << 1;
+
+            }
+
+
+            crc &=
+                0xFFFF;
+
+        }
+
+    }
+
+
+    return crc
+        .toString(16)
+        .toUpperCase()
+        .padStart(4,"0");
+
+}
+
+
+/*
+   Gera PIX Copia e Cola
+*/
+
+function gerarPixPayload(valor){
+
+    /*
+       Merchant Account Information
+    */
+
+    const gui =
+        campo(
+            "00",
+            "br.gov.bcb.pix"
+        );
+
+
+    const chave =
+        campo(
+            "01",
+            CHAVE_PIX
+        );
+
+
+    const merchantAccount =
+        campo(
+            "26",
+            gui + chave
+        );
+
+
+    /*
+       Payload principal
+    */
+
+    let payload = "";
+
+
+    payload +=
+        campo(
+            "00",
+            "01"
+        );
+
+
+    payload +=
+        campo(
+            "01",
+            "12"
+        );
+
+
+    payload +=
+        merchantAccount;
+
+
+    payload +=
+        campo(
+            "52",
+            "0000"
+        );
+
+
+    payload +=
+        campo(
+            "53",
+            "986"
+        );
+
+
+    /*
+       Valor
+    */
+
+    payload +=
+        campo(
+            "54",
+            Number(valor)
+            .toFixed(2)
+        );
+
+
+    /*
+       País
+    */
+
+    payload +=
+        campo(
+            "58",
+            "BR"
+        );
+
+
+    /*
+       Nome
+    */
+
+    payload +=
+        campo(
+            "59",
+            NOME_PIX
+        );
+
+
+    /*
+       Cidade
+    */
+
+    payload +=
+        campo(
+            "60",
+            CIDADE_PIX
+        );
+
+
+    /*
+       TXID
+    */
+
+    const txid =
+        campo(
+            "05",
+            "***"
+        );
+
+
+    payload +=
+        campo(
+            "62",
+            txid
+        );
+
+
+    /*
+       CRC
+    */
+
+    payload +=
+        "6304";
+
+
+    const crc =
+        calcularCRC16(
+            payload
+        );
+
+
+    return payload + crc;
+
+}
+
+
+/* =====================================================
+   GERAR QR CODE
+===================================================== */
+
+function gerarQRCode(valor){
+
+    const qr =
+        document.getElementById(
+            "qrCode"
+        );
+
+
+    const copia =
+        document.getElementById(
+            "pixCopiaCola"
+        );
+
+
+    qr.innerHTML = "";
+
+
+    const payload =
+        gerarPixPayload(
+            valor
+        );
+
+
+    /*
+       Copia e Cola
+    */
+
+    copia.value =
+        payload;
+
+
+    /*
+       QR Code
+    */
+
+    new QRCode(
+        qr,
+        {
+            text:payload,
+
+            width:230,
+
+            height:230,
+
+            correctLevel:
+                QRCode.CorrectLevel.M
+        }
+    );
+
+}
 
 
 /* =====================================================
@@ -1649,7 +2047,7 @@ document
 
 
 /* =====================================================
-   VALOR DO PIX
+   VALOR PIX
 ===================================================== */
 
 function atualizarValorPix(){
@@ -1683,7 +2081,50 @@ function atualizarValorPix(){
         .replace(".",",");
 
 
-    gerarQRCode(valor);
+    gerarQRCode(
+        valor
+    );
+
+}
+
+
+/* =====================================================
+   COPIAR PIX COPIA E COLA
+===================================================== */
+
+function copiarCodigoPix(){
+
+    const codigo =
+        document
+        .getElementById(
+            "pixCopiaCola"
+        )
+        .value;
+
+
+    navigator
+    .clipboard
+    .writeText(codigo)
+    .then(
+        function(){
+
+            mostrarMensagem(
+                "✅ PIX Copia e Cola copiado!",
+                "sucesso"
+            );
+
+        }
+    )
+    .catch(
+        function(){
+
+            mostrarMensagem(
+                "❌ Não foi possível copiar o código.",
+                "erro"
+            );
+
+        }
+    );
 
 }
 
@@ -1829,10 +2270,6 @@ document
         event.preventDefault();
 
 
-        /* ---------------------------------------------
-           VAGA
-        --------------------------------------------- */
-
         const vaga =
             proximaVaga();
 
@@ -1848,10 +2285,6 @@ document
 
         }
 
-
-        /* ---------------------------------------------
-           DADOS
-        --------------------------------------------- */
 
         const nome =
             document
@@ -1887,10 +2320,6 @@ document
             );
 
 
-        /* ---------------------------------------------
-           VALIDAR CPF
-        --------------------------------------------- */
-
         if(!validarCPF(cpf)){
 
             mostrarMensagem(
@@ -1902,10 +2331,6 @@ document
 
         }
 
-
-        /* ---------------------------------------------
-           PAGAMENTO
-        --------------------------------------------- */
 
         if(!pagamento){
 
@@ -1919,16 +2344,15 @@ document
         }
 
 
-        /* ---------------------------------------------
-           DUPLICIDADE
-        --------------------------------------------- */
-
         const lista =
             obterInscricoes();
 
 
         const cpfLimpo =
-            cpf.replace(/\D/g,"");
+            cpf.replace(
+                /\D/g,
+                ""
+            );
 
 
         const jaExiste =
@@ -1953,10 +2377,6 @@ document
         }
 
 
-        /* ---------------------------------------------
-           VALOR
-        --------------------------------------------- */
-
         let valor =
             VALOR;
 
@@ -1972,19 +2392,11 @@ document
         }
 
 
-        /* ---------------------------------------------
-           CÓDIGO
-        --------------------------------------------- */
-
         const codigo =
             "ASSGA-"
             +
             Date.now();
 
-
-        /* ---------------------------------------------
-           DATA
-        --------------------------------------------- */
 
         const data =
             new Date()
@@ -1992,10 +2404,6 @@ document
                 "pt-BR"
             );
 
-
-        /* ---------------------------------------------
-           OBJETO
-        --------------------------------------------- */
 
         const inscricao = {
 
@@ -2032,10 +2440,6 @@ document
         };
 
 
-        /* ---------------------------------------------
-           SALVAR
-        --------------------------------------------- */
-
         lista.push(
             inscricao
         );
@@ -2046,25 +2450,13 @@ document
         );
 
 
-        /* ---------------------------------------------
-           EXTRATO
-        --------------------------------------------- */
-
         mostrarExtrato(
             inscricao
         );
 
 
-        /* ---------------------------------------------
-           CONTADOR
-        --------------------------------------------- */
-
         atualizarContador();
 
-
-        /* ---------------------------------------------
-           MENSAGEM
-        --------------------------------------------- */
 
         mostrarMensagem(
 
@@ -2078,10 +2470,6 @@ document
 
         );
 
-
-        /* ---------------------------------------------
-           LIMPAR
-        --------------------------------------------- */
 
         document
         .getElementById(
@@ -2109,7 +2497,7 @@ let vagaAtual = null;
 
 
 /* =====================================================
-   MOSTRAR EXTRATO
+   EXTRATO
 ===================================================== */
 
 function mostrarExtrato(
@@ -2193,7 +2581,9 @@ function mostrarExtrato(
     .textContent =
         Number(
             inscricao.valor
-        ).toFixed(2);
+        )
+        .toFixed(2)
+        .replace(".",",");
 
 
     document
@@ -2266,7 +2656,7 @@ ${vagaAtual.pagamento}
 💰 Valor:
 R$ ${Number(vagaAtual.valor).toFixed(2)}
 
-🟢 Chave PIX:
+🟢 PIX:
 ${CHAVE_PIX}
 
 📅 Data:
@@ -2304,6 +2694,7 @@ ${vagaAtual.data}
 ===================================================== */
 
 atualizarContador();
+
 
 </script>
 
