@@ -1050,7 +1050,7 @@ escaneie o QR Code.
 <input
     type="text"
     id="pixChave"
-    value="57.242.499/0001-60"
+    value=""
     readonly
 >
 
@@ -1104,7 +1104,7 @@ R$ <span id="pixValor">100,00</span>
 
 Chave PIX:
 <strong>
-57.242.499/0001-60
+
 </strong>
 
 </p>
@@ -1346,7 +1346,7 @@ const LIMITE_VAGAS = 100;
 const VALOR = 100;
 
 const CHAVE_PIX =
-    "57.242.499/0001-60";
+    "";
 
 
 /* =====================================================
@@ -1601,39 +1601,6 @@ function copiarPix(){
    QR CODE
 ===================================================== */
 
-function gerarQRCode(valor){
-
-    /*
-     * IMPORTANTE:
-     *
-     * Esta URL gera um QR visual a partir do texto.
-     * Para pagamento PIX real, utilize o BR Code
-     * fornecido pelo banco/provedor de pagamento.
-     */
-
-    const texto =
-        CHAVE_PIX
-        +
-        "|ASSGA|"
-        +
-        Number(valor).toFixed(2);
-
-
-    const url =
-        "https://api.qrserver.com/v1/create-qr-code/?size=220x220&data="
-        +
-        encodeURIComponent(texto);
-
-
-    document
-    .getElementById("qrCode")
-    .innerHTML =
-
-        '<img src="' +
-        url +
-        '" alt="QR Code PIX ASSGA">';
-
-}
 
 
 /* =====================================================
