@@ -31,15 +31,17 @@
 
 <style>
 
-/* =========================
-   RESET
-========================= */
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    font-family:
+        'Segoe UI',
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
 }
 
 html{
@@ -47,67 +49,74 @@ html{
 }
 
 body{
-    background:linear-gradient(
-        135deg,
-        #f5f7fa 0%,
-        #c3cfe2 100%
-    );
 
     min-height:100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f5f7fa,
+            #c3cfe2
+        );
+
     overflow-x:hidden;
+
+    color:#555;
 }
 
 
-/* =========================
-   CABEÇALHO
-========================= */
+/* =====================================================
+   HEADER
+===================================================== */
 
 header{
 
-    background:linear-gradient(
-        135deg,
-        #003366 0%,
-        #004aad 100%
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #003366,
+            #004aad
+        );
 
     color:#fff;
 
     display:flex;
+
     justify-content:space-between;
     align-items:center;
 
     padding:15px 30px;
 
     position:sticky;
+
     top:0;
 
     z-index:999;
 
     box-shadow:
         0 8px 32px
-        rgba(0,51,102,0.3);
+        rgba(0,51,102,.30);
 }
 
 
-/* LOGO */
+/* =====================================================
+   LOGO
+===================================================== */
 
 .logo-area{
 
     display:flex;
+
     align-items:center;
 
     gap:15px;
-
-    cursor:pointer;
-
-    transition:
-        transform .3s ease;
 }
 
-.logo-area:hover{
+.logo-area a{
 
-    transform:
-        scale(1.05);
+    display:flex;
+
+    text-decoration:none;
 }
 
 .logo-area img{
@@ -121,7 +130,7 @@ header{
 
     box-shadow:
         0 4px 12px
-        rgba(0,0,0,.2);
+        rgba(0,0,0,.20);
 }
 
 .logo{
@@ -146,23 +155,23 @@ header{
 }
 
 
-/* =========================
+/* =====================================================
    MENU
-========================= */
+===================================================== */
+
+nav{
+    margin-left:auto;
+}
 
 .menu{
 
     list-style:none;
 
-    display:inline-grid;
-
-    grid-auto-flow:column;
-
-    gap:15px;
-
-    margin-left:auto;
+    display:flex;
 
     align-items:center;
+
+    gap:8px;
 }
 
 .menu li{
@@ -171,7 +180,12 @@ header{
 
 .menu a{
 
-    display:block;
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:8px;
 
     color:#fff;
 
@@ -181,45 +195,26 @@ header{
 
     font-weight:700;
 
-    padding:12px 20px;
+    padding:12px 16px;
 
     border-radius:25px;
 
-    transition:
-        all .4s
-        cubic-bezier(
-            .175,
-            .885,
-            .32,
-            1.275
-        );
+    transition:.3s;
 }
-
-@media (hover:hover){
 
 .menu a:hover{
 
     color:#003366;
 
-    background:
-        linear-gradient(
-            135deg,
-            #ffd700 0%,
-            #ffed4e 100%
-        );
-
-    box-shadow:
-        0 8px 24px
-        rgba(255,215,0,.4);
+    background:#ffd700;
 
     transform:
         translateY(-3px);
+
+    box-shadow:
+        0 8px 24px
+        rgba(255,215,0,.40);
 }
-
-}
-
-
-/* MENU MOBILE */
 
 .menu-toggle{
 
@@ -227,29 +222,22 @@ header{
 
     font-size:28px;
 
+    color:#fff;
+
     cursor:pointer;
-
-    transition:
-        transform .3s ease;
-}
-
-.menu-toggle:hover{
-
-    transform:
-        rotate(90deg);
 }
 
 
-/* =========================
+/* =====================================================
    TÍTULO
-========================= */
+===================================================== */
 
 .titulo{
 
     text-align:center;
 
     margin:
-        45px 20px 15px;
+        45px 20px 10px;
 
     color:#003366;
 
@@ -261,33 +249,37 @@ header{
         );
 
     font-weight:800;
+}
 
-    text-shadow:
-        2px 2px 4px
-        rgba(0,0,0,.1);
+.titulo i{
+
+    color:#004aad;
+
+    margin-right:8px;
 }
 
 .subtitulo{
 
     text-align:center;
 
-    color:#555;
+    margin:
+        0 20px 40px;
 
-    margin-bottom:40px;
+    color:#666;
 
-    font-size:1.05rem;
+    font-size:16px;
 }
 
 
-/* =========================
+/* =====================================================
    CONTAINER
-========================= */
+===================================================== */
 
 .container{
 
-    width:100%;
-
     max-width:1100px;
+
+    width:100%;
 
     margin:auto;
 
@@ -296,247 +288,9 @@ header{
 }
 
 
-/* =========================
-   PAINEL
-========================= */
-
-.painel{
-
-    background:
-        linear-gradient(
-            135deg,
-            #ffffff 0%,
-            #f8f9fa 100%
-        );
-
-    border-radius:18px;
-
-    padding:35px;
-
-    box-shadow:
-        0 10px 35px
-        rgba(0,0,0,.12);
-
-    border-top:
-        5px solid #004aad;
-
-    margin-bottom:40px;
-}
-
-.painel-titulo{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    color:#003366;
-
-    font-size:1.5rem;
-
-    margin-bottom:30px;
-
-    padding-bottom:15px;
-
-    border-bottom:
-        1px solid #ddd;
-}
-
-.painel-titulo i{
-
-    color:#004aad;
-}
-
-
-/* =========================
-   FORMULÁRIO
-========================= */
-
-.form-grid{
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(
-            2,
-            minmax(0,1fr)
-        );
-
-    gap:22px;
-}
-
-.campo{
-
-    display:flex;
-
-    flex-direction:column;
-}
-
-.campo-completo{
-
-    grid-column:
-        1 / -1;
-}
-
-.campo label{
-
-    color:#003366;
-
-    font-weight:700;
-
-    margin-bottom:8px;
-
-    font-size:.95rem;
-}
-
-.campo input,
-.campo select,
-.campo textarea{
-
-    width:100%;
-
-    padding:14px 15px;
-
-    border:
-        2px solid #dce2e8;
-
-    border-radius:10px;
-
-    outline:none;
-
-    background:#fff;
-
-    color:#333;
-
-    font-size:15px;
-
-    transition:
-        all .3s ease;
-}
-
-.campo input:focus,
-.campo select:focus,
-.campo textarea:focus{
-
-    border-color:#004aad;
-
-    box-shadow:
-        0 0 0 4px
-        rgba(0,74,173,.1);
-}
-
-.campo textarea{
-
-    min-height:130px;
-
-    resize:vertical;
-}
-
-
-/* =========================
-   BOTÕES
-========================= */
-
-.acoes{
-
-    display:flex;
-
-    gap:15px;
-
-    margin-top:25px;
-
-    flex-wrap:wrap;
-}
-
-.btn{
-
-    border:none;
-
-    padding:13px 24px;
-
-    border-radius:10px;
-
-    font-size:15px;
-
-    font-weight:700;
-
-    cursor:pointer;
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:8px;
-
-    transition:
-        all .3s ease;
-}
-
-.btn:hover{
-
-    transform:
-        translateY(-3px);
-}
-
-
-/* SALVAR */
-
-.btn-salvar{
-
-    color:#fff;
-
-    background:
-        linear-gradient(
-            135deg,
-            #003366,
-            #004aad
-        );
-
-    box-shadow:
-        0 6px 18px
-        rgba(0,74,173,.25);
-}
-
-.btn-salvar:hover{
-
-    box-shadow:
-        0 10px 25px
-        rgba(0,74,173,.35);
-}
-
-
-/* VISUALIZAR */
-
-.btn-visualizar{
-
-    background:#ffd700;
-
-    color:#003366;
-
-    box-shadow:
-        0 6px 18px
-        rgba(255,215,0,.25);
-}
-
-
-/* CANCELAR */
-
-.btn-cancelar{
-
-    background:#e9ecef;
-
-    color:#555;
-
-    display:none;
-}
-
-
-/* =========================
+/* =====================================================
    LISTA DE EVENTOS
-========================= */
+===================================================== */
 
 .lista-header{
 
@@ -546,11 +300,11 @@ header{
 
     align-items:center;
 
-    margin-bottom:25px;
+    flex-wrap:wrap;
 
     gap:15px;
 
-    flex-wrap:wrap;
+    margin-bottom:25px;
 }
 
 .lista-header h2{
@@ -560,13 +314,21 @@ header{
     font-size:1.5rem;
 }
 
+.lista-header h2 i{
+
+    color:#004aad;
+
+    margin-right:7px;
+}
+
 .contador{
 
     background:#003366;
 
     color:#fff;
 
-    padding:8px 15px;
+    padding:
+        8px 15px;
 
     border-radius:20px;
 
@@ -576,9 +338,9 @@ header{
 }
 
 
-/* =========================
-   CARDS
-========================= */
+/* =====================================================
+   EVENTOS
+===================================================== */
 
 .eventos{
 
@@ -604,15 +366,14 @@ header{
 
     overflow:hidden;
 
-    box-shadow:
-        0 8px 25px
-        rgba(0,0,0,.1);
-
     border-top:
         5px solid #004aad;
 
-    transition:
-        all .35s ease;
+    box-shadow:
+        0 8px 25px
+        rgba(0,0,0,.10);
+
+    transition:.35s;
 }
 
 .evento-card:hover{
@@ -620,11 +381,11 @@ header{
     transform:
         translateY(-8px);
 
+    border-top-color:#ffd700;
+
     box-shadow:
         0 15px 35px
-        rgba(0,74,173,.2);
-
-    border-top-color:#ffd700;
+        rgba(0,74,173,.20);
 }
 
 .evento-topo{
@@ -645,22 +406,25 @@ header{
 
     font-size:1.25rem;
 
-    margin-bottom:8px;
+    margin-bottom:10px;
 }
 
 .status{
 
-    display:inline-block;
+    display:inline-flex;
 
-    padding:5px 10px;
+    align-items:center;
+
+    gap:5px;
+
+    padding:
+        5px 10px;
 
     border-radius:20px;
 
     font-size:.78rem;
 
     font-weight:700;
-
-    margin-top:8px;
 }
 
 .status.aberto{
@@ -693,13 +457,17 @@ header{
 
     display:flex;
 
+    align-items:flex-start;
+
     gap:10px;
 
-    margin-bottom:12px;
+    margin-bottom:13px;
 
     color:#555;
 
     font-size:.95rem;
+
+    line-height:1.5;
 }
 
 .info-item i{
@@ -709,6 +477,8 @@ header{
     color:#004aad;
 
     text-align:center;
+
+    margin-top:3px;
 }
 
 .evento-descricao{
@@ -725,50 +495,27 @@ header{
     color:#666;
 }
 
-.evento-acoes{
+.evento-descricao i{
 
-    padding:
-        0 20px 20px;
+    color:#004aad;
 
-    display:flex;
-
-    gap:10px;
-}
-
-.btn-editar{
-
-    background:#004aad;
-
-    color:#fff;
-
-    flex:1;
-}
-
-.btn-excluir{
-
-    background:#dc3545;
-
-    color:#fff;
-
-    flex:1;
+    margin-right:5px;
 }
 
 
-/* =========================
+/* =====================================================
    SEM EVENTOS
-========================= */
+===================================================== */
 
 .sem-eventos{
 
-    text-align:center;
-
     background:#fff;
 
+    padding:60px 20px;
+
+    text-align:center;
+
     border-radius:15px;
-
-    padding:50px 20px;
-
-    color:#777;
 
     box-shadow:
         0 8px 25px
@@ -792,147 +539,139 @@ header{
 }
 
 
-/* =========================
-   MODAL
-========================= */
-
-.modal{
-
-    display:none;
-
-    position:fixed;
-
-    z-index:2000;
-
-    left:0;
-
-    top:0;
-
-    width:100%;
-
-    height:100%;
-
-    background:
-        rgba(0,0,0,.65);
-
-    backdrop-filter:
-        blur(5px);
-
-    align-items:center;
-
-    justify-content:center;
-
-    padding:20px;
-}
-
-.modal-conteudo{
-
-    background:#fff;
-
-    width:100%;
-
-    max-width:600px;
-
-    border-radius:18px;
-
-    padding:35px;
-
-    position:relative;
-
-    box-shadow:
-        0 20px 60px
-        rgba(0,0,0,.3);
-
-    max-height:90vh;
-
-    overflow-y:auto;
-}
-
-.fechar{
-
-    position:absolute;
-
-    right:20px;
-
-    top:15px;
-
-    font-size:30px;
-
-    color:#777;
-
-    cursor:pointer;
-}
-
-.fechar:hover{
-
-    color:#dc3545;
-}
-
-.modal-conteudo h2{
-
-    margin:
-        0 0 25px;
-
-    color:#003366;
-}
-
-.preview{
-
-    line-height:1.8;
-
-    color:#555;
-}
-
-.preview strong{
-
-    color:#003366;
-}
-
-
-/* =========================
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 footer{
 
     background:
         linear-gradient(
             135deg,
-            #003366 0%,
-            #002244 100%
+            #003366,
+            #002244
         );
 
     color:#fff;
 
-    padding:30px 20px;
+    padding:
+        35px 20px;
 
     text-align:center;
 
     margin-top:50px;
 }
 
+.footer-logo{
 
-/* =========================
-   RESPONSIVO
-========================= */
+    font-size:25px;
+
+    font-weight:800;
+
+    margin-bottom:10px;
+}
+
+.footer-logo i{
+
+    color:#ffd700;
+
+    margin-right:8px;
+}
+
+.footer-info{
+
+    margin:8px 0;
+
+    color:#e8eef5;
+}
+
+.footer-info i{
+
+    color:#ffd700;
+
+    margin-right:6px;
+}
+
+.footer-redes{
+
+    margin:22px 0;
+}
+
+.footer-redes a{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:42px;
+    height:42px;
+
+    color:#fff;
+
+    border:
+        1px solid
+        rgba(255,255,255,.25);
+
+    border-radius:50%;
+
+    margin:0 5px;
+
+    text-decoration:none;
+
+    font-size:20px;
+
+    transition:.3s;
+}
+
+.footer-redes a:hover{
+
+    background:#ffd700;
+
+    color:#003366;
+
+    transform:
+        translateY(-5px);
+}
+
+.copyright{
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.15);
+
+    padding-top:18px;
+
+    margin-top:18px;
+
+    font-size:14px;
+
+    opacity:.85;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media(max-width:767px){
 
     header{
 
-        padding:15px;
+        padding:
+            12px 15px;
     }
 
     .logo-area img{
 
         width:48px;
-
         height:60px;
     }
 
     .logo{
 
-        font-size:18px;
+        font-size:19px;
     }
 
     .menu-toggle{
@@ -946,32 +685,34 @@ footer{
 
         display:none;
 
-        flex-direction:column;
-
         position:absolute;
 
-        top:75px;
+        top:78px;
 
         left:15px;
-
         right:15px;
 
         width:
             calc(100% - 30px);
 
-        background:
-            linear-gradient(
-                135deg,
-                rgba(0,51,102,.97),
-                rgba(0,74,173,.97)
-            );
-
-        border-radius:12px;
+        flex-direction:column;
 
         padding:15px;
 
-        backdrop-filter:
-            blur(10px);
+        gap:5px;
+
+        background:
+            linear-gradient(
+                135deg,
+                rgba(0,51,102,.98),
+                rgba(0,74,173,.98)
+            );
+
+        border-radius:14px;
+
+        box-shadow:
+            0 15px 35px
+            rgba(0,0,0,.25);
     }
 
     .menu.active{
@@ -981,48 +722,49 @@ footer{
 
     .menu li{
 
-        padding:8px 0;
-
-        text-align:center;
-
         width:100%;
     }
 
     .menu a{
 
         width:100%;
-    }
 
-    .form-grid{
+        justify-content:flex-start;
 
-        grid-template-columns:1fr;
-    }
-
-    .campo-completo{
-
-        grid-column:auto;
-    }
-
-    .painel{
-
-        padding:22px;
+        padding:
+            13px 15px;
     }
 
     .titulo{
 
-        margin-top:30px;
+        margin-top:35px;
     }
 
-    .acoes{
+    .lista-header{
+
+        align-items:flex-start;
 
         flex-direction:column;
     }
 
-    .btn{
+    .contador{
 
-        width:100%;
+        align-self:flex-start;
     }
 
+}
+
+
+/* =====================================================
+   ACESSIBILIDADE
+===================================================== */
+
+.menu a:focus-visible{
+
+    outline:
+        3px solid #ffd700;
+
+    outline-offset:3px;
 }
 
 </style>
@@ -1033,9 +775,9 @@ footer{
 <body>
 
 
-<!-- =========================
-     CABEÇALHO
-========================= -->
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header>
 
@@ -1060,8 +802,12 @@ footer{
     <div
         class="menu-toggle"
         onclick="toggleMenu()"
+        aria-label="Abrir menu"
+        aria-expanded="false"
     >
-        ☰
+
+        <i class="fa-solid fa-bars"></i>
+
     </div>
 
 
@@ -1074,37 +820,66 @@ footer{
 
             <li>
                 <a href="index.html">
-                    Home
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>Home</span>
+
                 </a>
             </li>
+
 
             <li>
                 <a href="historia.html">
-                    História
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                    <span>História</span>
+
                 </a>
             </li>
+
 
             <li>
                 <a href="esportiva.html">
-                    Esportiva
+
+                    <i class="fa-solid fa-futbol"></i>
+
+                    <span>Esportiva</span>
+
                 </a>
             </li>
+
 
             <li>
                 <a href="evento.html">
-                    Eventos
+
+                    <i class="fa-solid fa-calendar-days"></i>
+
+                    <span>Eventos</span>
+
                 </a>
             </li>
+
 
             <li>
                 <a href="estatuto.html">
-                    Estatuto
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                    <span>Estatuto</span>
+
                 </a>
             </li>
 
+
             <li>
                 <a href="diretoria.html">
-                    Diretoria
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <span>Diretoria</span>
+
                 </a>
             </li>
 
@@ -1115,276 +890,34 @@ footer{
 </header>
 
 
-
-<!-- =========================
+<!-- =====================================================
      TÍTULO
-========================= -->
+===================================================== -->
 
 <h1 class="titulo">
+
     <i class="fa-solid fa-calendar-days"></i>
+
     Eventos
+
 </h1>
 
+
 <p class="subtitulo">
-    Gerencie os eventos da ASSGA
+
+    <i class="fa-solid fa-circle-info"></i>
+
+    Confira os eventos da ASSGA
+
 </p>
 
 
-
-<!-- =========================
-     CONTAINER
-========================= -->
+<!-- =====================================================
+     CONTEÚDO PÚBLICO
+===================================================== -->
 
 <main class="container">
 
-
-    <!-- =========================
-         CADASTRO
-    ========================= -->
-
-    <section class="painel">
-
-        <div class="painel-titulo">
-
-            <i class="fa-solid fa-calendar-plus"></i>
-
-            <span id="tituloFormulario">
-                Cadastro de Evento
-            </span>
-
-        </div>
-
-
-        <form
-            id="formEvento"
-        >
-
-            <input
-                type="hidden"
-                id="eventoId"
-            >
-
-
-            <div class="form-grid">
-
-
-                <!-- NOME -->
-
-                <div class="campo campo-completo">
-
-                    <label for="nome">
-                        Nome do evento
-                    </label>
-
-                    <input
-                        type="text"
-                        id="nome"
-                        placeholder="Digite o nome do evento"
-                        required
-                    >
-
-                </div>
-
-
-                <!-- DATA -->
-
-                <div class="campo">
-
-                    <label for="data">
-
-                        <i class="fa-solid fa-calendar"></i>
-
-                        Data
-
-                    </label>
-
-                    <input
-                        type="date"
-                        id="data"
-                        required
-                    >
-
-                </div>
-
-
-                <!-- LOCAL -->
-
-                <div class="campo">
-
-                    <label for="local">
-
-                        <i class="fa-solid fa-location-dot"></i>
-
-                        Local
-
-                    </label>
-
-                    <input
-                        type="text"
-                        id="local"
-                        placeholder="Local do evento"
-                        required
-                    >
-
-                </div>
-
-
-                <!-- VAGAS -->
-
-                <div class="campo">
-
-                    <label for="vagas">
-
-                        <i class="fa-solid fa-users"></i>
-
-                        Vagas
-
-                    </label>
-
-                    <input
-                        type="number"
-                        id="vagas"
-                        min="0"
-                        placeholder="Quantidade de vagas"
-                        required
-                    >
-
-                </div>
-
-
-                <!-- VALOR -->
-
-                <div class="campo">
-
-                    <label for="valor">
-
-                        <i class="fa-solid fa-money-bill"></i>
-
-                        Valor
-
-                    </label>
-
-                    <input
-                        type="number"
-                        id="valor"
-                        min="0"
-                        step="0.01"
-                        placeholder="0,00"
-                    >
-
-                </div>
-
-
-                <!-- STATUS -->
-
-                <div class="campo">
-
-                    <label for="status">
-
-                        <i class="fa-solid fa-circle-info"></i>
-
-                        Status
-
-                    </label>
-
-                    <select
-                        id="status"
-                        required
-                    >
-
-                        <option value="aberto">
-                            Inscrições abertas
-                        </option>
-
-                        <option value="encerrado">
-                            Encerrado
-                        </option>
-
-                        <option value="breve">
-                            Em breve
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <!-- DESCRIÇÃO -->
-
-                <div class="campo campo-completo">
-
-                    <label for="descricao">
-
-                        <i class="fa-solid fa-align-left"></i>
-
-                        Descrição
-
-                    </label>
-
-                    <textarea
-                        id="descricao"
-                        placeholder="Digite a descrição do evento..."
-                    ></textarea>
-
-                </div>
-
-
-            </div>
-
-
-            <!-- BOTÕES -->
-
-            <div class="acoes">
-
-                <button
-                    type="submit"
-                    class="btn btn-salvar"
-                >
-
-                    <i class="fa-solid fa-save"></i>
-
-                    Salvar Evento
-
-                </button>
-
-
-                <button
-                    type="button"
-                    class="btn btn-visualizar"
-                    onclick="abrirVisualizacao()"
-                >
-
-                    <i class="fa-solid fa-eye"></i>
-
-                    Visualizar
-
-                </button>
-
-
-                <button
-                    type="button"
-                    class="btn btn-cancelar"
-                    id="btnCancelar"
-                    onclick="cancelarEdicao()"
-                >
-
-                    <i class="fa-solid fa-xmark"></i>
-
-                    Cancelar
-
-                </button>
-
-            </div>
-
-        </form>
-
-    </section>
-
-
-
-    <!-- =========================
-         LISTA
-    ========================= -->
 
     <section>
 
@@ -1392,7 +925,7 @@ footer{
 
             <h2>
 
-                <i class="fa-solid fa-list"></i>
+                <i class="fa-solid fa-list-check"></i>
 
                 Eventos cadastrados
 
@@ -1411,8 +944,7 @@ footer{
         <div
             class="eventos"
             id="listaEventos"
-        >
-        </div>
+        ></div>
 
     </section>
 
@@ -1420,202 +952,216 @@ footer{
 </main>
 
 
-
-<!-- =========================
-     MODAL VISUALIZAÇÃO
-========================= -->
-
-<div
-    class="modal"
-    id="modal"
->
-
-    <div class="modal-conteudo">
-
-        <span
-            class="fechar"
-            onclick="fecharVisualizacao()"
-        >
-            &times;
-        </span>
-
-
-        <h2>
-            <i class="fa-solid fa-eye"></i>
-            Visualização do Evento
-        </h2>
-
-
-        <div
-            class="preview"
-            id="preview"
-        >
-        </div>
-
-    </div>
-
-</div>
-
-
-
-<!-- =========================
+<!-- =====================================================
      FOOTER
-========================= -->
+===================================================== -->
 
 <footer>
 
-    © 2026 ASSGA - Todos os direitos reservados
+    <div class="footer-logo">
+
+        <i class="fa-solid fa-people-group"></i>
+
+        ASSGA
+
+    </div>
+
+
+    <p class="footer-info">
+
+        <i class="fa-solid fa-location-dot"></i>
+
+        São Gonçalo do Amarante - RN
+
+    </p>
+
+
+    <p class="footer-info">
+
+        <i class="fa-solid fa-calendar-check"></i>
+
+        Eventos da Associação
+
+    </p>
+
+
+    <div class="footer-redes">
+
+        <a
+            href="#"
+            aria-label="Facebook"
+        >
+            <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+
+        <a
+            href="#"
+            aria-label="Instagram"
+        >
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+
+        <a
+            href="#"
+            aria-label="WhatsApp"
+        >
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+
+        <a
+            href="#"
+            aria-label="YouTube"
+        >
+            <i class="fa-brands fa-youtube"></i>
+        </a>
+
+    </div>
+
+
+    <p class="copyright">
+
+        <i class="fa-regular fa-copyright"></i>
+
+        2026 ASSGA - Todos os direitos reservados
+
+    </p>
 
 </footer>
 
 
-
 <script>
 
-/* =========================
+/* =====================================================
    MENU MOBILE
-========================= */
+===================================================== */
 
 function toggleMenu(){
 
-    document
-        .getElementById("menu")
-        .classList
-        .toggle("active");
+    const menu =
+        document.getElementById("menu");
+
+    const toggle =
+        document.querySelector(".menu-toggle");
+
+    menu.classList.toggle("active");
+
+    toggle.setAttribute(
+        "aria-expanded",
+        menu.classList.contains("active")
+    );
 
 }
 
 
-/* =========================
-   BANCO LOCAL
-========================= */
+document
+    .querySelectorAll(".menu a")
+    .forEach(function(link){
 
-let eventos =
-    JSON.parse(
-        localStorage.getItem("assga_eventos")
-    ) || [];
+        link.addEventListener(
+            "click",
+            function(){
 
+                document
+                    .getElementById("menu")
+                    .classList
+                    .remove("active");
 
-/* =========================
-   FORMULÁRIO
-========================= */
-
-const form =
-    document.getElementById(
-        "formEvento"
-    );
-
-
-form.addEventListener(
-    "submit",
-    function(event){
-
-        event.preventDefault();
-
-
-        const id =
-            document.getElementById(
-                "eventoId"
-            ).value;
-
-
-        const evento = {
-
-            id:
-                id ||
-                Date.now().toString(),
-
-            nome:
-                document.getElementById(
-                    "nome"
-                ).value,
-
-            data:
-                document.getElementById(
-                    "data"
-                ).value,
-
-            local:
-                document.getElementById(
-                    "local"
-                ).value,
-
-            vagas:
-                document.getElementById(
-                    "vagas"
-                ).value,
-
-            valor:
-                document.getElementById(
-                    "valor"
-                ).value || "0",
-
-            status:
-                document.getElementById(
-                    "status"
-                ).value,
-
-            descricao:
-                document.getElementById(
-                    "descricao"
-                ).value
-
-        };
-
-
-        if(id){
-
-            const index =
-                eventos.findIndex(
-                    item =>
-                        item.id == id
-                );
-
-            if(index !== -1){
-
-                eventos[index] =
-                    evento;
+                document
+                    .querySelector(".menu-toggle")
+                    .setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
 
             }
-
-        }else{
-
-            eventos.push(evento);
-
-        }
-
-
-        salvarEventos();
-
-        limparFormulario();
-
-        mostrarEventos();
-
-        alert(
-            "Evento salvo com sucesso!"
         );
 
+    });
+
+
+/* =====================================================
+   EVENTOS PÚBLICOS
+===================================================== */
+
+/*
+   IMPORTANTE:
+
+   Esta página NÃO possui:
+
+   - cadastro
+   - edição
+   - exclusão
+   - formulário
+   - botão salvar
+   - botão editar
+   - botão excluir
+
+   O gerenciamento deverá ficar somente
+   no Admin Painel.
+
+   Enquanto o Django não estiver conectado,
+   os eventos abaixo servem apenas como
+   exemplo de visualização.
+*/
+
+
+const eventos = [
+
+    {
+        nome:
+            "Campeonato de Futsal ASSGA",
+
+        data:
+            "2026-09-15",
+
+        local:
+            "Ginásio Municipal",
+
+        vagas:
+            20,
+
+        valor:
+            0,
+
+        status:
+            "aberto",
+
+        descricao:
+            "Campeonato de futsal da ASSGA com participação de equipes da comunidade."
+    },
+
+    {
+        nome:
+            "Encontro da Comunidade Surda",
+
+        data:
+            "2026-10-05",
+
+        local:
+            "São Gonçalo do Amarante - RN",
+
+        vagas:
+            100,
+
+        valor:
+            0,
+
+        status:
+            "breve",
+
+        descricao:
+            "Encontro de integração, cultura, esporte e acessibilidade."
     }
-);
+
+];
 
 
-/* =========================
-   SALVAR
-========================= */
-
-function salvarEventos(){
-
-    localStorage.setItem(
-        "assga_eventos",
-        JSON.stringify(eventos)
-    );
-
-}
-
-
-/* =========================
+/* =====================================================
    MOSTRAR EVENTOS
-========================= */
+===================================================== */
 
 function mostrarEventos(){
 
@@ -1623,6 +1169,7 @@ function mostrarEventos(){
         document.getElementById(
             "listaEventos"
         );
+
 
     const contador =
         document.getElementById(
@@ -1634,8 +1181,8 @@ function mostrarEventos(){
         eventos.length +
         (
             eventos.length === 1
-            ? " evento"
-            : " eventos"
+                ? " evento"
+                : " eventos"
         );
 
 
@@ -1645,14 +1192,16 @@ function mostrarEventos(){
 
             <div class="sem-eventos">
 
-                <i class="fa-solid fa-calendar-xmark"></i>
+                <i
+                    class="fa-solid fa-calendar-xmark"
+                ></i>
 
                 <h3>
                     Nenhum evento cadastrado
                 </h3>
 
                 <p>
-                    Cadastre o primeiro evento da ASSGA.
+                    No momento não existem eventos cadastrados.
                 </p>
 
             </div>
@@ -1665,40 +1214,58 @@ function mostrarEventos(){
 
 
     lista.innerHTML =
-        eventos.map(
-            evento =>
-                criarCard(evento)
-        ).join("");
+        eventos
+            .map(
+                evento =>
+                    criarCard(evento)
+            )
+            .join("");
 
 }
 
 
-/* =========================
+/* =====================================================
    CRIAR CARD
-========================= */
+===================================================== */
 
 function criarCard(evento){
 
-    let statusTexto = "";
+    let statusTexto =
+        "";
+
+    let statusIcone =
+        "";
+
 
     if(evento.status === "aberto"){
 
         statusTexto =
             "Inscrições abertas";
 
+        statusIcone =
+            '<i class="fa-solid fa-circle-check"></i>';
+
     }
+
 
     if(evento.status === "encerrado"){
 
         statusTexto =
             "Encerrado";
 
+        statusIcone =
+            '<i class="fa-solid fa-circle-xmark"></i>';
+
     }
+
 
     if(evento.status === "breve"){
 
         statusTexto =
             "Em breve";
+
+        statusIcone =
+            '<i class="fa-solid fa-clock"></i>';
 
     }
 
@@ -1712,7 +1279,9 @@ function criarCard(evento){
     const valorFormatado =
         Number(evento.valor) > 0
 
-        ? Number(evento.valor)
+        ?
+
+        Number(evento.valor)
             .toLocaleString(
                 "pt-BR",
                 {
@@ -1721,25 +1290,37 @@ function criarCard(evento){
                 }
             )
 
-        : "Gratuito";
+        :
+
+        "Gratuito";
 
 
     return `
 
-        <article
-            class="evento-card"
-        >
+        <article class="evento-card">
+
 
             <div class="evento-topo">
 
                 <h3>
+
+                    <i
+                        class="fa-solid fa-calendar-day"
+                    ></i>
+
                     ${escapar(evento.nome)}
+
                 </h3>
+
 
                 <span
                     class="status ${evento.status}"
                 >
+
+                    ${statusIcone}
+
                     ${statusTexto}
+
                 </span>
 
             </div>
@@ -1750,10 +1331,18 @@ function criarCard(evento){
 
                 <div class="info-item">
 
-                    <i class="fa-solid fa-calendar"></i>
+                    <i
+                        class="fa-solid fa-calendar-days"
+                    ></i>
 
                     <span>
+
+                        <strong>
+                            Data:
+                        </strong>
+
                         ${dataFormatada}
+
                     </span>
 
                 </div>
@@ -1761,10 +1350,18 @@ function criarCard(evento){
 
                 <div class="info-item">
 
-                    <i class="fa-solid fa-location-dot"></i>
+                    <i
+                        class="fa-solid fa-location-dot"
+                    ></i>
 
                     <span>
+
+                        <strong>
+                            Local:
+                        </strong>
+
                         ${escapar(evento.local)}
+
                     </span>
 
                 </div>
@@ -1772,10 +1369,18 @@ function criarCard(evento){
 
                 <div class="info-item">
 
-                    <i class="fa-solid fa-users"></i>
+                    <i
+                        class="fa-solid fa-users"
+                    ></i>
 
                     <span>
-                        ${evento.vagas} vagas
+
+                        <strong>
+                            Vagas:
+                        </strong>
+
+                        ${evento.vagas}
+
                     </span>
 
                 </div>
@@ -1783,64 +1388,42 @@ function criarCard(evento){
 
                 <div class="info-item">
 
-                    <i class="fa-solid fa-money-bill"></i>
+                    <i
+                        class="fa-solid fa-money-bill-wave"
+                    ></i>
 
                     <span>
+
+                        <strong>
+                            Valor:
+                        </strong>
+
                         ${valorFormatado}
+
                     </span>
 
                 </div>
 
 
-                ${
-                    evento.descricao
+                <div class="evento-descricao">
 
-                    ? `
+                    <i
+                        class="fa-solid fa-align-left"
+                    ></i>
 
-                    <div class="evento-descricao">
+                    <strong>
+                        Descrição:
+                    </strong>
 
-                        ${escapar(
-                            evento.descricao
-                        )}
+                    <br>
 
-                    </div>
+                    ${escapar(evento.descricao)}
 
-                    `
-
-                    : ""
-
-                }
+                </div>
 
 
             </div>
 
-
-            <div class="evento-acoes">
-
-                <button
-                    class="btn btn-editar"
-                    onclick="editarEvento('${evento.id}')"
-                >
-
-                    <i class="fa-solid fa-pen"></i>
-
-                    Editar
-
-                </button>
-
-
-                <button
-                    class="btn btn-excluir"
-                    onclick="excluirEvento('${evento.id}')"
-                >
-
-                    <i class="fa-solid fa-trash"></i>
-
-                    Excluir
-
-                </button>
-
-            </div>
 
         </article>
 
@@ -1849,9 +1432,9 @@ function criarCard(evento){
 }
 
 
-/* =========================
+/* =====================================================
    FORMATAR DATA
-========================= */
+===================================================== */
 
 function formatarData(data){
 
@@ -1884,405 +1467,9 @@ function formatarData(data){
 }
 
 
-/* =========================
-   EDITAR
-========================= */
-
-function editarEvento(id){
-
-    const evento =
-        eventos.find(
-            item =>
-                item.id == id
-        );
-
-
-    if(!evento){
-
-        return;
-
-    }
-
-
-    document.getElementById(
-        "eventoId"
-    ).value =
-        evento.id;
-
-
-    document.getElementById(
-        "nome"
-    ).value =
-        evento.nome;
-
-
-    document.getElementById(
-        "data"
-    ).value =
-        evento.data;
-
-
-    document.getElementById(
-        "local"
-    ).value =
-        evento.local;
-
-
-    document.getElementById(
-        "vagas"
-    ).value =
-        evento.vagas;
-
-
-    document.getElementById(
-        "valor"
-    ).value =
-        evento.valor;
-
-
-    document.getElementById(
-        "status"
-    ).value =
-        evento.status;
-
-
-    document.getElementById(
-        "descricao"
-    ).value =
-        evento.descricao;
-
-
-    document.getElementById(
-        "tituloFormulario"
-    ).innerHTML = `
-
-        <i class="fa-solid fa-pen"></i>
-
-        Editar Evento
-
-    `;
-
-
-    document.getElementById(
-        "btnCancelar"
-    ).style.display =
-        "inline-flex";
-
-
-    window.scrollTo({
-
-        top:0,
-
-        behavior:"smooth"
-
-    });
-
-}
-
-
-/* =========================
-   CANCELAR EDIÇÃO
-========================= */
-
-function cancelarEdicao(){
-
-    limparFormulario();
-
-}
-
-
-/* =========================
-   LIMPAR FORMULÁRIO
-========================= */
-
-function limparFormulario(){
-
-    form.reset();
-
-
-    document.getElementById(
-        "eventoId"
-    ).value = "";
-
-
-    document.getElementById(
-        "tituloFormulario"
-    ).innerHTML = `
-
-        <i class="fa-solid fa-calendar-plus"></i>
-
-        Cadastro de Evento
-
-    `;
-
-
-    document.getElementById(
-        "btnCancelar"
-    ).style.display =
-        "none";
-
-}
-
-
-/* =========================
-   EXCLUIR
-========================= */
-
-function excluirEvento(id){
-
-    const evento =
-        eventos.find(
-            item =>
-                item.id == id
-        );
-
-
-    if(!evento){
-
-        return;
-
-    }
-
-
-    const confirmar =
-        confirm(
-            "Deseja realmente excluir o evento \"" +
-            evento.nome +
-            "\"?"
-        );
-
-
-    if(!confirmar){
-
-        return;
-
-    }
-
-
-    eventos =
-        eventos.filter(
-            item =>
-                item.id != id
-        );
-
-
-    salvarEventos();
-
-    mostrarEventos();
-
-
-    alert(
-        "Evento excluído com sucesso!"
-    );
-
-}
-
-
-/* =========================
-   VISUALIZAR
-========================= */
-
-function abrirVisualizacao(){
-
-    const nome =
-        document.getElementById(
-            "nome"
-        ).value;
-
-
-    const data =
-        document.getElementById(
-            "data"
-        ).value;
-
-
-    const local =
-        document.getElementById(
-            "local"
-        ).value;
-
-
-    const vagas =
-        document.getElementById(
-            "vagas"
-        ).value;
-
-
-    const valor =
-        document.getElementById(
-            "valor"
-        ).value;
-
-
-    const status =
-        document.getElementById(
-            "status"
-        ).value;
-
-
-    const descricao =
-        document.getElementById(
-            "descricao"
-        ).value;
-
-
-    let statusTexto =
-        "Inscrições abertas";
-
-
-    if(status === "encerrado"){
-
-        statusTexto =
-            "Encerrado";
-
-    }
-
-
-    if(status === "breve"){
-
-        statusTexto =
-            "Em breve";
-
-    }
-
-
-    const valorFormatado =
-        Number(valor) > 0
-
-        ? Number(valor)
-            .toLocaleString(
-                "pt-BR",
-                {
-                    style:"currency",
-                    currency:"BRL"
-                }
-            )
-
-        : "Gratuito";
-
-
-    document.getElementById(
-        "preview"
-    ).innerHTML = `
-
-        <h3
-            style="
-                color:#003366;
-                font-size:1.5rem;
-                margin-bottom:20px;
-            "
-        >
-            ${escapar(nome) ||
-                "Nome do evento"}
-        </h3>
-
-
-        <p>
-            <strong>Status:</strong>
-            ${statusTexto}
-        </p>
-
-
-        <p>
-            <strong>Data:</strong>
-            ${
-                data
-                ? formatarData(data)
-                : "Não informada"
-            }
-        </p>
-
-
-        <p>
-            <strong>Local:</strong>
-            ${escapar(local) ||
-                "Não informado"}
-        </p>
-
-
-        <p>
-            <strong>Vagas:</strong>
-            ${vagas ||
-                "Não informado"}
-        </p>
-
-
-        <p>
-            <strong>Valor:</strong>
-            ${valorFormatado}
-        </p>
-
-
-        <p
-            style="
-                margin-top:20px;
-            "
-        >
-
-            <strong>
-                Descrição:
-            </strong>
-
-        </p>
-
-
-        <p>
-
-            ${
-                escapar(descricao) ||
-                "Nenhuma descrição informada."
-            }
-
-        </p>
-
-    `;
-
-
-    document.getElementById(
-        "modal"
-    ).style.display =
-        "flex";
-
-}
-
-
-/* =========================
-   FECHAR MODAL
-========================= */
-
-function fecharVisualizacao(){
-
-    document.getElementById(
-        "modal"
-    ).style.display =
-        "none";
-
-}
-
-
-window.addEventListener(
-    "click",
-    function(event){
-
-        const modal =
-            document.getElementById(
-                "modal"
-            );
-
-
-        if(event.target === modal){
-
-            fecharVisualizacao();
-
-        }
-
-    }
-);
-
-
-/* =========================
-   ESCAPAR HTML
-========================= */
+/* =====================================================
+   SEGURANÇA HTML
+===================================================== */
 
 function escapar(texto){
 
@@ -2294,22 +1481,27 @@ function escapar(texto){
 
 
     return String(texto)
+
         .replace(
             /&/g,
             "&amp;"
         )
+
         .replace(
             /</g,
             "&lt;"
         )
+
         .replace(
             />/g,
             "&gt;"
         )
+
         .replace(
             /"/g,
             "&quot;"
         )
+
         .replace(
             /'/g,
             "&#039;"
@@ -2318,9 +1510,9 @@ function escapar(texto){
 }
 
 
-/* =========================
+/* =====================================================
    INICIAR
-========================= */
+===================================================== */
 
 document.addEventListener(
     "DOMContentLoaded",
@@ -2335,4 +1527,5 @@ document.addEventListener(
 
 
 </body>
+
 </html>

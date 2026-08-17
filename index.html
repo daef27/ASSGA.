@@ -10,7 +10,22 @@
     content="width=device-width, initial-scale=1.0"
 >
 
+<meta
+    name="description"
+    content="ASSGA - Associação Desportiva. Esporte, integração, eventos e participação social."
+>
+
+<meta
+    name="theme-color"
+    content="#003366"
+>
+
 <title>ASSGA - Associação Desportiva</title>
+
+
+<!-- =====================================================
+     FAVICON
+===================================================== -->
 
 <link
     rel="icon"
@@ -24,10 +39,16 @@
     type="image/jpeg"
 >
 
+
+<!-- =====================================================
+     FONT AWESOME
+===================================================== -->
+
 <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 >
+
 
 <style>
 
@@ -39,7 +60,13 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+
+    font-family:
+        'Segoe UI',
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
 }
 
 html{
@@ -47,12 +74,15 @@ html{
 }
 
 body{
+
     background:
         linear-gradient(
             135deg,
             #f5f7fa 0%,
             #c3cfe2 100%
         );
+
+    color:#333;
 
     overflow-x:hidden;
 }
@@ -63,6 +93,7 @@ body{
 ===================================================== */
 
 h2{
+
     text-align:center;
 
     margin:45px 0 35px;
@@ -75,6 +106,13 @@ h2{
 
     text-shadow:
         2px 2px 4px rgba(0,0,0,.1);
+}
+
+h2 i{
+
+    color:#004aad;
+
+    margin-right:10px;
 }
 
 
@@ -111,6 +149,11 @@ header{
         0 8px 32px rgba(0,51,102,.3);
 }
 
+
+/* =====================================================
+   LOGO
+===================================================== */
+
 .logo-area{
 
     display:flex;
@@ -131,6 +174,13 @@ header{
         scale(1.05);
 }
 
+.logo-area a{
+
+    display:flex;
+
+    text-decoration:none;
+}
+
 .logo-area img{
 
     width:56px;
@@ -140,6 +190,8 @@ header{
     object-fit:cover;
 
     border-radius:8px;
+
+    background:#fff;
 
     box-shadow:
         0 4px 12px rgba(0,0,0,.2);
@@ -180,7 +232,7 @@ header{
 
     grid-auto-flow:column;
 
-    gap:15px;
+    gap:10px;
 
     margin-left:auto;
 
@@ -188,6 +240,7 @@ header{
 }
 
 .menu li{
+
     position:relative;
 }
 
@@ -203,7 +256,7 @@ header{
 
     font-weight:700;
 
-    padding:12px 20px;
+    padding:12px 17px;
 
     border-radius:25px;
 
@@ -211,28 +264,26 @@ header{
         all .4s ease;
 }
 
-@media (hover:hover){
 
-    .menu a:hover{
+/* =====================================================
+   ÍCONES DO MENU — BRANCOS
+===================================================== */
 
-        color:#003366;
+.menu a i{
 
-        background:
-            linear-gradient(
-                135deg,
-                #ffd700,
-                #ffed4e
-            );
+    margin-right:7px;
 
-        box-shadow:
-            0 8px 24px rgba(255,215,0,.4);
+    color:#fff;
 
-        transform:
-            translateY(-3px);
-    }
+    transition:.3s;
 }
 
-.menu a:focus{
+
+/* =====================================================
+   HOVER DO MENU
+===================================================== */
+
+.menu a:hover{
 
     color:#003366;
 
@@ -242,6 +293,20 @@ header{
             #ffd700,
             #ffed4e
         );
+
+    box-shadow:
+        0 8px 24px rgba(255,215,0,.4);
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* ÍCONE CONTINUA BRANCO NO HOVER */
+
+.menu a:hover i{
+
+    color:#fff;
 }
 
 
@@ -253,20 +318,42 @@ header{
 
     display:none;
 
-    font-size:28px;
+    width:45px;
+
+    height:45px;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:25px;
 
     cursor:pointer;
 
     margin-left:auto;
 
-    transition:
-        transform .3s ease;
+    border:0;
+
+    border-radius:10px;
+
+    color:#fff;
+
+    background:transparent;
+
+    transition:.3s;
 }
 
 .menu-toggle:hover{
 
-    transform:
-        rotate(90deg);
+    background:
+        rgba(255,255,255,.12);
+}
+
+.menu-toggle i{
+
+    pointer-events:none;
+
+    color:#fff;
 }
 
 
@@ -290,6 +377,24 @@ header{
         0 10px 35px rgba(0,0,0,.25);
 }
 
+.slider::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.05),
+            rgba(0,0,0,.30)
+        );
+
+    pointer-events:none;
+}
+
 .slider img{
 
     width:100%;
@@ -303,13 +408,13 @@ header{
     display:block;
 
     transition:
-        opacity .4s ease,
+        opacity .5s ease,
         transform .5s ease;
 }
 
 
 /* =====================================================
-   INFORMAÇÃO DO SLIDER
+   INFORMAÇÃO SLIDER
 ===================================================== */
 
 .slider-info{
@@ -324,18 +429,18 @@ header{
         translateX(-50%);
 
     background:
-        rgba(0,0,0,.55);
+        rgba(0,0,0,.60);
 
     backdrop-filter:
         blur(8px);
 
     color:#fff;
 
-    padding:10px 22px;
+    padding:12px 24px;
 
     border-radius:30px;
 
-    font-size:14px;
+    font-size:15px;
 
     font-weight:700;
 
@@ -346,6 +451,16 @@ header{
     text-align:center;
 
     white-space:nowrap;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,.25);
+}
+
+.slider-info i{
+
+    color:#ffd700;
+
+    margin-right:6px;
 }
 
 
@@ -364,7 +479,7 @@ header{
 
 
 /* =====================================================
-   CARD DA NOTÍCIA
+   CARD NOTÍCIA
 ===================================================== */
 
 .noticia-item{
@@ -413,7 +528,7 @@ header{
 
 
 /* =====================================================
-   IMAGEM DA NOTÍCIA
+   IMAGEM NOTÍCIA
 ===================================================== */
 
 .noticia-imagem{
@@ -475,6 +590,13 @@ header{
     font-weight:900;
 }
 
+.texto h3 i{
+
+    color:#004aad;
+
+    margin-right:8px;
+}
+
 .texto data{
 
     display:block;
@@ -488,6 +610,13 @@ header{
     margin-bottom:18px;
 }
 
+.texto data i{
+
+    color:#003366;
+
+    margin-right:5px;
+}
+
 .texto p{
 
     line-height:1.7;
@@ -499,6 +628,13 @@ header{
     font-size:15px;
 }
 
+.texto p i{
+
+    color:#004aad;
+
+    margin-right:5px;
+}
+
 .texto p strong{
 
     color:#003366;
@@ -506,7 +642,7 @@ header{
 
 
 /* =====================================================
-   INFORMAÇÕES DO EVENTO
+   EVENTO INFO
 ===================================================== */
 
 .evento-info{
@@ -523,7 +659,7 @@ header{
 
 .evento-info-item{
 
-    padding:13px 15px;
+    padding:14px 15px;
 
     background:
         linear-gradient(
@@ -556,6 +692,15 @@ header{
 
     box-shadow:
         0 5px 15px rgba(0,74,173,.12);
+}
+
+.evento-info-item i{
+
+    color:#004aad;
+
+    width:20px;
+
+    margin-right:5px;
 }
 
 .evento-info-item strong{
@@ -598,6 +743,11 @@ header{
         0 5px 15px rgba(255,215,0,.2);
 }
 
+.preco-evento i{
+
+    margin-right:7px;
+}
+
 
 /* =====================================================
    AVISO
@@ -621,6 +771,11 @@ header{
     font-size:14px;
 
     font-weight:700;
+}
+
+.aviso-vagas i{
+
+    margin-right:6px;
 }
 
 
@@ -755,6 +910,46 @@ header{
     border-top-color:#ffd700;
 }
 
+.info-card .icon{
+
+    width:65px;
+
+    height:65px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:0 auto 12px;
+
+    border-radius:50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #003366,
+            #004aad
+        );
+
+    color:#ffd700;
+
+    font-size:28px;
+
+    box-shadow:
+        0 8px 20px rgba(0,51,102,.25);
+
+    transition:.4s;
+}
+
+.info-card:hover .icon{
+
+    transform:
+        scale(1.15)
+        rotate(8deg);
+}
+
 .info-card h3{
 
     color:#003366;
@@ -762,6 +957,13 @@ header{
     margin:12px 0;
 
     font-size:1.3em;
+}
+
+.info-card h3 i{
+
+    color:#004aad;
+
+    margin-right:6px;
 }
 
 .info-card p{
@@ -773,32 +975,29 @@ header{
     word-break:break-word;
 }
 
-.icon{
-
-    font-size:40px;
-
-    margin-bottom:10px;
-
-    transition:
-        transform .4s ease;
-}
-
-.info-card:hover .icon{
-
-    transform:
-        scale(1.2)
-        rotate(10deg);
-}
-
 .info-card a{
 
-    display:inline-block;
+    display:inline-flex;
 
-    color:#004aad;
+    align-items:center;
 
-    margin-top:12px;
+    justify-content:center;
 
-    font-size:22px;
+    width:42px;
+
+    height:42px;
+
+    color:#fff;
+
+    background:#004aad;
+
+    margin-top:15px;
+
+    border-radius:50%;
+
+    font-size:18px;
+
+    text-decoration:none;
 
     transition:
         all .3s ease;
@@ -806,10 +1005,12 @@ header{
 
 .info-card a:hover{
 
-    color:#ffd700;
+    color:#003366;
+
+    background:#ffd700;
 
     transform:
-        scale(1.3);
+        scale(1.15);
 }
 
 
@@ -854,32 +1055,63 @@ footer{
 
     font-size:13px;
 
-    line-height:1.7;
+    line-height:1.8;
 
     opacity:.9;
 }
 
+.footer-copy i{
+
+    color:#ffd700;
+
+    margin-right:5px;
+}
+
+.footer-redes{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+}
+
 .footer-redes a{
+
+    width:45px;
+
+    height:45px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
 
     color:#fff;
 
-    margin-left:15px;
+    font-size:21px;
 
-    font-size:25px;
+    border-radius:50%;
+
+    background:
+        rgba(255,255,255,.10);
+
+    text-decoration:none;
 
     transition:
         all .3s ease;
-
-    display:inline-block;
 }
 
 .footer-redes a:hover{
 
-    color:#ffd700;
+    color:#003366;
+
+    background:#ffd700;
 
     transform:
         translateY(-5px)
-        scale(1.2);
+        scale(1.1);
 }
 
 
@@ -904,12 +1136,6 @@ footer{
 
         object-position:center;
     }
-
-    .noticia-item{
-
-        flex-direction:row;
-    }
-
 }
 
 
@@ -932,14 +1158,21 @@ and (max-width:1023px){
 
     .menu{
 
-        gap:8px;
+        gap:4px;
     }
 
     .menu a{
 
-        font-size:13px;
+        font-size:12px;
 
-        padding:10px 12px;
+        padding:10px 9px;
+    }
+
+    .menu a i{
+
+        margin-right:4px;
+
+        color:#fff;
     }
 
     .slider{
@@ -981,7 +1214,6 @@ and (max-width:1023px){
 
         width:45%;
     }
-
 }
 
 
@@ -1015,24 +1247,30 @@ and (max-width:1023px){
 
     .menu-toggle{
 
-        display:block;
+        display:flex;
     }
 
     .menu{
 
         display:none;
 
-        flex-direction:column;
-
         position:absolute;
 
-        top:75px;
+        top:76px;
 
         left:15px;
 
         right:15px;
 
         width:calc(100% - 30px);
+
+        grid-auto-flow:row;
+
+        gap:4px;
+
+        margin:0;
+
+        padding:15px;
 
         background:
             linear-gradient(
@@ -1041,33 +1279,45 @@ and (max-width:1023px){
                 rgba(0,74,173,.98)
             );
 
-        border-radius:12px;
-
-        padding:15px;
+        border-radius:15px;
 
         box-shadow:
-            0 10px 30px rgba(0,0,0,.25);
+            0 15px 35px rgba(0,0,0,.30);
     }
 
     .menu.active{
 
-        display:flex;
+        display:grid;
     }
 
     .menu li{
 
-        padding:5px 0;
-
-        text-align:center;
-
         width:100%;
+
+        padding:2px 0;
     }
 
     .menu a{
 
         width:100%;
 
-        padding:12px;
+        text-align:left;
+
+        padding:13px 15px;
+    }
+
+    .menu a i{
+
+        width:25px;
+
+        text-align:center;
+
+        color:#fff;
+    }
+
+    .menu a:hover i{
+
+        color:#fff;
     }
 
     .slider{
@@ -1172,18 +1422,12 @@ and (max-width:1023px){
         margin-top:15px;
     }
 
-    .footer-redes a{
-
-        margin:0 8px;
-    }
-
     h2{
 
         font-size:1.8em;
 
         margin:30px 0;
     }
-
 }
 
 
@@ -1226,7 +1470,6 @@ and (max-width:1023px){
 
         height:220px;
     }
-
 }
 
 
@@ -1234,12 +1477,25 @@ and (max-width:1023px){
    ACESSIBILIDADE
 ===================================================== */
 
-a:focus{
+a:focus,
+button:focus{
 
     outline:
         3px solid #ffd700;
 
     outline-offset:3px;
+}
+
+@media(prefers-reduced-motion:reduce){
+
+    *{
+
+        scroll-behavior:auto !important;
+
+        transition:none !important;
+
+        animation:none !important;
+    }
 }
 
 </style>
@@ -1258,7 +1514,10 @@ a:focus{
 
     <div class="logo-area">
 
-        <a href="index.html">
+        <a
+            href="index.html"
+            aria-label="Página inicial ASSGA"
+        >
 
             <img
                 src="src/imagens/Assga_foto.jpg"
@@ -1274,19 +1533,31 @@ a:focus{
     </div>
 
 
-    <div
+    <!-- =================================================
+         BOTÃO MENU MOBILE
+    ================================================== -->
+
+    <button
         class="menu-toggle"
         id="menuToggle"
         onclick="toggleMenu()"
         aria-label="Abrir menu"
         aria-controls="menu"
         aria-expanded="false"
-        role="button"
-        tabindex="0"
+        type="button"
     >
-        ☰
-    </div>
 
+        <i
+            id="menuIcon"
+            class="fas fa-bars"
+        ></i>
+
+    </button>
+
+
+    <!-- =================================================
+         MENU PRINCIPAL
+    ================================================== -->
 
     <nav aria-label="Menu principal">
 
@@ -1296,39 +1567,80 @@ a:focus{
         >
 
             <li>
+
                 <a href="index.html">
+
+                    <i class="fas fa-house"></i>
+
                     Home
+
                 </a>
+
             </li>
 
+
             <li>
+
                 <a href="historia.html">
+
+                    <i class="fas fa-book-open"></i>
+
                     História
+
                 </a>
+
             </li>
 
+
             <li>
+
                 <a href="esportiva.html">
+
+                    <i class="fas fa-futbol"></i>
+
                     Esportiva
+
                 </a>
+
             </li>
 
+
             <li>
+
                 <a href="evento.html">
+
+                    <i class="fas fa-calendar-days"></i>
+
                     Eventos
+
                 </a>
+
             </li>
 
+
             <li>
+
                 <a href="estatuto.html">
+
+                    <i class="fas fa-file-contract"></i>
+
                     Estatuto
+
                 </a>
+
             </li>
 
+
             <li>
+
                 <a href="diretoria.html">
+
+                    <i class="fas fa-users"></i>
+
                     Diretoria
+
                 </a>
+
             </li>
 
         </ul>
@@ -1358,7 +1670,11 @@ a:focus{
         class="slider-info"
         id="sliderInfo"
     >
+
+        <i class="fas fa-shield-halved"></i>
+
         ASSGA - Associação Desportiva
+
     </div>
 
 </section>
@@ -1372,14 +1688,16 @@ a:focus{
 <section class="noticias">
 
     <h2>
+
+        <i class="fas fa-newspaper"></i>
+
         Notícias
+
     </h2>
 
 
     <article class="noticia-item">
 
-
-        <!-- IMAGEM -->
 
         <a
             class="noticia-imagem"
@@ -1392,23 +1710,28 @@ a:focus{
             <img
                 src="src/imagens/halloween-assga.jpeg"
                 alt="2º Halloween ASSGA"
+                onerror="imagemAlternativa(this)"
             >
 
         </a>
 
 
-        <!-- TEXTO -->
-
         <div class="texto">
 
             <h3>
-                🎃 2º HALLOWEEN ASSGA
+
+                <i class="fas fa-ghost"></i>
+
+                2º HALLOWEEN ASSGA
+
             </h3>
 
 
             <data datetime="2026-08-15T17:00">
 
-                📅 Publicado em
+                <i class="fas fa-calendar-check"></i>
+
+                Publicado em
                 15 de agosto de 2026
 
             </data>
@@ -1417,8 +1740,12 @@ a:focus{
             <p>
 
                 <strong>
+
+                    <i class="fas fa-bullhorn"></i>
+
                     Estão abertas as inscrições
                     para o 2º HALLOWEEN ASSGA!
+
                 </strong>
 
             </p>
@@ -1426,7 +1753,9 @@ a:focus{
 
             <p>
 
-                🎃 Prepare-se para um evento
+                <i class="fas fa-star"></i>
+
+                Prepare-se para um evento
                 especial com muita diversão,
                 esporte, integração e
                 confraternização.
@@ -1439,9 +1768,9 @@ a:focus{
 
                 <div class="evento-info-item">
 
-                    <strong>
-                        📅 Data
-                    </strong>
+                    <i class="fas fa-calendar-days"></i>
+
+                    <strong>Data</strong>
 
                     <br>
 
@@ -1452,9 +1781,9 @@ a:focus{
 
                 <div class="evento-info-item">
 
-                    <strong>
-                        📍 Local
-                    </strong>
+                    <i class="fas fa-location-dot"></i>
+
+                    <strong>Local</strong>
 
                     <br>
 
@@ -1465,9 +1794,9 @@ a:focus{
 
                 <div class="evento-info-item">
 
-                    <strong>
-                        🎟️ Vagas
-                    </strong>
+                    <i class="fas fa-ticket"></i>
+
+                    <strong>Vagas</strong>
 
                     <br>
 
@@ -1478,9 +1807,9 @@ a:focus{
 
                 <div class="evento-info-item">
 
-                    <strong>
-                        📆 Inscrições
-                    </strong>
+                    <i class="fas fa-calendar-check"></i>
+
+                    <strong>Inscrições</strong>
 
                     <br>
 
@@ -1491,9 +1820,9 @@ a:focus{
 
                 <div class="evento-info-item">
 
-                    <strong>
-                        💳 Pagamento
-                    </strong>
+                    <i class="fas fa-credit-card"></i>
+
+                    <strong>Pagamento</strong>
 
                     <br>
 
@@ -1504,9 +1833,9 @@ a:focus{
 
                 <div class="evento-info-item">
 
-                    <strong>
-                        🎁 Evento
-                    </strong>
+                    <i class="fas fa-gift"></i>
+
+                    <strong>Evento</strong>
 
                     <br>
 
@@ -1517,9 +1846,9 @@ a:focus{
 
                 <div class="evento-info-item">
 
-                    <strong>
-                        👥 Público
-                    </strong>
+                    <i class="fas fa-users"></i>
+
+                    <strong>Público</strong>
 
                     <br>
 
@@ -1530,9 +1859,9 @@ a:focus{
 
                 <div class="evento-info-item">
 
-                    <strong>
-                        📞 Informações
-                    </strong>
+                    <i class="fas fa-circle-info"></i>
+
+                    <strong>Informações</strong>
 
                     <br>
 
@@ -1540,32 +1869,29 @@ a:focus{
 
                 </div>
 
-
             </div>
 
 
-            <!-- PREÇO -->
-
             <div class="preco-evento">
 
-                💰 Inscrição:
+                <i class="fas fa-money-bill-wave"></i>
+
+                Inscrição:
                 R$ 100,00
 
             </div>
 
 
-            <!-- AVISO -->
-
             <div class="aviso-vagas">
 
-                ⚠️ Atenção:
+                <i class="fas fa-triangle-exclamation"></i>
+
+                Atenção:
                 inscrições limitadas às
                 primeiras 100 pessoas.
 
             </div>
 
-
-            <!-- BOTÃO -->
 
             <div style="margin-top:20px;">
 
@@ -1575,14 +1901,15 @@ a:focus{
                     aria-label="Fazer inscrição no Halloween ASSGA"
                 >
 
-                    <i class="fas fa-ticket-alt"></i>
+                    <i class="fas fa-ticket"></i>
 
                     Fazer inscrição
+
+                    <i class="fas fa-arrow-right"></i>
 
                 </a>
 
             </div>
-
 
         </div>
 
@@ -1599,27 +1926,37 @@ a:focus{
 <section class="info">
 
     <h2>
+
+        <i class="fas fa-comments"></i>
+
         Fale Conosco
+
     </h2>
 
 
     <div class="info-container">
 
 
-        <!-- ENDEREÇO -->
-
         <div class="info-card">
 
             <div class="icon">
-                📍
+
+                <i class="fas fa-location-dot"></i>
+
             </div>
 
             <h3>
+
+                <i class="fas fa-map-marker-alt"></i>
+
                 Endereço
+
             </h3>
 
             <p>
+
                 São Gonçalo do Amarante - RN
+
             </p>
 
             <a
@@ -1627,9 +1964,10 @@ a:focus{
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Abrir endereço no Google Maps"
+                title="Abrir no Google Maps"
             >
 
-                <i class="fas fa-map-marker-alt"></i>
+                <i class="fas fa-map-location-dot"></i>
 
             </a>
 
@@ -1637,28 +1975,35 @@ a:focus{
 
 
 
-        <!-- EMAIL -->
-
         <div class="info-card">
 
             <div class="icon">
-                ✉️
+
+                <i class="fas fa-envelope"></i>
+
             </div>
 
             <h3>
+
+                <i class="fas fa-at"></i>
+
                 Email
+
             </h3>
 
             <p>
+
                 assgar2019@gmail.com
+
             </p>
 
             <a
                 href="mailto:assgar2019@gmail.com"
-                aria-label="Enviar email"
+                aria-label="Enviar email para ASSGA"
+                title="Enviar email"
             >
 
-                <i class="fas fa-envelope"></i>
+                <i class="fas fa-paper-plane"></i>
 
             </a>
 
@@ -1666,50 +2011,74 @@ a:focus{
 
 
 
-        <!-- TELEFONE -->
-
         <div class="info-card">
 
             <div class="icon">
-                📞
-            </div>
-
-            <h3>
-                Telefone
-            </h3>
-
-            <p>
-                (84) 96981-248
-            </p>
-
-            <a
-                href="tel:+558496981248"
-                aria-label="Ligar para ASSGA"
-            >
 
                 <i class="fas fa-phone"></i>
 
+            </div>
+
+            <h3>
+
+                <i class="fas fa-phone"></i>
+
+                Telefone
+
+            </h3>
+
+            <p>
+
+                (84) 99698-1248
+
+            </p>
+
+            <a
+                href="tel:+5584996981248"
+                aria-label="Ligar para ASSGA"
+                title="Ligar"
+            >
+
+                <i class="fas fa-phone-volume"></i>
+
             </a>
 
         </div>
 
 
 
-        <!-- CNPJ -->
-
         <div class="info-card">
 
             <div class="icon">
-                🧾
+
+                <i class="fas fa-building"></i>
+
             </div>
 
             <h3>
+
+                <i class="fas fa-id-card"></i>
+
                 CNPJ
+
             </h3>
 
             <p>
+
                 57.242.499/0001-60
+
             </p>
+
+            <a
+                href="#"
+                aria-label="CNPJ da ASSGA"
+                title="CNPJ"
+                onclick="return false;"
+            >
+
+                <i class="fas fa-id-card"></i>
+
+            </a>
 
         </div>
 
@@ -1727,21 +2096,33 @@ a:focus{
 
     <div class="footer-container">
 
-
         <div class="footer-copy">
 
-            © 2026 ASSGA -
+            <i class="fas fa-copyright"></i>
+
+            2026 ASSGA -
             Todos os direitos reservados
 
             <br>
 
+            <i class="fas fa-building"></i>
+
             CNPJ:
             57.242.499/0001-60
+
+            <br>
+
+            <i class="fas fa-futbol"></i>
+
+            Associação Desportiva
 
         </div>
 
 
-        <div class="footer-redes">
+        <div
+            class="footer-redes"
+            aria-label="Redes sociais da ASSGA"
+        >
 
 
             <!-- INSTAGRAM -->
@@ -1751,6 +2132,7 @@ a:focus{
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram ASSGA"
+                title="Instagram"
             >
 
                 <i class="fab fa-instagram"></i>
@@ -1765,6 +2147,7 @@ a:focus{
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YouTube ASSGA"
+                title="YouTube"
             >
 
                 <i class="fab fa-youtube"></i>
@@ -1779,12 +2162,25 @@ a:focus{
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp ASSGA"
+                title="WhatsApp"
             >
 
                 <i class="fab fa-whatsapp"></i>
 
             </a>
 
+
+            <!-- EMAIL -->
+
+            <a
+                href="mailto:assgar2019@gmail.com"
+                aria-label="Email ASSGA"
+                title="Email"
+            >
+
+                <i class="fas fa-envelope"></i>
+
+            </a>
 
         </div>
 
@@ -1800,6 +2196,7 @@ a:focus{
 
 <script>
 
+
 /* =====================================================
    MENU MOBILE
 ===================================================== */
@@ -1812,15 +2209,52 @@ function toggleMenu(){
     const toggle =
         document.getElementById("menuToggle");
 
+    const icon =
+        document.getElementById("menuIcon");
+
+
     menu.classList.toggle("active");
+
 
     const aberto =
         menu.classList.contains("active");
+
 
     toggle.setAttribute(
         "aria-expanded",
         aberto
     );
+
+
+    toggle.setAttribute(
+        "aria-label",
+        aberto
+            ? "Fechar menu"
+            : "Abrir menu"
+    );
+
+
+    if(aberto){
+
+        icon.classList.remove(
+            "fa-bars"
+        );
+
+        icon.classList.add(
+            "fa-xmark"
+        );
+
+    }else{
+
+        icon.classList.remove(
+            "fa-xmark"
+        );
+
+        icon.classList.add(
+            "fa-bars"
+        );
+
+    }
 
 }
 
@@ -1837,18 +2271,7 @@ document
             "click",
             function(){
 
-                const menu =
-                    document.getElementById("menu");
-
-                const toggle =
-                    document.getElementById("menuToggle");
-
-                menu.classList.remove("active");
-
-                toggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
+                fecharMenu();
 
             }
         );
@@ -1857,28 +2280,67 @@ document
 
 
 /* =====================================================
-   ACESSIBILIDADE DO MENU
+   FECHAR MENU
 ===================================================== */
 
-document
-    .getElementById("menuToggle")
-    .addEventListener(
-        "keydown",
-        function(event){
+function fecharMenu(){
 
-            if(
-                event.key === "Enter" ||
-                event.key === " "
-            ){
+    const menu =
+        document.getElementById("menu");
 
-                event.preventDefault();
+    const toggle =
+        document.getElementById("menuToggle");
 
-                toggleMenu();
+    const icon =
+        document.getElementById("menuIcon");
 
-            }
+
+    menu.classList.remove(
+        "active"
+    );
+
+
+    toggle.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
+
+    toggle.setAttribute(
+        "aria-label",
+        "Abrir menu"
+    );
+
+
+    icon.classList.remove(
+        "fa-xmark"
+    );
+
+    icon.classList.add(
+        "fa-bars"
+    );
+
+}
+
+
+/* =====================================================
+   ESC PARA FECHAR MENU
+===================================================== */
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(
+            event.key === "Escape"
+        ){
+
+            fecharMenu();
 
         }
-    );
+
+    }
+);
 
 
 /* =====================================================
@@ -1946,8 +2408,12 @@ function trocarImagem(){
             slide.alt =
                 textosSlider[index];
 
-            sliderInfo.textContent =
+
+            sliderInfo.innerHTML =
+
+                '<i class="fas fa-futbol"></i> ' +
                 textosSlider[index];
+
 
             slide.style.opacity =
                 "1";
@@ -1960,7 +2426,7 @@ function trocarImagem(){
 
 
 /* =====================================================
-   CONTROLE DO SLIDER
+   SLIDER AUTOMÁTICO
 ===================================================== */
 
 let intervaloSlider =
@@ -1994,18 +2460,33 @@ slider.addEventListener(
     "mouseleave",
     function(){
 
-        intervaloSlider =
-            setInterval(
-                trocarImagem,
-                4000
-            );
+        iniciarSlider();
 
     }
 );
 
 
 /* =====================================================
-   PAUSAR QUANDO A ABA NÃO ESTIVER VISÍVEL
+   INICIAR SLIDER
+===================================================== */
+
+function iniciarSlider(){
+
+    clearInterval(
+        intervaloSlider
+    );
+
+    intervaloSlider =
+        setInterval(
+            trocarImagem,
+            4000
+        );
+
+}
+
+
+/* =====================================================
+   PAUSAR ABA
 ===================================================== */
 
 document.addEventListener(
@@ -2022,11 +2503,144 @@ document.addEventListener(
 
         }else{
 
-            intervaloSlider =
-                setInterval(
-                    trocarImagem,
-                    4000
-                );
+            iniciarSlider();
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   FALLBACK DA IMAGEM DA NOTÍCIA
+===================================================== */
+
+function imagemAlternativa(imagem){
+
+    imagem.onerror = null;
+
+    imagem.src =
+        "src/imagens/Assga_foto.jpg";
+
+    imagem.alt =
+        "Logo da ASSGA";
+
+}
+
+
+/* =====================================================
+   FALLBACK SLIDER
+===================================================== */
+
+document
+    .getElementById("slide")
+    .addEventListener(
+        "error",
+        function(){
+
+            this.onerror = null;
+
+            this.src =
+                "src/imagens/Assga_foto.jpg";
+
+            this.alt =
+                "Logo da ASSGA";
+
+        }
+    );
+
+
+/* =====================================================
+   ANIMAÇÃO DA NOTÍCIA
+===================================================== */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function(){
+
+        const noticia =
+            document.querySelector(
+                ".noticia-item"
+            );
+
+
+        if(!noticia){
+
+            return;
+
+        }
+
+
+        noticia.style.opacity =
+            "0";
+
+        noticia.style.transform =
+            "translateY(30px)";
+
+
+        setTimeout(
+            function(){
+
+                noticia.style.transition =
+                    "all .7s ease";
+
+                noticia.style.opacity =
+                    "1";
+
+                noticia.style.transform =
+                    "translateY(0)";
+
+            },
+            150
+        );
+
+    }
+);
+
+
+/* =====================================================
+   FECHAR MENU AO CLICAR FORA
+===================================================== */
+
+document.addEventListener(
+    "click",
+    function(event){
+
+        const menu =
+            document.getElementById("menu");
+
+        const toggle =
+            document.getElementById("menuToggle");
+
+
+        if(
+            window.innerWidth <= 767 &&
+            menu.classList.contains("active") &&
+            !menu.contains(event.target) &&
+            !toggle.contains(event.target)
+        ){
+
+            fecharMenu();
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   AJUSTE AO REDIMENSIONAR
+===================================================== */
+
+window.addEventListener(
+    "resize",
+    function(){
+
+        if(
+            window.innerWidth > 767
+        ){
+
+            fecharMenu();
 
         }
 
