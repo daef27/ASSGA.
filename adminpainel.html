@@ -5,15 +5,21 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
-<meta name="robots" content="noindex,nofollow">
+<meta
+    name="robots"
+    content="noindex,nofollow"
+>
 
 <title>ASSGA - Painel Administrativo</title>
 
 <link
     rel="icon"
-    href="src/imagens/Assga_foto.jpg"
+    href="/src/imagens/Assga_foto.jpg"
     type="image/jpeg"
 >
 
@@ -25,7 +31,7 @@
 <style>
 
 /* =========================================================
-   RESET
+RESET
 ========================================================= */
 
 *{
@@ -40,19 +46,22 @@ html{
 }
 
 body{
+
     min-height:100vh;
+
     background:
         linear-gradient(
             135deg,
             #eef4fb,
             #dce8f6
         );
+
     color:#333;
 }
 
 
 /* =========================================================
-   BLOQUEIO
+BLOQUEIO
 ========================================================= */
 
 #bloqueio{
@@ -81,7 +90,7 @@ body{
 
     background:#fff;
 
-    width:min(420px,90%);
+    width:min(430px,90%);
 
     padding:35px;
 
@@ -137,7 +146,7 @@ body{
 
 
 /* =========================================================
-   HEADER
+HEADER
 ========================================================= */
 
 .admin-header{
@@ -175,7 +184,6 @@ body{
         0 5px 20px rgba(0,0,0,.20);
 }
 
-
 .admin-brand{
 
     display:flex;
@@ -184,7 +192,6 @@ body{
 
     gap:12px;
 }
-
 
 .admin-brand img{
 
@@ -199,7 +206,6 @@ body{
     background:#fff;
 }
 
-
 .admin-brand h1{
 
     font-size:21px;
@@ -208,7 +214,6 @@ body{
 
     letter-spacing:1px;
 }
-
 
 .admin-user{
 
@@ -219,14 +224,12 @@ body{
     gap:15px;
 }
 
-
 .admin-user span{
 
     font-size:14px;
 
     font-weight:700;
 }
-
 
 .btn-sair{
 
@@ -247,7 +250,6 @@ body{
     transition:.3s;
 }
 
-
 .btn-sair:hover{
 
     background:#a91f1f;
@@ -257,7 +259,7 @@ body{
 
 
 /* =========================================================
-   SIDEBAR
+SIDEBAR
 ========================================================= */
 
 .sidebar{
@@ -281,7 +283,6 @@ body{
     z-index:900;
 }
 
-
 .sidebar-title{
 
     color:#8db8e8;
@@ -296,7 +297,6 @@ body{
 
     letter-spacing:1px;
 }
-
 
 .sidebar button{
 
@@ -325,7 +325,6 @@ body{
     transition:.3s;
 }
 
-
 .sidebar button i{
 
     width:25px;
@@ -333,14 +332,12 @@ body{
     color:#ffd700;
 }
 
-
 .sidebar button:hover{
 
     background:#004aad;
 
     transform:translateX(4px);
 }
-
 
 .sidebar button.active{
 
@@ -357,7 +354,7 @@ body{
 
 
 /* =========================================================
-   MAIN
+MAIN
 ========================================================= */
 
 .main{
@@ -369,7 +366,6 @@ body{
     min-height:100vh;
 }
 
-
 .page{
 
     display:none;
@@ -377,12 +373,10 @@ body{
     animation:aparecer .3s ease;
 }
 
-
 .page.active{
 
     display:block;
 }
-
 
 @keyframes aparecer{
 
@@ -391,7 +385,6 @@ body{
         opacity:0;
 
         transform:translateY(10px);
-
     }
 
     to{
@@ -399,21 +392,18 @@ body{
         opacity:1;
 
         transform:translateY(0);
-
     }
-
 }
 
 
 /* =========================================================
-   TÍTULOS
+TÍTULOS
 ========================================================= */
 
 .page-title{
 
     margin-bottom:25px;
 }
-
 
 .page-title h2{
 
@@ -424,7 +414,6 @@ body{
     margin-bottom:6px;
 }
 
-
 .page-title p{
 
     color:#687789;
@@ -434,7 +423,7 @@ body{
 
 
 /* =========================================================
-   CARDS
+CARDS
 ========================================================= */
 
 .cards{
@@ -448,7 +437,6 @@ body{
 
     margin-bottom:30px;
 }
-
 
 .card{
 
@@ -466,7 +454,6 @@ body{
     transition:.3s;
 }
 
-
 .card:hover{
 
     transform:translateY(-5px);
@@ -474,7 +461,6 @@ body{
     box-shadow:
         0 15px 35px rgba(0,0,0,.12);
 }
-
 
 .card-icon{
 
@@ -485,7 +471,6 @@ body{
     margin-bottom:10px;
 }
 
-
 .card h3{
 
     color:#003366;
@@ -494,7 +479,6 @@ body{
 
     margin-bottom:7px;
 }
-
 
 .card-number{
 
@@ -507,7 +491,7 @@ body{
 
 
 /* =========================================================
-   PAINEL
+PAINEL
 ========================================================= */
 
 .panel{
@@ -523,7 +507,6 @@ body{
     box-shadow:
         0 8px 25px rgba(0,0,0,.08);
 }
-
 
 .panel-header{
 
@@ -542,7 +525,6 @@ body{
     border-bottom:1px solid #e4e9ef;
 }
 
-
 .panel-header h3{
 
     color:#003366;
@@ -552,7 +534,7 @@ body{
 
 
 /* =========================================================
-   FORM
+FORM
 ========================================================= */
 
 .form-grid{
@@ -565,7 +547,6 @@ body{
     gap:18px;
 }
 
-
 .form-group{
 
     display:flex;
@@ -575,12 +556,10 @@ body{
     gap:7px;
 }
 
-
 .form-group.full{
 
     grid-column:1 / -1;
 }
-
 
 .form-group label{
 
@@ -590,7 +569,6 @@ body{
 
     font-size:14px;
 }
-
 
 .form-group input,
 .form-group textarea,
@@ -613,7 +591,6 @@ body{
     transition:.3s;
 }
 
-
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus{
@@ -626,7 +603,6 @@ body{
     background:#fff;
 }
 
-
 .form-group textarea{
 
     min-height:140px;
@@ -636,7 +612,7 @@ body{
 
 
 /* =========================================================
-   BOTÕES
+BOTÕES
 ========================================================= */
 
 .actions{
@@ -649,7 +625,6 @@ body{
 
     margin-top:20px;
 }
-
 
 .btn{
 
@@ -666,12 +641,10 @@ body{
     transition:.3s;
 }
 
-
 .btn:hover{
 
     transform:translateY(-2px);
 }
-
 
 .btn-primary{
 
@@ -680,12 +653,10 @@ body{
     color:#fff;
 }
 
-
 .btn-primary:hover{
 
     background:#003366;
 }
-
 
 .btn-success{
 
@@ -694,12 +665,10 @@ body{
     color:#fff;
 }
 
-
 .btn-success:hover{
 
     background:#146c43;
 }
-
 
 .btn-warning{
 
@@ -708,7 +677,6 @@ body{
     color:#4a3900;
 }
 
-
 .btn-danger{
 
     background:#dc3545;
@@ -716,12 +684,10 @@ body{
     color:#fff;
 }
 
-
 .btn-danger:hover{
 
     background:#a71d2a;
 }
-
 
 .btn-secondary{
 
@@ -732,7 +698,7 @@ body{
 
 
 /* =========================================================
-   PÁGINAS
+PÁGINAS
 ========================================================= */
 
 .site-page-card{
@@ -758,14 +724,12 @@ body{
     transition:.3s;
 }
 
-
 .site-page-card:hover{
 
     border-color:#004aad;
 
     background:#f4f8ff;
 }
-
 
 .site-page-info{
 
@@ -775,7 +739,6 @@ body{
 
     gap:15px;
 }
-
 
 .site-page-icon{
 
@@ -798,14 +761,12 @@ body{
     font-size:20px;
 }
 
-
 .site-page-info h4{
 
     color:#003366;
 
     margin-bottom:4px;
 }
-
 
 .site-page-info small{
 
@@ -814,7 +775,7 @@ body{
 
 
 /* =========================================================
-   AVISOS
+AVISOS
 ========================================================= */
 
 .aviso{
@@ -830,7 +791,6 @@ body{
     line-height:1.6;
 }
 
-
 .aviso-info{
 
     background:#e8f1ff;
@@ -839,7 +799,6 @@ body{
 
     border-left:4px solid #004aad;
 }
-
 
 .aviso-warning{
 
@@ -852,7 +811,7 @@ body{
 
 
 /* =========================================================
-   SLIDER
+SLIDER
 ========================================================= */
 
 .slider-grid{
@@ -865,7 +824,6 @@ body{
     gap:20px;
 }
 
-
 .slider-card{
 
     border:1px solid #dce3eb;
@@ -876,7 +834,6 @@ body{
 
     background:#f8fafc;
 }
-
 
 .slider-card img{
 
@@ -889,12 +846,10 @@ body{
     display:block;
 }
 
-
 .slider-card-content{
 
     padding:15px;
 }
-
 
 .slider-card-content h4{
 
@@ -902,7 +857,6 @@ body{
 
     margin-bottom:10px;
 }
-
 
 .slider-card-content input{
 
@@ -917,7 +871,7 @@ body{
 
 
 /* =========================================================
-   TABELA
+TABELA
 ========================================================= */
 
 .table-container{
@@ -927,7 +881,6 @@ body{
     overflow-x:auto;
 }
 
-
 table{
 
     width:100%;
@@ -936,7 +889,6 @@ table{
 
     min-width:750px;
 }
-
 
 th{
 
@@ -951,7 +903,6 @@ th{
     font-size:13px;
 }
 
-
 td{
 
     padding:13px;
@@ -963,12 +914,10 @@ td{
     color:#444;
 }
 
-
 tr:hover td{
 
     background:#f5f9ff;
 }
-
 
 .status{
 
@@ -983,7 +932,6 @@ tr:hover td{
     font-weight:800;
 }
 
-
 .status-ok{
 
     background:#d1e7dd;
@@ -992,16 +940,8 @@ tr:hover td{
 }
 
 
-.status-pendente{
-
-    background:#fff3cd;
-
-    color:#664d03;
-}
-
-
 /* =========================================================
-   TOAST
+TOAST
 ========================================================= */
 
 .toast{
@@ -1034,7 +974,6 @@ tr:hover td{
     z-index:99999;
 }
 
-
 .toast.show{
 
     opacity:1;
@@ -1044,7 +983,7 @@ tr:hover td{
 
 
 /* =========================================================
-   RESPONSIVO
+RESPONSIVO
 ========================================================= */
 
 @media(max-width:1100px){
@@ -1059,9 +998,7 @@ tr:hover td{
 
         grid-template-columns:1fr;
     }
-
 }
-
 
 @media(max-width:800px){
 
@@ -1122,9 +1059,7 @@ tr:hover td{
 
         grid-column:auto;
     }
-
 }
-
 
 @media(max-width:600px){
 
@@ -1183,7 +1118,6 @@ tr:hover td{
 
         width:100%;
     }
-
 }
 
 </style>
@@ -1195,7 +1129,7 @@ tr:hover td{
 
 
 <!-- =========================================================
-     BLOQUEIO DE ACESSO
+BLOQUEIO
 ========================================================= -->
 
 <div id="bloqueio">
@@ -1215,11 +1149,14 @@ tr:hover td{
         </p>
 
         <a
-            href="admin-login.html"
+            href="/admin-login.html"
             class="btn-login"
         >
+
             <i class="fas fa-sign-in-alt"></i>
+
             Ir para Login
+
         </a>
 
     </div>
@@ -1228,7 +1165,7 @@ tr:hover td{
 
 
 <!-- =========================================================
-     HEADER
+HEADER
 ========================================================= -->
 
 <header class="admin-header">
@@ -1236,7 +1173,7 @@ tr:hover td{
     <div class="admin-brand">
 
         <img
-            src="src/imagens/Assga_foto.jpg"
+            src="/src/imagens/Assga_foto.jpg"
             alt="ASSGA"
         >
 
@@ -1249,7 +1186,7 @@ tr:hover td{
 
     <div class="admin-user">
 
-        <span>
+        <span id="nomeAdministrador">
 
             <i class="fas fa-user-shield"></i>
 
@@ -1275,7 +1212,7 @@ tr:hover td{
 
 
 <!-- =========================================================
-     SIDEBAR
+SIDEBAR
 ========================================================= -->
 
 <aside class="sidebar">
@@ -1430,15 +1367,13 @@ tr:hover td{
 
 
 <!-- =========================================================
-     MAIN
+MAIN
 ========================================================= -->
 
 <main class="main">
 
 
-<!-- =========================================================
-     DASHBOARD
-========================================================= -->
+<!-- DASHBOARD -->
 
 <section
     class="page active"
@@ -1512,7 +1447,7 @@ tr:hover td{
                 class="card-number"
                 id="totalEventos"
             >
-                1
+                0
             </div>
 
         </div>
@@ -1545,8 +1480,11 @@ tr:hover td{
         <div class="panel-header">
 
             <h3>
+
                 <i class="fas fa-cog"></i>
+
                 Gerenciamento das páginas
+
             </h3>
 
         </div>
@@ -1561,9 +1499,6 @@ tr:hover td{
             use o menu para gerenciar
             as páginas do site.
 
-            Os dados desta versão são
-            armazenados no navegador.
-
         </div>
 
 
@@ -1572,7 +1507,9 @@ tr:hover td{
             <div class="site-page-info">
 
                 <div class="site-page-icon">
+
                     <i class="fas fa-home"></i>
+
                 </div>
 
                 <div>
@@ -1604,7 +1541,9 @@ tr:hover td{
             <div class="site-page-info">
 
                 <div class="site-page-icon">
+
                     <i class="fas fa-book"></i>
+
                 </div>
 
                 <div>
@@ -1636,7 +1575,9 @@ tr:hover td{
             <div class="site-page-info">
 
                 <div class="site-page-icon">
+
                     <i class="fas fa-calendar"></i>
+
                 </div>
 
                 <div>
@@ -1668,7 +1609,9 @@ tr:hover td{
             <div class="site-page-info">
 
                 <div class="site-page-icon">
+
                     <i class="fas fa-file-alt"></i>
+
                 </div>
 
                 <div>
@@ -1700,7 +1643,9 @@ tr:hover td{
             <div class="site-page-info">
 
                 <div class="site-page-icon">
+
                     <i class="fas fa-futbol"></i>
+
                 </div>
 
                 <div>
@@ -1732,7 +1677,9 @@ tr:hover td{
             <div class="site-page-info">
 
                 <div class="site-page-icon">
+
                     <i class="fas fa-users"></i>
+
                 </div>
 
                 <div>
@@ -1763,9 +1710,7 @@ tr:hover td{
 </section>
 
 
-<!-- =========================================================
-     INDEX
-========================================================= -->
+<!-- INDEX -->
 
 <section
     class="page"
@@ -1790,8 +1735,11 @@ tr:hover td{
         <div class="panel-header">
 
             <h3>
+
                 <i class="fas fa-home"></i>
+
                 Notícias
+
             </h3>
 
         </div>
@@ -1834,9 +1782,7 @@ tr:hover td{
                     Texto principal
                 </label>
 
-                <textarea
-                    id="indexTexto"
-                >Estão abertas as inscrições para o 2º HALLOWEEN ASSGA!</textarea>
+                <textarea id="indexTexto">Estão abertas as inscrições para o 2º HALLOWEEN ASSGA!</textarea>
 
             </div>
 
@@ -1911,6 +1857,7 @@ tr:hover td{
             >
 
                 <i class="fas fa-save"></i>
+
                 Salvar
 
             </button>
@@ -1922,6 +1869,7 @@ tr:hover td{
             >
 
                 <i class="fas fa-eye"></i>
+
                 Visualizar
 
             </button>
@@ -1933,9 +1881,7 @@ tr:hover td{
 </section>
 
 
-<!-- =========================================================
-     HISTÓRIA
-========================================================= -->
+<!-- HISTÓRIA -->
 
 <section
     class="page"
@@ -1960,8 +1906,11 @@ tr:hover td{
         <div class="panel-header">
 
             <h3>
+
                 <i class="fas fa-book"></i>
+
                 Conteúdo da História
+
             </h3>
 
         </div>
@@ -2008,6 +1957,7 @@ tr:hover td{
             >
 
                 <i class="fas fa-save"></i>
+
                 Salvar História
 
             </button>
@@ -2019,6 +1969,7 @@ tr:hover td{
             >
 
                 <i class="fas fa-eye"></i>
+
                 Visualizar
 
             </button>
@@ -2030,9 +1981,7 @@ tr:hover td{
 </section>
 
 
-<!-- =========================================================
-     EVENTO
-========================================================= -->
+<!-- EVENTO -->
 
 <section
     class="page"
@@ -2057,8 +2006,11 @@ tr:hover td{
         <div class="panel-header">
 
             <h3>
+
                 <i class="fas fa-calendar-alt"></i>
+
                 Cadastro de evento
+
             </h3>
 
         </div>
@@ -2172,9 +2124,7 @@ tr:hover td{
                     Descrição
                 </label>
 
-                <textarea
-                    id="eventoDescricao"
-                >Prepare-se para um evento especial com muita diversão, esporte, integração e confraternização.</textarea>
+                <textarea id="eventoDescricao">Prepare-se para um evento especial com muita diversão, esporte, integração e confraternização.</textarea>
 
             </div>
 
@@ -2189,6 +2139,7 @@ tr:hover td{
             >
 
                 <i class="fas fa-save"></i>
+
                 Salvar Evento
 
             </button>
@@ -2200,6 +2151,7 @@ tr:hover td{
             >
 
                 <i class="fas fa-eye"></i>
+
                 Visualizar
 
             </button>
@@ -2211,9 +2163,7 @@ tr:hover td{
 </section>
 
 
-<!-- =========================================================
-     ESTATUTO
-========================================================= -->
+<!-- ESTATUTO -->
 
 <section
     class="page"
@@ -2238,8 +2188,11 @@ tr:hover td{
         <div class="panel-header">
 
             <h3>
+
                 <i class="fas fa-file-alt"></i>
+
                 Informações do Estatuto
+
             </h3>
 
         </div>
@@ -2268,9 +2221,7 @@ tr:hover td{
                     Descrição
                 </label>
 
-                <textarea
-                    id="estatutoTexto"
-                >Estatuto social da Associação Desportiva ASSGA.</textarea>
+                <textarea id="estatutoTexto">Estatuto social da Associação Desportiva ASSGA.</textarea>
 
             </div>
 
@@ -2284,7 +2235,7 @@ tr:hover td{
                 <input
                     type="text"
                     id="estatutoPdf"
-                    value="src/documentos/estatuto.pdf"
+                    value="/src/documentos/estatuto.pdf"
                 >
 
             </div>
@@ -2300,6 +2251,7 @@ tr:hover td{
             >
 
                 <i class="fas fa-save"></i>
+
                 Salvar
 
             </button>
@@ -2311,6 +2263,7 @@ tr:hover td{
             >
 
                 <i class="fas fa-eye"></i>
+
                 Visualizar
 
             </button>
@@ -2322,9 +2275,7 @@ tr:hover td{
 </section>
 
 
-<!-- =========================================================
-     ESPORTIVA
-========================================================= -->
+<!-- ESPORTIVA -->
 
 <section
     class="page"
@@ -2349,8 +2300,11 @@ tr:hover td{
         <div class="panel-header">
 
             <h3>
+
                 <i class="fas fa-futbol"></i>
+
                 Conteúdo Esportivo
+
             </h3>
 
         </div>
@@ -2394,9 +2348,7 @@ tr:hover td{
                     Descrição
                 </label>
 
-                <textarea
-                    id="esportivaTexto"
-                >A ASSGA promove atividades esportivas, futsal, integração e participação da comunidade.</textarea>
+                <textarea id="esportivaTexto">A ASSGA promove atividades esportivas, futsal, integração e participação da comunidade.</textarea>
 
             </div>
 
@@ -2411,6 +2363,7 @@ tr:hover td{
             >
 
                 <i class="fas fa-save"></i>
+
                 Salvar
 
             </button>
@@ -2422,6 +2375,7 @@ tr:hover td{
             >
 
                 <i class="fas fa-eye"></i>
+
                 Visualizar
 
             </button>
@@ -2433,9 +2387,7 @@ tr:hover td{
 </section>
 
 
-<!-- =========================================================
-     DIRETORIA
-========================================================= -->
+<!-- DIRETORIA -->
 
 <section
     class="page"
@@ -2460,8 +2412,11 @@ tr:hover td{
         <div class="panel-header">
 
             <h3>
+
                 <i class="fas fa-users"></i>
+
                 Diretoria ASSGA
+
             </h3>
 
         </div>
@@ -2537,7 +2492,7 @@ tr:hover td{
 
                 <textarea
                     id="diretoriaTexto"
-                    placeholder="Informações adicionais da diretoria"
+                    placeholder="Informações adicionais"
                 ></textarea>
 
             </div>
@@ -2553,6 +2508,7 @@ tr:hover td{
             >
 
                 <i class="fas fa-save"></i>
+
                 Salvar Diretoria
 
             </button>
@@ -2564,6 +2520,7 @@ tr:hover td{
             >
 
                 <i class="fas fa-eye"></i>
+
                 Visualizar
 
             </button>
@@ -2575,9 +2532,7 @@ tr:hover td{
 </section>
 
 
-<!-- =========================================================
-     SLIDER
-========================================================= -->
+<!-- SLIDER -->
 
 <section
     class="page"
@@ -2591,7 +2546,7 @@ tr:hover td{
         </h2>
 
         <p>
-            Gerenciar foto1.jpg, foto2.jpg e foto3.jpg
+            Gerenciar fotos
         </p>
 
     </div>
@@ -2603,9 +2558,9 @@ tr:hover td{
             Atenção:
         </strong>
 
-        HTML, CSS e JavaScript não conseguem
-        substituir fisicamente arquivos no servidor.
-        Aqui são salvos os caminhos das imagens.
+        O painel salva os caminhos das imagens.
+        Ele não substitui fisicamente os arquivos
+        publicados no Netlify.
 
     </div>
 
@@ -2618,7 +2573,7 @@ tr:hover td{
             <div class="slider-card">
 
                 <img
-                    src="src/imagens/foto1.jpg"
+                    src="/src/imagens/foto1.jpg"
                     alt="Foto 1"
                     onerror="this.style.display='none'"
                 >
@@ -2632,7 +2587,7 @@ tr:hover td{
                     <input
                         type="text"
                         id="foto1"
-                        value="src/imagens/foto1.jpg"
+                        value="/src/imagens/foto1.jpg"
                     >
 
                 </div>
@@ -2643,7 +2598,7 @@ tr:hover td{
             <div class="slider-card">
 
                 <img
-                    src="src/imagens/foto2.jpg"
+                    src="/src/imagens/foto2.jpg"
                     alt="Foto 2"
                     onerror="this.style.display='none'"
                 >
@@ -2657,7 +2612,7 @@ tr:hover td{
                     <input
                         type="text"
                         id="foto2"
-                        value="src/imagens/foto2.jpg"
+                        value="/src/imagens/foto2.jpg"
                     >
 
                 </div>
@@ -2668,7 +2623,7 @@ tr:hover td{
             <div class="slider-card">
 
                 <img
-                    src="src/imagens/foto3.jpg"
+                    src="/src/imagens/foto3.jpg"
                     alt="Foto 3"
                     onerror="this.style.display='none'"
                 >
@@ -2682,7 +2637,7 @@ tr:hover td{
                     <input
                         type="text"
                         id="foto3"
-                        value="src/imagens/foto3.jpg"
+                        value="/src/imagens/foto3.jpg"
                     >
 
                 </div>
@@ -2700,6 +2655,7 @@ tr:hover td{
             >
 
                 <i class="fas fa-save"></i>
+
                 Salvar Slider
 
             </button>
@@ -2711,9 +2667,7 @@ tr:hover td{
 </section>
 
 
-<!-- =========================================================
-     REGISTROS
-========================================================= -->
+<!-- REGISTROS -->
 
 <section
     class="page"
@@ -2738,8 +2692,11 @@ tr:hover td{
         <div class="panel-header">
 
             <h3>
+
                 <i class="fas fa-clipboard-list"></i>
+
                 Registros
+
             </h3>
 
 
@@ -2765,29 +2722,17 @@ tr:hover td{
 
                     <tr>
 
-                        <th>
-                            #
-                        </th>
+                        <th>#</th>
 
-                        <th>
-                            Nome
-                        </th>
+                        <th>Nome</th>
 
-                        <th>
-                            CPF
-                        </th>
+                        <th>CPF</th>
 
-                        <th>
-                            Telefone
-                        </th>
+                        <th>Telefone</th>
 
-                        <th>
-                            Data
-                        </th>
+                        <th>Data</th>
 
-                        <th>
-                            Status
-                        </th>
+                        <th>Status</th>
 
                     </tr>
 
@@ -2810,9 +2755,7 @@ tr:hover td{
 </main>
 
 
-<!-- =========================================================
-     TOAST
-========================================================= -->
+<!-- TOAST -->
 
 <div
     class="toast"
@@ -2825,7 +2768,7 @@ tr:hover td{
 <script>
 
 /* =========================================================
-   PROTEÇÃO DO PAINEL
+PROTEÇÃO
 ========================================================= */
 
 function verificarLogin(){
@@ -2857,14 +2800,44 @@ function verificarLogin(){
 
 
 /* =========================================================
-   NAVEGAÇÃO
+ADMINISTRADOR
+========================================================= */
+
+function carregarAdministrador(){
+
+    const usuario =
+        localStorage.getItem(
+            "assga_admin_usuario"
+        );
+
+    const elemento =
+        document.getElementById(
+            "nomeAdministrador"
+        );
+
+
+    if(
+        elemento &&
+        usuario
+    ){
+
+        elemento.innerHTML =
+            '<i class="fas fa-user-shield"></i> ' +
+            escapeHTML(usuario);
+
+    }
+
+}
+
+
+/* =========================================================
+NAVEGAÇÃO
 ========================================================= */
 
 const botoes =
     document.querySelectorAll(
         ".nav-btn"
     );
-
 
 const paginas =
     document.querySelectorAll(
@@ -2949,7 +2922,7 @@ function mostrarPagina(nome){
 
 
 /* =========================================================
-   TOAST
+TOAST
 ========================================================= */
 
 function mostrarToast(mensagem){
@@ -2981,7 +2954,7 @@ function mostrarToast(mensagem){
 
 
 /* =========================================================
-   INDEX
+INDEX
 ========================================================= */
 
 function salvarIndex(){
@@ -3040,7 +3013,7 @@ function salvarIndex(){
 
 
 /* =========================================================
-   HISTÓRIA
+HISTÓRIA
 ========================================================= */
 
 function salvarHistoria(){
@@ -3074,7 +3047,7 @@ function salvarHistoria(){
 
 
 /* =========================================================
-   EVENTO
+EVENTO
 ========================================================= */
 
 function salvarEvento(){
@@ -3136,7 +3109,7 @@ function salvarEvento(){
 
 
 /* =========================================================
-   ESTATUTO
+ESTATUTO
 ========================================================= */
 
 function salvarEstatuto(){
@@ -3175,7 +3148,7 @@ function salvarEstatuto(){
 
 
 /* =========================================================
-   ESPORTIVA
+ESPORTIVA
 ========================================================= */
 
 function salvarEsportiva(){
@@ -3214,7 +3187,7 @@ function salvarEsportiva(){
 
 
 /* =========================================================
-   DIRETORIA
+DIRETORIA
 ========================================================= */
 
 function salvarDiretoria(){
@@ -3263,7 +3236,7 @@ function salvarDiretoria(){
 
 
 /* =========================================================
-   SLIDER
+SLIDER
 ========================================================= */
 
 function salvarSlider(){
@@ -3302,7 +3275,7 @@ function salvarSlider(){
 
 
 /* =========================================================
-   CARREGAR DADOS
+CARREGAR OBJETO
 ========================================================= */
 
 function carregarObjeto(
@@ -3342,6 +3315,10 @@ function carregarObjeto(
 
 }
 
+
+/* =========================================================
+CARREGAR DADOS
+========================================================= */
 
 function carregarDados(){
 
@@ -3494,7 +3471,7 @@ function carregarDados(){
 
 
 /* =========================================================
-   REGISTROS
+REGISTROS
 ========================================================= */
 
 function carregarRegistros(){
@@ -3634,7 +3611,7 @@ function carregarRegistros(){
 
 
 /* =========================================================
-   LIMPAR REGISTROS
+LIMPAR REGISTROS
 ========================================================= */
 
 function limparRegistros(){
@@ -3668,7 +3645,7 @@ function limparRegistros(){
 
 
 /* =========================================================
-   ESCAPE HTML
+ESCAPE
 ========================================================= */
 
 function escapeHTML(valor){
@@ -3704,7 +3681,7 @@ function escapeHTML(valor){
 
 
 /* =========================================================
-   DASHBOARD
+DASHBOARD
 ========================================================= */
 
 function atualizarDashboard(){
@@ -3749,13 +3726,13 @@ function atualizarDashboard(){
 
 
 /* =========================================================
-   ABRIR SITE
+ABRIR SITE
 ========================================================= */
 
 function abrirSite(){
 
     window.open(
-        "index.html",
+        "/",
         "_blank"
     );
 
@@ -3765,7 +3742,7 @@ function abrirSite(){
 function abrirPagina(pagina){
 
     window.open(
-        pagina,
+        "/" + pagina,
         "_blank"
     );
 
@@ -3773,7 +3750,7 @@ function abrirPagina(pagina){
 
 
 /* =========================================================
-   SAIR
+SAIR
 ========================================================= */
 
 function sairPainel(){
@@ -3794,17 +3771,21 @@ function sairPainel(){
     localStorage.removeItem(
         "assga_admin_logado"
     );
-    
+
+
+    localStorage.removeItem(
+        "assga_admin_usuario"
+    );
 
 
     window.location.href =
-        "admin-login.html";
+        "/admin-login.html";
 
 }
 
 
 /* =========================================================
-   INICIALIZAÇÃO
+INICIALIZAÇÃO
 ========================================================= */
 
 document.addEventListener(
@@ -3812,6 +3793,8 @@ document.addEventListener(
     function(){
 
         verificarLogin();
+
+        carregarAdministrador();
 
         carregarDados();
 
@@ -3824,7 +3807,7 @@ document.addEventListener(
 
 
 /* =========================================================
-   VERIFICAÇÃO AO VOLTAR PARA A ABA
+VERIFICAR AO VOLTAR PARA ABA
 ========================================================= */
 
 window.addEventListener(
