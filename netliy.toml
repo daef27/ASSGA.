@@ -1,40 +1,12 @@
-# netlify.toml
-
 [build]
   publish = "."
 
-# Página principal
-[[redirects]]
-  from = "/"
-  to = "/index.html"
-  status = 200
-
-# Painel administrativo
 [[redirects]]
   from = "/adminpainel"
   to = "/adminpainel.html"
   status = 200
 
-# Login administrativo
 [[redirects]]
   from = "/admin-login"
   to = "/admin-login.html"
   status = 200
-
-# Evita cache excessivo dos arquivos HTML
-[[headers]]
-  for = "/*.html"
-  [headers.values]
-    Cache-Control = "no-cache"
-
-# Arquivos CSS
-[[headers]]
-  for = "/*.css"
-  [headers.values]
-    Cache-Control = "public, max-age=3600"
-
-# Arquivos JavaScript
-[[headers]]
-  for = "/*.js"
-  [headers.values]
-    Cache-Control = "public, max-age=3600"
