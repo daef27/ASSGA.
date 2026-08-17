@@ -63,7 +63,6 @@ body{
 ===================================================== */
 
 h2{
-
     text-align:center;
 
     margin:45px 0 35px;
@@ -272,7 +271,7 @@ header{
 
 
 /* =====================================================
-   SLIDER GRANDE
+   SLIDER
 ===================================================== */
 
 .slider{
@@ -310,7 +309,7 @@ header{
 
 
 /* =====================================================
-   INDICADOR DO SLIDER
+   INFORMAÇÃO DO SLIDER
 ===================================================== */
 
 .slider-info{
@@ -343,6 +342,10 @@ header{
     letter-spacing:.5px;
 
     z-index:5;
+
+    text-align:center;
+
+    white-space:nowrap;
 }
 
 
@@ -684,7 +687,7 @@ header{
 
 
 /* =====================================================
-   INFO
+   FALE CONOSCO
 ===================================================== */
 
 .info{
@@ -891,6 +894,17 @@ footer{
         height:560px;
     }
 
+    .slider img{
+
+        width:100%;
+
+        height:560px;
+
+        object-fit:cover;
+
+        object-position:center;
+    }
+
     .noticia-item{
 
         flex-direction:row;
@@ -931,6 +945,17 @@ and (max-width:1023px){
     .slider{
 
         height:400px;
+    }
+
+    .slider img{
+
+        width:100%;
+
+        height:400px;
+
+        object-fit:cover;
+
+        object-position:center;
     }
 
     .noticia-item{
@@ -1007,8 +1032,7 @@ and (max-width:1023px){
 
         right:15px;
 
-        width:
-            calc(100% - 30px);
+        width:calc(100% - 30px);
 
         background:
             linear-gradient(
@@ -1053,7 +1077,13 @@ and (max-width:1023px){
 
     .slider img{
 
+        width:100%;
+
+        height:280px;
+
         object-fit:cover;
+
+        object-position:center;
     }
 
     .slider-info{
@@ -1063,12 +1093,17 @@ and (max-width:1023px){
         font-size:12px;
 
         padding:8px 15px;
+
+        max-width:90%;
+
+        overflow:hidden;
+
+        text-overflow:ellipsis;
     }
 
     .noticias{
 
-        padding:
-            25px 12px;
+        padding:25px 12px;
     }
 
     .noticia-item{
@@ -1116,6 +1151,8 @@ and (max-width:1023px){
     .preco-evento{
 
         width:100%;
+
+        text-align:center;
     }
 
     .info-card{
@@ -1145,6 +1182,49 @@ and (max-width:1023px){
         font-size:1.8em;
 
         margin:30px 0;
+    }
+
+}
+
+
+/* =====================================================
+   CELULAR PEQUENO
+===================================================== */
+
+@media (max-width:380px){
+
+    .logo{
+
+        font-size:16px;
+    }
+
+    .logo-area img{
+
+        width:44px;
+
+        height:55px;
+    }
+
+    .slider{
+
+        height:240px;
+    }
+
+    .slider img{
+
+        height:240px;
+    }
+
+    .slider-info{
+
+        font-size:11px;
+
+        padding:7px 12px;
+    }
+
+    .noticia-imagem{
+
+        height:220px;
     }
 
 }
@@ -1199,6 +1279,8 @@ a:focus{
         id="menuToggle"
         onclick="toggleMenu()"
         aria-label="Abrir menu"
+        aria-controls="menu"
+        aria-expanded="false"
         role="button"
         tabindex="0"
     >
@@ -1258,7 +1340,7 @@ a:focus{
 
 
 <!-- =====================================================
-     SLIDER GRANDE
+     SLIDER
 ===================================================== -->
 
 <section
@@ -1269,7 +1351,7 @@ a:focus{
     <img
         id="slide"
         src="src/imagens/foto1.jpg"
-        alt="Imagem esportiva da ASSGA"
+        alt="ASSGA - Associação Desportiva"
     >
 
     <div
@@ -1703,6 +1785,7 @@ a:focus{
 
             </a>
 
+
         </div>
 
     </div>
@@ -1717,7 +1800,6 @@ a:focus{
 
 <script>
 
-
 /* =====================================================
    MENU MOBILE
 ===================================================== */
@@ -1727,7 +1809,18 @@ function toggleMenu(){
     const menu =
         document.getElementById("menu");
 
+    const toggle =
+        document.getElementById("menuToggle");
+
     menu.classList.toggle("active");
+
+    const aberto =
+        menu.classList.contains("active");
+
+    toggle.setAttribute(
+        "aria-expanded",
+        aberto
+    );
 
 }
 
@@ -1744,14 +1837,48 @@ document
             "click",
             function(){
 
-                document
-                    .getElementById("menu")
-                    .classList.remove("active");
+                const menu =
+                    document.getElementById("menu");
+
+                const toggle =
+                    document.getElementById("menuToggle");
+
+                menu.classList.remove("active");
+
+                toggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
 
             }
         );
 
     });
+
+
+/* =====================================================
+   ACESSIBILIDADE DO MENU
+===================================================== */
+
+document
+    .getElementById("menuToggle")
+    .addEventListener(
+        "keydown",
+        function(event){
+
+            if(
+                event.key === "Enter" ||
+                event.key === " "
+            ){
+
+                event.preventDefault();
+
+                toggleMenu();
+
+            }
+
+        }
+    );
 
 
 /* =====================================================
@@ -1782,6 +1909,10 @@ const textosSlider = [
 
 let index = 0;
 
+
+/* =====================================================
+   TROCAR IMAGEM
+===================================================== */
 
 function trocarImagem(){
 
@@ -1828,59 +1959,8 @@ function trocarImagem(){
 }
 
 
-setInterval(
-    trocarImagem,
-    4000
-);
-
-
 /* =====================================================
-   ACESSIBILIDADE DO MENU
-===================================================== */
-
-document
-    .getElementById("menuToggle")
-    .addEventListener(
-        "keydown",
-        function(event){
-
-            if(
-                event.key === "Enter" ||
-                event.key === " "
-            ){
-
-                event.preventDefault();
-
-                toggleMenu();
-
-            }
-
-        }
-    );
-
-
-/* =====================================================
-   PAUSAR SLIDER AO PASSAR O MOUSE
-===================================================== */
-
-const slider =
-    document.querySelector(".slider");
-
-let sliderInterval =
-    setInterval(trocarImagem,4000);
-
-
-/*
-   O primeiro setInterval acima já controla
-   a troca. Este bloco evita criar dois
-   intervalos simultâneos.
-*/
-
-clearInterval(sliderInterval);
-
-
-/* =====================================================
-   CONTROLE CORRETO DO SLIDER
+   CONTROLE DO SLIDER
 ===================================================== */
 
 let intervaloSlider =
@@ -1890,11 +1970,21 @@ let intervaloSlider =
     );
 
 
+/* =====================================================
+   PAUSAR NO MOUSE
+===================================================== */
+
+const slider =
+    document.querySelector(".slider");
+
+
 slider.addEventListener(
     "mouseenter",
     function(){
 
-        clearInterval(intervaloSlider);
+        clearInterval(
+            intervaloSlider
+        );
 
     }
 );
@@ -1913,6 +2003,35 @@ slider.addEventListener(
     }
 );
 
+
+/* =====================================================
+   PAUSAR QUANDO A ABA NÃO ESTIVER VISÍVEL
+===================================================== */
+
+document.addEventListener(
+    "visibilitychange",
+    function(){
+
+        if(
+            document.hidden
+        ){
+
+            clearInterval(
+                intervaloSlider
+            );
+
+        }else{
+
+            intervaloSlider =
+                setInterval(
+                    trocarImagem,
+                    4000
+                );
+
+        }
+
+    }
+);
 
 </script>
 
