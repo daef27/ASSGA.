@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>História - ASSGA</title>
 
-<link rel="icon" href="src/imagens/Assga_foto.jpg" type="image/jpeg">
-<link rel="shortcut icon" href="src/imagens/Assga_foto.jpg" type="image/jpeg">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Eventos - ASSGA</title>
+
+<link
+    rel="icon"
+    href="src/imagens/Assga_foto.jpg"
+    type="image/jpeg"
+>
+
+<link
+    rel="shortcut icon"
+    href="src/imagens/Assga_foto.jpg"
+    type="image/jpeg"
+>
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+>
 
 <style>
+
+/* =========================
+   RESET
+========================= */
+
 *{
     margin:0;
     padding:0;
@@ -17,73 +42,126 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background:linear-gradient(
+        135deg,
+        #f5f7fa 0%,
+        #c3cfe2 100%
+    );
+
+    min-height:100vh;
     overflow-x:hidden;
 }
 
-h2{
-    text-align:center;
-    margin:40px 0;
-    color:#003366;
-    font-size: 2.5em;
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-}
+
+/* =========================
+   CABEÇALHO
+========================= */
 
 header{
-    background: linear-gradient(135deg, #003366 0%, #004aad 100%);
+
+    background:linear-gradient(
+        135deg,
+        #003366 0%,
+        #004aad 100%
+    );
+
     color:#fff;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
+
     padding:15px 30px;
+
     position:sticky;
     top:0;
+
     z-index:999;
-    box-shadow: 0 8px 32px rgba(0, 51, 102, 0.3);
+
+    box-shadow:
+        0 8px 32px
+        rgba(0,51,102,0.3);
 }
+
+
+/* LOGO */
 
 .logo-area{
+
     display:flex;
     align-items:center;
+
     gap:15px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+
+    cursor:pointer;
+
+    transition:
+        transform .3s ease;
 }
 
-.logo-area:hover {
-    transform: scale(1.05);
+.logo-area:hover{
+
+    transform:
+        scale(1.05);
 }
 
 .logo-area img{
+
     width:56px;
     height:68px;
+
     object-fit:cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+
+    border-radius:8px;
+
+    box-shadow:
+        0 4px 12px
+        rgba(0,0,0,.2);
 }
 
 .logo{
+
     font-size:28px;
+
     font-weight:900;
-    letter-spacing: 2px;
-    background: linear-gradient(135deg, #ffd700, #ffed4e);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+
+    letter-spacing:2px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd700,
+            #ffed4e
+        );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    background-clip:text;
 }
 
+
+/* =========================
+   MENU
+========================= */
+
 .menu{
+
     list-style:none;
+
     display:inline-grid;
+
     grid-auto-flow:column;
+
     gap:15px;
+
     margin-left:auto;
+
     align-items:center;
 }
 
@@ -91,286 +169,2170 @@ header{
     position:relative;
 }
 
-.menu a {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 700;
-    padding: 12px 20px;
-    border-radius: 25px;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    position: relative;
-    overflow: hidden;
+.menu a{
+
+    display:block;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    padding:12px 20px;
+
+    border-radius:25px;
+
+    transition:
+        all .4s
+        cubic-bezier(
+            .175,
+            .885,
+            .32,
+            1.275
+        );
 }
 
-@media (hover: hover){
-.menu a:hover {
+@media (hover:hover){
+
+.menu a:hover{
+
     color:#003366;
-    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
-    box-shadow: 0 8px 24px rgba(255, 215, 0, 0.4);
-    transform: translateY(-3px);
-}
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd700 0%,
+            #ffed4e 100%
+        );
+
+    box-shadow:
+        0 8px 24px
+        rgba(255,215,0,.4);
+
+    transform:
+        translateY(-3px);
 }
 
-.menu a:active,
-.menu a:focus{
-    color:#003366;
-    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
-    box-shadow: 0 8px 24px rgba(255, 215, 0, 0.4);
-    transform: translateY(-3px);
 }
+
+
+/* MENU MOBILE */
 
 .menu-toggle{
+
     display:none;
+
     font-size:28px;
+
     cursor:pointer;
-    transition: transform 0.3s ease;
+
+    transition:
+        transform .3s ease;
 }
 
-.menu-toggle:hover {
-    transform: rotate(90deg);
+.menu-toggle:hover{
+
+    transform:
+        rotate(90deg);
 }
 
-.historia-container{
-    max-width:1000px;
-    margin:40px auto;
-    padding:0 20px;
-}
 
-.historia-texto{
-    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
-    padding:40px;
-    border-radius:15px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-    line-height: 1.8;
-    color: #555;
-    border-left: 5px solid #004aad;
-}
+/* =========================
+   TÍTULO
+========================= */
 
-.historia-texto h3{
-    color: #003366;
-    font-size: 1.5em;
-    margin-bottom: 20px;
-}
+.titulo{
 
-.historia-texto p{
-    margin-bottom: 15px;
-    font-size: 1.05em;
-}
-
-.responsaveis{
-    padding:60px 20px;
-    background: linear-gradient(135deg, #e9eef5 0%, #d4e1ed 100%);
-    margin-top: 40px;
-}
-
-.cards{
-    display: flex;
-    justify-content: center;
-    gap:30px;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.card{
-    width:280px;
-    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
-    padding:30px;
-    border-radius:15px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-    border-top: 4px solid #004aad;
     text-align:center;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
 
-.card:hover{
-    transform: translateY(-10px);
-    box-shadow: 0 16px 48px rgba(0, 74, 173, 0.2);
-    border-top-color: #ffd700;
-}
+    margin:
+        45px 20px 15px;
 
-.card img{
-    width:120px;
-    height:120px;
-    border-radius:50%;
-    object-fit: cover;
-    border:4px solid #004aad;
-    margin-bottom: 15px;
-    transition: transform 0.3s ease;
-}
-
-.card:hover img{
-    transform: scale(1.1);
-}
-
-.card h3{
-    margin:15px 0 5px;
     color:#003366;
-    font-size: 1.2em;
+
+    font-size:
+        clamp(
+            2rem,
+            5vw,
+            2.8rem
+        );
+
+    font-weight:800;
+
+    text-shadow:
+        2px 2px 4px
+        rgba(0,0,0,.1);
 }
 
-.card p{
-    color: #666;
+.subtitulo{
+
+    text-align:center;
+
+    color:#555;
+
+    margin-bottom:40px;
+
+    font-size:1.05rem;
 }
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container{
+
+    width:100%;
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:
+        0 20px 60px;
+}
+
+
+/* =========================
+   PAINEL
+========================= */
+
+.painel{
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #f8f9fa 100%
+        );
+
+    border-radius:18px;
+
+    padding:35px;
+
+    box-shadow:
+        0 10px 35px
+        rgba(0,0,0,.12);
+
+    border-top:
+        5px solid #004aad;
+
+    margin-bottom:40px;
+}
+
+.painel-titulo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#003366;
+
+    font-size:1.5rem;
+
+    margin-bottom:30px;
+
+    padding-bottom:15px;
+
+    border-bottom:
+        1px solid #ddd;
+}
+
+.painel-titulo i{
+
+    color:#004aad;
+}
+
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0,1fr)
+        );
+
+    gap:22px;
+}
+
+.campo{
+
+    display:flex;
+
+    flex-direction:column;
+}
+
+.campo-completo{
+
+    grid-column:
+        1 / -1;
+}
+
+.campo label{
+
+    color:#003366;
+
+    font-weight:700;
+
+    margin-bottom:8px;
+
+    font-size:.95rem;
+}
+
+.campo input,
+.campo select,
+.campo textarea{
+
+    width:100%;
+
+    padding:14px 15px;
+
+    border:
+        2px solid #dce2e8;
+
+    border-radius:10px;
+
+    outline:none;
+
+    background:#fff;
+
+    color:#333;
+
+    font-size:15px;
+
+    transition:
+        all .3s ease;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus{
+
+    border-color:#004aad;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(0,74,173,.1);
+}
+
+.campo textarea{
+
+    min-height:130px;
+
+    resize:vertical;
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+.acoes{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:25px;
+
+    flex-wrap:wrap;
+}
+
+.btn{
+
+    border:none;
+
+    padding:13px 24px;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    transition:
+        all .3s ease;
+}
+
+.btn:hover{
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* SALVAR */
+
+.btn-salvar{
+
+    color:#fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #003366,
+            #004aad
+        );
+
+    box-shadow:
+        0 6px 18px
+        rgba(0,74,173,.25);
+}
+
+.btn-salvar:hover{
+
+    box-shadow:
+        0 10px 25px
+        rgba(0,74,173,.35);
+}
+
+
+/* VISUALIZAR */
+
+.btn-visualizar{
+
+    background:#ffd700;
+
+    color:#003366;
+
+    box-shadow:
+        0 6px 18px
+        rgba(255,215,0,.25);
+}
+
+
+/* CANCELAR */
+
+.btn-cancelar{
+
+    background:#e9ecef;
+
+    color:#555;
+
+    display:none;
+}
+
+
+/* =========================
+   LISTA DE EVENTOS
+========================= */
+
+.lista-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+}
+
+.lista-header h2{
+
+    color:#003366;
+
+    font-size:1.5rem;
+}
+
+.contador{
+
+    background:#003366;
+
+    color:#fff;
+
+    padding:8px 15px;
+
+    border-radius:20px;
+
+    font-size:.9rem;
+
+    font-weight:700;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.eventos{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(
+                280px,
+                1fr
+            )
+        );
+
+    gap:25px;
+}
+
+.evento-card{
+
+    background:#fff;
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0,0,0,.1);
+
+    border-top:
+        5px solid #004aad;
+
+    transition:
+        all .35s ease;
+}
+
+.evento-card:hover{
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(0,74,173,.2);
+
+    border-top-color:#ffd700;
+}
+
+.evento-topo{
+
+    background:
+        linear-gradient(
+            135deg,
+            #003366,
+            #004aad
+        );
+
+    color:#fff;
+
+    padding:22px;
+}
+
+.evento-topo h3{
+
+    font-size:1.25rem;
+
+    margin-bottom:8px;
+}
+
+.status{
+
+    display:inline-block;
+
+    padding:5px 10px;
+
+    border-radius:20px;
+
+    font-size:.78rem;
+
+    font-weight:700;
+
+    margin-top:8px;
+}
+
+.status.aberto{
+
+    background:#d4edda;
+
+    color:#155724;
+}
+
+.status.encerrado{
+
+    background:#f8d7da;
+
+    color:#721c24;
+}
+
+.status.breve{
+
+    background:#fff3cd;
+
+    color:#856404;
+}
+
+.evento-info{
+
+    padding:20px;
+}
+
+.info-item{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-bottom:12px;
+
+    color:#555;
+
+    font-size:.95rem;
+}
+
+.info-item i{
+
+    width:20px;
+
+    color:#004aad;
+
+    text-align:center;
+}
+
+.evento-descricao{
+
+    margin-top:15px;
+
+    padding-top:15px;
+
+    border-top:
+        1px solid #eee;
+
+    line-height:1.6;
+
+    color:#666;
+}
+
+.evento-acoes{
+
+    padding:
+        0 20px 20px;
+
+    display:flex;
+
+    gap:10px;
+}
+
+.btn-editar{
+
+    background:#004aad;
+
+    color:#fff;
+
+    flex:1;
+}
+
+.btn-excluir{
+
+    background:#dc3545;
+
+    color:#fff;
+
+    flex:1;
+}
+
+
+/* =========================
+   SEM EVENTOS
+========================= */
+
+.sem-eventos{
+
+    text-align:center;
+
+    background:#fff;
+
+    border-radius:15px;
+
+    padding:50px 20px;
+
+    color:#777;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0,0,0,.08);
+}
+
+.sem-eventos i{
+
+    font-size:55px;
+
+    color:#004aad;
+
+    margin-bottom:15px;
+}
+
+.sem-eventos h3{
+
+    color:#003366;
+
+    margin-bottom:8px;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal{
+
+    display:none;
+
+    position:fixed;
+
+    z-index:2000;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:
+        rgba(0,0,0,.65);
+
+    backdrop-filter:
+        blur(5px);
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+}
+
+.modal-conteudo{
+
+    background:#fff;
+
+    width:100%;
+
+    max-width:600px;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    position:relative;
+
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,.3);
+
+    max-height:90vh;
+
+    overflow-y:auto;
+}
+
+.fechar{
+
+    position:absolute;
+
+    right:20px;
+
+    top:15px;
+
+    font-size:30px;
+
+    color:#777;
+
+    cursor:pointer;
+}
+
+.fechar:hover{
+
+    color:#dc3545;
+}
+
+.modal-conteudo h2{
+
+    margin:
+        0 0 25px;
+
+    color:#003366;
+}
+
+.preview{
+
+    line-height:1.8;
+
+    color:#555;
+}
+
+.preview strong{
+
+    color:#003366;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
-    background: linear-gradient(135deg, #003366 0%, #002244 100%);
+
+    background:
+        linear-gradient(
+            135deg,
+            #003366 0%,
+            #002244 100%
+        );
+
     color:#fff;
+
     padding:30px 20px;
-    margin-top: 50px;
-    text-align: center;
+
+    text-align:center;
+
+    margin-top:50px;
 }
 
-.footer-redes a{
-    color:#fff;
-    margin-left:15px;
-    font-size:24px;
-    transition: all 0.3s ease;
-    display: inline-block;
-}
 
-.footer-redes a:hover{
-    color:#ffd700;
-    transform: translateY(-5px) scale(1.2);
-}
+/* =========================
+   RESPONSIVO
+========================= */
 
-@media (max-width:767px){
+@media(max-width:767px){
+
     header{
+
         padding:15px;
     }
 
     .logo-area img{
+
         width:48px;
+
         height:60px;
     }
 
     .logo{
+
         font-size:18px;
     }
 
     .menu-toggle{
+
         display:block;
+
         margin-left:auto;
     }
 
     .menu{
+
         display:none;
+
         flex-direction:column;
+
         position:absolute;
+
         top:75px;
+
         left:15px;
+
         right:15px;
-        width: calc(100% - 30px);
-        background: linear-gradient(135deg, rgba(0, 51, 102, 0.95), rgba(0, 74, 173, 0.95));
-        border-radius: 12px;
-        padding: 15px;
-        backdrop-filter: blur(10px);
+
+        width:
+            calc(100% - 30px);
+
+        background:
+            linear-gradient(
+                135deg,
+                rgba(0,51,102,.97),
+                rgba(0,74,173,.97)
+            );
+
+        border-radius:12px;
+
+        padding:15px;
+
+        backdrop-filter:
+            blur(10px);
     }
 
     .menu.active{
+
         display:flex;
     }
 
     .menu li{
-        padding:10px 0;
+
+        padding:8px 0;
+
         text-align:center;
-        width: 100%;
-    }
 
-    .menu a {
-        width: 100%;
-    }
-
-    h2 {
-        font-size: 1.8em;
-    }
-
-    .historia-texto{
-        padding: 25px;
-    }
-
-    .card{
         width:100%;
-        max-width: 340px;
     }
+
+    .menu a{
+
+        width:100%;
+    }
+
+    .form-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .campo-completo{
+
+        grid-column:auto;
+    }
+
+    .painel{
+
+        padding:22px;
+    }
+
+    .titulo{
+
+        margin-top:30px;
+    }
+
+    .acoes{
+
+        flex-direction:column;
+    }
+
+    .btn{
+
+        width:100%;
+    }
+
 }
+
 </style>
+
 </head>
+
 
 <body>
 
+
+<!-- =========================
+     CABEÇALHO
+========================= -->
+
 <header>
 
-<div class="logo-area">
-    <a href="index.html"><img src="src/imagens/Assga_foto.jpg" alt="Logo"></a>
-<div class="logo">ASSGA</div>
-</div>
+    <div class="logo-area">
 
-<div class="menu-toggle" onclick="toggleMenu()">
-☰
-</div>
+        <a href="index.html">
 
-<nav>
-<ul class="menu" id="menu">
+            <img
+                src="src/imagens/Assga_foto.jpg"
+                alt="Logo ASSGA"
+            >
 
-<li><a href="index.html">Home</a></li>
+        </a>
 
-<li><a href="historia.html">História</a></li>
+        <div class="logo">
+            ASSGA
+        </div>
 
-<li><a href="esportiva.html">Esportiva</a></li>
+    </div>
 
-<li><a href="evento.html">Eventos</a></li>
 
-<li><a href="estatuto.html">Estatuto</a></li>
+    <div
+        class="menu-toggle"
+        onclick="toggleMenu()"
+    >
+        ☰
+    </div>
 
-<li><a href="diretoria.html">Diretoria</a></li>
 
-</ul>
-</nav>
+    <nav>
+
+        <ul
+            class="menu"
+            id="menu"
+        >
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="historia.html">
+                    História
+                </a>
+            </li>
+
+            <li>
+                <a href="esportiva.html">
+                    Esportiva
+                </a>
+            </li>
+
+            <li>
+                <a href="evento.html">
+                    Eventos
+                </a>
+            </li>
+
+            <li>
+                <a href="estatuto.html">
+                    Estatuto
+                </a>
+            </li>
+
+            <li>
+                <a href="diretoria.html">
+                    Diretoria
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
 
 </header>
 
-<h2>Eventos</h2>
 
 
-<p>Evento novo breve</p>
-<p>Confira os próximos eventos.</p>
+<!-- =========================
+     TÍTULO
+========================= -->
 
+<h1 class="titulo">
+    <i class="fa-solid fa-calendar-days"></i>
+    Eventos
+</h1>
+
+<p class="subtitulo">
+    Gerencie os eventos da ASSGA
+</p>
+
+
+
+<!-- =========================
+     CONTAINER
+========================= -->
+
+<main class="container">
+
+
+    <!-- =========================
+         CADASTRO
+    ========================= -->
+
+    <section class="painel">
+
+        <div class="painel-titulo">
+
+            <i class="fa-solid fa-calendar-plus"></i>
+
+            <span id="tituloFormulario">
+                Cadastro de Evento
+            </span>
+
+        </div>
+
+
+        <form
+            id="formEvento"
+        >
+
+            <input
+                type="hidden"
+                id="eventoId"
+            >
+
+
+            <div class="form-grid">
+
+
+                <!-- NOME -->
+
+                <div class="campo campo-completo">
+
+                    <label for="nome">
+                        Nome do evento
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        placeholder="Digite o nome do evento"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- DATA -->
+
+                <div class="campo">
+
+                    <label for="data">
+
+                        <i class="fa-solid fa-calendar"></i>
+
+                        Data
+
+                    </label>
+
+                    <input
+                        type="date"
+                        id="data"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- LOCAL -->
+
+                <div class="campo">
+
+                    <label for="local">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Local
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="local"
+                        placeholder="Local do evento"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- VAGAS -->
+
+                <div class="campo">
+
+                    <label for="vagas">
+
+                        <i class="fa-solid fa-users"></i>
+
+                        Vagas
+
+                    </label>
+
+                    <input
+                        type="number"
+                        id="vagas"
+                        min="0"
+                        placeholder="Quantidade de vagas"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- VALOR -->
+
+                <div class="campo">
+
+                    <label for="valor">
+
+                        <i class="fa-solid fa-money-bill"></i>
+
+                        Valor
+
+                    </label>
+
+                    <input
+                        type="number"
+                        id="valor"
+                        min="0"
+                        step="0.01"
+                        placeholder="0,00"
+                    >
+
+                </div>
+
+
+                <!-- STATUS -->
+
+                <div class="campo">
+
+                    <label for="status">
+
+                        <i class="fa-solid fa-circle-info"></i>
+
+                        Status
+
+                    </label>
+
+                    <select
+                        id="status"
+                        required
+                    >
+
+                        <option value="aberto">
+                            Inscrições abertas
+                        </option>
+
+                        <option value="encerrado">
+                            Encerrado
+                        </option>
+
+                        <option value="breve">
+                            Em breve
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- DESCRIÇÃO -->
+
+                <div class="campo campo-completo">
+
+                    <label for="descricao">
+
+                        <i class="fa-solid fa-align-left"></i>
+
+                        Descrição
+
+                    </label>
+
+                    <textarea
+                        id="descricao"
+                        placeholder="Digite a descrição do evento..."
+                    ></textarea>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- BOTÕES -->
+
+            <div class="acoes">
+
+                <button
+                    type="submit"
+                    class="btn btn-salvar"
+                >
+
+                    <i class="fa-solid fa-save"></i>
+
+                    Salvar Evento
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="btn btn-visualizar"
+                    onclick="abrirVisualizacao()"
+                >
+
+                    <i class="fa-solid fa-eye"></i>
+
+                    Visualizar
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="btn btn-cancelar"
+                    id="btnCancelar"
+                    onclick="cancelarEdicao()"
+                >
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                    Cancelar
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+
+
+    <!-- =========================
+         LISTA
+    ========================= -->
+
+    <section>
+
+        <div class="lista-header">
+
+            <h2>
+
+                <i class="fa-solid fa-list"></i>
+
+                Eventos cadastrados
+
+            </h2>
+
+            <span
+                class="contador"
+                id="contador"
+            >
+                0 eventos
+            </span>
+
+        </div>
+
+
+        <div
+            class="eventos"
+            id="listaEventos"
+        >
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================
+     MODAL VISUALIZAÇÃO
+========================= -->
+
+<div
+    class="modal"
+    id="modal"
+>
+
+    <div class="modal-conteudo">
+
+        <span
+            class="fechar"
+            onclick="fecharVisualizacao()"
+        >
+            &times;
+        </span>
+
+
+        <h2>
+            <i class="fa-solid fa-eye"></i>
+            Visualização do Evento
+        </h2>
+
+
+        <div
+            class="preview"
+            id="preview"
+        >
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-© 2026 ASSGA - Todos os direitos reservados
+    © 2026 ASSGA - Todos os direitos reservados
 
 </footer>
 
+
+
 <script>
+
+/* =========================
+   MENU MOBILE
+========================= */
 
 function toggleMenu(){
 
-document.getElementById("menu").classList.toggle("active");
+    document
+        .getElementById("menu")
+        .classList
+        .toggle("active");
 
 }
 
-window.onload=function(){
 
-const cards=document.querySelectorAll(".card");
+/* =========================
+   BANCO LOCAL
+========================= */
 
-cards.forEach((card,index)=>{
+let eventos =
+    JSON.parse(
+        localStorage.getItem("assga_eventos")
+    ) || [];
 
-setTimeout(()=>{
 
-card.style.opacity="1";
-card.style.transform="translateY(0)";
+/* =========================
+   FORMULÁRIO
+========================= */
 
-},index*300);
+const form =
+    document.getElementById(
+        "formEvento"
+    );
 
-});
+
+form.addEventListener(
+    "submit",
+    function(event){
+
+        event.preventDefault();
+
+
+        const id =
+            document.getElementById(
+                "eventoId"
+            ).value;
+
+
+        const evento = {
+
+            id:
+                id ||
+                Date.now().toString(),
+
+            nome:
+                document.getElementById(
+                    "nome"
+                ).value,
+
+            data:
+                document.getElementById(
+                    "data"
+                ).value,
+
+            local:
+                document.getElementById(
+                    "local"
+                ).value,
+
+            vagas:
+                document.getElementById(
+                    "vagas"
+                ).value,
+
+            valor:
+                document.getElementById(
+                    "valor"
+                ).value || "0",
+
+            status:
+                document.getElementById(
+                    "status"
+                ).value,
+
+            descricao:
+                document.getElementById(
+                    "descricao"
+                ).value
+
+        };
+
+
+        if(id){
+
+            const index =
+                eventos.findIndex(
+                    item =>
+                        item.id == id
+                );
+
+            if(index !== -1){
+
+                eventos[index] =
+                    evento;
+
+            }
+
+        }else{
+
+            eventos.push(evento);
+
+        }
+
+
+        salvarEventos();
+
+        limparFormulario();
+
+        mostrarEventos();
+
+        alert(
+            "Evento salvo com sucesso!"
+        );
+
+    }
+);
+
+
+/* =========================
+   SALVAR
+========================= */
+
+function salvarEventos(){
+
+    localStorage.setItem(
+        "assga_eventos",
+        JSON.stringify(eventos)
+    );
 
 }
+
+
+/* =========================
+   MOSTRAR EVENTOS
+========================= */
+
+function mostrarEventos(){
+
+    const lista =
+        document.getElementById(
+            "listaEventos"
+        );
+
+    const contador =
+        document.getElementById(
+            "contador"
+        );
+
+
+    contador.textContent =
+        eventos.length +
+        (
+            eventos.length === 1
+            ? " evento"
+            : " eventos"
+        );
+
+
+    if(eventos.length === 0){
+
+        lista.innerHTML = `
+
+            <div class="sem-eventos">
+
+                <i class="fa-solid fa-calendar-xmark"></i>
+
+                <h3>
+                    Nenhum evento cadastrado
+                </h3>
+
+                <p>
+                    Cadastre o primeiro evento da ASSGA.
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    lista.innerHTML =
+        eventos.map(
+            evento =>
+                criarCard(evento)
+        ).join("");
+
+}
+
+
+/* =========================
+   CRIAR CARD
+========================= */
+
+function criarCard(evento){
+
+    let statusTexto = "";
+
+    if(evento.status === "aberto"){
+
+        statusTexto =
+            "Inscrições abertas";
+
+    }
+
+    if(evento.status === "encerrado"){
+
+        statusTexto =
+            "Encerrado";
+
+    }
+
+    if(evento.status === "breve"){
+
+        statusTexto =
+            "Em breve";
+
+    }
+
+
+    const dataFormatada =
+        formatarData(
+            evento.data
+        );
+
+
+    const valorFormatado =
+        Number(evento.valor) > 0
+
+        ? Number(evento.valor)
+            .toLocaleString(
+                "pt-BR",
+                {
+                    style:"currency",
+                    currency:"BRL"
+                }
+            )
+
+        : "Gratuito";
+
+
+    return `
+
+        <article
+            class="evento-card"
+        >
+
+            <div class="evento-topo">
+
+                <h3>
+                    ${escapar(evento.nome)}
+                </h3>
+
+                <span
+                    class="status ${evento.status}"
+                >
+                    ${statusTexto}
+                </span>
+
+            </div>
+
+
+            <div class="evento-info">
+
+
+                <div class="info-item">
+
+                    <i class="fa-solid fa-calendar"></i>
+
+                    <span>
+                        ${dataFormatada}
+                    </span>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <span>
+                        ${escapar(evento.local)}
+                    </span>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <span>
+                        ${evento.vagas} vagas
+                    </span>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <i class="fa-solid fa-money-bill"></i>
+
+                    <span>
+                        ${valorFormatado}
+                    </span>
+
+                </div>
+
+
+                ${
+                    evento.descricao
+
+                    ? `
+
+                    <div class="evento-descricao">
+
+                        ${escapar(
+                            evento.descricao
+                        )}
+
+                    </div>
+
+                    `
+
+                    : ""
+
+                }
+
+
+            </div>
+
+
+            <div class="evento-acoes">
+
+                <button
+                    class="btn btn-editar"
+                    onclick="editarEvento('${evento.id}')"
+                >
+
+                    <i class="fa-solid fa-pen"></i>
+
+                    Editar
+
+                </button>
+
+
+                <button
+                    class="btn btn-excluir"
+                    onclick="excluirEvento('${evento.id}')"
+                >
+
+                    <i class="fa-solid fa-trash"></i>
+
+                    Excluir
+
+                </button>
+
+            </div>
+
+        </article>
+
+    `;
+
+}
+
+
+/* =========================
+   FORMATAR DATA
+========================= */
+
+function formatarData(data){
+
+    if(!data){
+
+        return "Data não informada";
+
+    }
+
+
+    const partes =
+        data.split("-");
+
+
+    if(partes.length !== 3){
+
+        return data;
+
+    }
+
+
+    return (
+        partes[2] +
+        "/" +
+        partes[1] +
+        "/" +
+        partes[0]
+    );
+
+}
+
+
+/* =========================
+   EDITAR
+========================= */
+
+function editarEvento(id){
+
+    const evento =
+        eventos.find(
+            item =>
+                item.id == id
+        );
+
+
+    if(!evento){
+
+        return;
+
+    }
+
+
+    document.getElementById(
+        "eventoId"
+    ).value =
+        evento.id;
+
+
+    document.getElementById(
+        "nome"
+    ).value =
+        evento.nome;
+
+
+    document.getElementById(
+        "data"
+    ).value =
+        evento.data;
+
+
+    document.getElementById(
+        "local"
+    ).value =
+        evento.local;
+
+
+    document.getElementById(
+        "vagas"
+    ).value =
+        evento.vagas;
+
+
+    document.getElementById(
+        "valor"
+    ).value =
+        evento.valor;
+
+
+    document.getElementById(
+        "status"
+    ).value =
+        evento.status;
+
+
+    document.getElementById(
+        "descricao"
+    ).value =
+        evento.descricao;
+
+
+    document.getElementById(
+        "tituloFormulario"
+    ).innerHTML = `
+
+        <i class="fa-solid fa-pen"></i>
+
+        Editar Evento
+
+    `;
+
+
+    document.getElementById(
+        "btnCancelar"
+    ).style.display =
+        "inline-flex";
+
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+}
+
+
+/* =========================
+   CANCELAR EDIÇÃO
+========================= */
+
+function cancelarEdicao(){
+
+    limparFormulario();
+
+}
+
+
+/* =========================
+   LIMPAR FORMULÁRIO
+========================= */
+
+function limparFormulario(){
+
+    form.reset();
+
+
+    document.getElementById(
+        "eventoId"
+    ).value = "";
+
+
+    document.getElementById(
+        "tituloFormulario"
+    ).innerHTML = `
+
+        <i class="fa-solid fa-calendar-plus"></i>
+
+        Cadastro de Evento
+
+    `;
+
+
+    document.getElementById(
+        "btnCancelar"
+    ).style.display =
+        "none";
+
+}
+
+
+/* =========================
+   EXCLUIR
+========================= */
+
+function excluirEvento(id){
+
+    const evento =
+        eventos.find(
+            item =>
+                item.id == id
+        );
+
+
+    if(!evento){
+
+        return;
+
+    }
+
+
+    const confirmar =
+        confirm(
+            "Deseja realmente excluir o evento \"" +
+            evento.nome +
+            "\"?"
+        );
+
+
+    if(!confirmar){
+
+        return;
+
+    }
+
+
+    eventos =
+        eventos.filter(
+            item =>
+                item.id != id
+        );
+
+
+    salvarEventos();
+
+    mostrarEventos();
+
+
+    alert(
+        "Evento excluído com sucesso!"
+    );
+
+}
+
+
+/* =========================
+   VISUALIZAR
+========================= */
+
+function abrirVisualizacao(){
+
+    const nome =
+        document.getElementById(
+            "nome"
+        ).value;
+
+
+    const data =
+        document.getElementById(
+            "data"
+        ).value;
+
+
+    const local =
+        document.getElementById(
+            "local"
+        ).value;
+
+
+    const vagas =
+        document.getElementById(
+            "vagas"
+        ).value;
+
+
+    const valor =
+        document.getElementById(
+            "valor"
+        ).value;
+
+
+    const status =
+        document.getElementById(
+            "status"
+        ).value;
+
+
+    const descricao =
+        document.getElementById(
+            "descricao"
+        ).value;
+
+
+    let statusTexto =
+        "Inscrições abertas";
+
+
+    if(status === "encerrado"){
+
+        statusTexto =
+            "Encerrado";
+
+    }
+
+
+    if(status === "breve"){
+
+        statusTexto =
+            "Em breve";
+
+    }
+
+
+    const valorFormatado =
+        Number(valor) > 0
+
+        ? Number(valor)
+            .toLocaleString(
+                "pt-BR",
+                {
+                    style:"currency",
+                    currency:"BRL"
+                }
+            )
+
+        : "Gratuito";
+
+
+    document.getElementById(
+        "preview"
+    ).innerHTML = `
+
+        <h3
+            style="
+                color:#003366;
+                font-size:1.5rem;
+                margin-bottom:20px;
+            "
+        >
+            ${escapar(nome) ||
+                "Nome do evento"}
+        </h3>
+
+
+        <p>
+            <strong>Status:</strong>
+            ${statusTexto}
+        </p>
+
+
+        <p>
+            <strong>Data:</strong>
+            ${
+                data
+                ? formatarData(data)
+                : "Não informada"
+            }
+        </p>
+
+
+        <p>
+            <strong>Local:</strong>
+            ${escapar(local) ||
+                "Não informado"}
+        </p>
+
+
+        <p>
+            <strong>Vagas:</strong>
+            ${vagas ||
+                "Não informado"}
+        </p>
+
+
+        <p>
+            <strong>Valor:</strong>
+            ${valorFormatado}
+        </p>
+
+
+        <p
+            style="
+                margin-top:20px;
+            "
+        >
+
+            <strong>
+                Descrição:
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            ${
+                escapar(descricao) ||
+                "Nenhuma descrição informada."
+            }
+
+        </p>
+
+    `;
+
+
+    document.getElementById(
+        "modal"
+    ).style.display =
+        "flex";
+
+}
+
+
+/* =========================
+   FECHAR MODAL
+========================= */
+
+function fecharVisualizacao(){
+
+    document.getElementById(
+        "modal"
+    ).style.display =
+        "none";
+
+}
+
+
+window.addEventListener(
+    "click",
+    function(event){
+
+        const modal =
+            document.getElementById(
+                "modal"
+            );
+
+
+        if(event.target === modal){
+
+            fecharVisualizacao();
+
+        }
+
+    }
+);
+
+
+/* =========================
+   ESCAPAR HTML
+========================= */
+
+function escapar(texto){
+
+    if(!texto){
+
+        return "";
+
+    }
+
+
+    return String(texto)
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+        .replace(
+            /</g,
+            "&lt;"
+        )
+        .replace(
+            />/g,
+            "&gt;"
+        )
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+        .replace(
+            /'/g,
+            "&#039;"
+        );
+
+}
+
+
+/* =========================
+   INICIAR
+========================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function(){
+
+        mostrarEventos();
+
+    }
+);
 
 </script>
+
 
 </body>
 </html>

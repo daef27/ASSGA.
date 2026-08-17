@@ -5,15 +5,9 @@
 
 <meta charset="UTF-8">
 
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta
-    name="robots"
-    content="noindex,nofollow"
->
+<meta name="robots" content="noindex,nofollow">
 
 <title>ASSGA - Painel Administrativo</title>
 
@@ -46,16 +40,8 @@ html{
 }
 
 body{
-
     min-height:100vh;
-
-    background:
-        linear-gradient(
-            135deg,
-            #eef4fb,
-            #dce8f6
-        );
-
+    background:linear-gradient(135deg,#eef4fb,#dce8f6);
     color:#333;
 }
 
@@ -65,82 +51,48 @@ BLOQUEIO
 ========================================================= */
 
 #bloqueio{
-
     position:fixed;
-
     inset:0;
-
-    background:
-        linear-gradient(
-            135deg,
-            #003366,
-            #004aad
-        );
-
+    background:linear-gradient(135deg,#003366,#004aad);
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     z-index:999999;
 }
 
 .bloqueio-box{
-
     background:#fff;
-
     width:min(430px,90%);
-
     padding:35px;
-
     border-radius:20px;
-
     text-align:center;
-
-    box-shadow:
-        0 20px 60px rgba(0,0,0,.30);
+    box-shadow:0 20px 60px rgba(0,0,0,.30);
 }
 
 .bloqueio-box i{
-
     font-size:55px;
-
     color:#004aad;
-
     margin-bottom:20px;
 }
 
 .bloqueio-box h2{
-
     color:#003366;
-
     margin-bottom:10px;
 }
 
 .bloqueio-box p{
-
     color:#667;
-
     line-height:1.6;
-
     margin-bottom:20px;
 }
 
 .btn-login{
-
     display:inline-block;
-
     text-decoration:none;
-
     background:#004aad;
-
     color:#fff;
-
     padding:12px 20px;
-
     border-radius:9px;
-
     font-weight:800;
 }
 
@@ -150,110 +102,70 @@ HEADER
 ========================================================= */
 
 .admin-header{
-
     height:75px;
-
     position:fixed;
-
     top:0;
-
     left:0;
-
     right:0;
-
     z-index:1000;
 
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
 
     padding:0 25px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #003366,
-            #004aad
-        );
+    background:linear-gradient(135deg,#003366,#004aad);
 
     color:#fff;
 
-    box-shadow:
-        0 5px 20px rgba(0,0,0,.20);
+    box-shadow:0 5px 20px rgba(0,0,0,.20);
 }
 
 .admin-brand{
-
     display:flex;
-
     align-items:center;
-
     gap:12px;
 }
 
 .admin-brand img{
-
     width:45px;
-
     height:55px;
-
     object-fit:cover;
-
     border-radius:8px;
-
     background:#fff;
 }
 
 .admin-brand h1{
-
     font-size:21px;
-
     font-weight:900;
-
     letter-spacing:1px;
 }
 
 .admin-user{
-
     display:flex;
-
     align-items:center;
-
     gap:15px;
 }
 
 .admin-user span{
-
     font-size:14px;
-
     font-weight:700;
 }
 
 .btn-sair{
-
     border:0;
-
     background:#d62828;
-
     color:#fff;
-
     padding:10px 16px;
-
     border-radius:8px;
-
     cursor:pointer;
-
     font-weight:800;
-
     transition:.3s;
 }
 
 .btn-sair:hover{
-
     background:#a91f1f;
-
     transform:translateY(-2px);
 }
 
@@ -263,13 +175,9 @@ SIDEBAR
 ========================================================= */
 
 .sidebar{
-
     position:fixed;
-
     left:0;
-
     top:75px;
-
     bottom:0;
 
     width:250px;
@@ -284,13 +192,9 @@ SIDEBAR
 }
 
 .sidebar-title{
-
     color:#8db8e8;
-
     font-size:12px;
-
     font-weight:800;
-
     text-transform:uppercase;
 
     padding:10px 15px;
@@ -299,11 +203,9 @@ SIDEBAR
 }
 
 .sidebar button{
-
     width:100%;
 
     border:0;
-
     background:transparent;
 
     color:#fff;
@@ -317,7 +219,6 @@ SIDEBAR
     cursor:pointer;
 
     font-size:14px;
-
     font-weight:700;
 
     margin-bottom:5px;
@@ -326,30 +227,19 @@ SIDEBAR
 }
 
 .sidebar button i{
-
     width:25px;
-
     color:#ffd700;
 }
 
 .sidebar button:hover{
-
     background:#004aad;
-
     transform:translateX(4px);
 }
 
 .sidebar button.active{
+    background:linear-gradient(135deg,#004aad,#0066cc);
 
-    background:
-        linear-gradient(
-            135deg,
-            #004aad,
-            #0066cc
-        );
-
-    box-shadow:
-        0 5px 15px rgba(0,0,0,.20);
+    box-shadow:0 5px 15px rgba(0,0,0,.20);
 }
 
 
@@ -358,7 +248,6 @@ MAIN
 ========================================================= */
 
 .main{
-
     margin-left:250px;
 
     padding:105px 30px 40px;
@@ -367,32 +256,26 @@ MAIN
 }
 
 .page{
-
     display:none;
-
     animation:aparecer .3s ease;
 }
 
 .page.active{
-
     display:block;
 }
 
 @keyframes aparecer{
 
     from{
-
         opacity:0;
-
         transform:translateY(10px);
     }
 
     to{
-
         opacity:1;
-
         transform:translateY(0);
     }
+
 }
 
 
@@ -401,23 +284,17 @@ TÍTULOS
 ========================================================= */
 
 .page-title{
-
     margin-bottom:25px;
 }
 
 .page-title h2{
-
     color:#003366;
-
     font-size:30px;
-
     margin-bottom:6px;
 }
 
 .page-title p{
-
     color:#687789;
-
     font-size:14px;
 }
 
@@ -427,11 +304,8 @@ CARDS
 ========================================================= */
 
 .cards{
-
     display:grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
+    grid-template-columns:repeat(4,1fr);
 
     gap:20px;
 
@@ -439,7 +313,6 @@ CARDS
 }
 
 .card{
-
     background:#fff;
 
     border-radius:15px;
@@ -448,44 +321,32 @@ CARDS
 
     border-top:4px solid #004aad;
 
-    box-shadow:
-        0 8px 25px rgba(0,0,0,.08);
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
 
     transition:.3s;
 }
 
 .card:hover{
-
     transform:translateY(-5px);
 
-    box-shadow:
-        0 15px 35px rgba(0,0,0,.12);
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
 }
 
 .card-icon{
-
     font-size:30px;
-
     color:#004aad;
-
     margin-bottom:10px;
 }
 
 .card h3{
-
     color:#003366;
-
     font-size:16px;
-
     margin-bottom:7px;
 }
 
 .card-number{
-
     font-size:30px;
-
     font-weight:900;
-
     color:#004aad;
 }
 
@@ -495,7 +356,6 @@ PAINEL
 ========================================================= */
 
 .panel{
-
     background:#fff;
 
     border-radius:16px;
@@ -504,12 +364,10 @@ PAINEL
 
     margin-bottom:25px;
 
-    box-shadow:
-        0 8px 25px rgba(0,0,0,.08);
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
 
 .panel-header{
-
     display:flex;
 
     justify-content:space-between;
@@ -526,9 +384,7 @@ PAINEL
 }
 
 .panel-header h3{
-
     color:#003366;
-
     font-size:20px;
 }
 
@@ -538,31 +394,24 @@ FORM
 ========================================================= */
 
 .form-grid{
-
     display:grid;
 
-    grid-template-columns:
-        repeat(2,1fr);
+    grid-template-columns:repeat(2,1fr);
 
     gap:18px;
 }
 
 .form-group{
-
     display:flex;
-
     flex-direction:column;
-
     gap:7px;
 }
 
 .form-group.full{
-
     grid-column:1 / -1;
 }
 
 .form-group label{
-
     color:#003366;
 
     font-weight:800;
@@ -597,8 +446,7 @@ FORM
 
     border-color:#004aad;
 
-    box-shadow:
-        0 0 0 3px rgba(0,74,173,.10);
+    box-shadow:0 0 0 3px rgba(0,74,173,.10);
 
     background:#fff;
 }
@@ -642,57 +490,43 @@ BOTÕES
 }
 
 .btn:hover{
-
     transform:translateY(-2px);
 }
 
 .btn-primary{
-
     background:#004aad;
-
     color:#fff;
 }
 
 .btn-primary:hover{
-
     background:#003366;
 }
 
 .btn-success{
-
     background:#198754;
-
     color:#fff;
 }
 
 .btn-success:hover{
-
     background:#146c43;
 }
 
 .btn-warning{
-
     background:#ffc107;
-
     color:#4a3900;
 }
 
 .btn-danger{
-
     background:#dc3545;
-
     color:#fff;
 }
 
 .btn-danger:hover{
-
     background:#a71d2a;
 }
 
 .btn-secondary{
-
     background:#e9eef4;
-
     color:#003366;
 }
 
@@ -818,8 +652,7 @@ SLIDER
 
     display:grid;
 
-    grid-template-columns:
-        repeat(3,1fr);
+    grid-template-columns:repeat(3,1fr);
 
     gap:20px;
 }
@@ -887,7 +720,7 @@ table{
 
     border-collapse:collapse;
 
-    min-width:750px;
+    min-width:800px;
 }
 
 th{
@@ -939,6 +772,13 @@ tr:hover td{
     color:#0f5132;
 }
 
+.status-warning{
+
+    background:#fff3cd;
+
+    color:#664d03;
+}
+
 
 /* =========================================================
 TOAST
@@ -960,8 +800,7 @@ TOAST
 
     border-radius:10px;
 
-    box-shadow:
-        0 10px 30px rgba(0,0,0,.25);
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
 
     opacity:0;
 
@@ -989,15 +828,13 @@ RESPONSIVO
 @media(max-width:1100px){
 
     .cards{
-
-        grid-template-columns:
-            repeat(2,1fr);
+        grid-template-columns:repeat(2,1fr);
     }
 
     .slider-grid{
-
         grid-template-columns:1fr;
     }
+
 }
 
 @media(max-width:800px){
@@ -1010,7 +847,6 @@ RESPONSIVO
     }
 
     .sidebar-title{
-
         display:none;
     }
 
@@ -1022,7 +858,6 @@ RESPONSIVO
     }
 
     .sidebar button span{
-
         display:none;
     }
 
@@ -1041,30 +876,26 @@ RESPONSIVO
     }
 
     .admin-brand h1{
-
         font-size:16px;
     }
 
     .admin-user span{
-
         display:none;
     }
 
     .form-grid{
-
         grid-template-columns:1fr;
     }
 
     .form-group.full{
-
         grid-column:auto;
     }
+
 }
 
 @media(max-width:600px){
 
     .admin-header{
-
         padding:0 12px;
     }
 
@@ -1076,7 +907,6 @@ RESPONSIVO
     }
 
     .admin-brand h1{
-
         font-size:14px;
     }
 
@@ -1088,17 +918,14 @@ RESPONSIVO
     }
 
     .cards{
-
         grid-template-columns:1fr;
     }
 
     .page-title h2{
-
         font-size:24px;
     }
 
     .panel{
-
         padding:18px;
     }
 
@@ -1110,14 +937,13 @@ RESPONSIVO
     }
 
     .actions{
-
         flex-direction:column;
     }
 
     .actions .btn{
-
         width:100%;
     }
+
 }
 
 </style>
@@ -1373,7 +1199,9 @@ MAIN
 <main class="main">
 
 
-<!-- DASHBOARD -->
+<!-- =========================================================
+DASHBOARD
+========================================================= -->
 
 <section
     class="page active"
@@ -1710,7 +1538,9 @@ MAIN
 </section>
 
 
-<!-- INDEX -->
+<!-- =========================================================
+INDEX
+========================================================= -->
 
 <section
     class="page"
@@ -1746,6 +1576,7 @@ MAIN
 
 
         <div class="form-grid">
+
 
             <div class="form-group">
 
@@ -1881,7 +1712,9 @@ MAIN
 </section>
 
 
-<!-- HISTÓRIA -->
+<!-- =========================================================
+HISTÓRIA
+========================================================= -->
 
 <section
     class="page"
@@ -1917,6 +1750,7 @@ MAIN
 
 
         <div class="form-grid">
+
 
             <div class="form-group full">
 
@@ -1981,7 +1815,9 @@ MAIN
 </section>
 
 
-<!-- EVENTO -->
+<!-- =========================================================
+EVENTO
+========================================================= -->
 
 <section
     class="page"
@@ -2017,6 +1853,7 @@ MAIN
 
 
         <div class="form-grid">
+
 
             <div class="form-group">
 
@@ -2163,7 +2000,9 @@ MAIN
 </section>
 
 
-<!-- ESTATUTO -->
+<!-- =========================================================
+ESTATUTO
+========================================================= -->
 
 <section
     class="page"
@@ -2199,6 +2038,7 @@ MAIN
 
 
         <div class="form-grid">
+
 
             <div class="form-group full">
 
@@ -2275,7 +2115,9 @@ MAIN
 </section>
 
 
-<!-- ESPORTIVA -->
+<!-- =========================================================
+ESPORTIVA
+========================================================= -->
 
 <section
     class="page"
@@ -2311,6 +2153,7 @@ MAIN
 
 
         <div class="form-grid">
+
 
             <div class="form-group">
 
@@ -2387,7 +2230,9 @@ MAIN
 </section>
 
 
-<!-- DIRETORIA -->
+<!-- =========================================================
+DIRETORIA
+========================================================= -->
 
 <section
     class="page"
@@ -2423,6 +2268,7 @@ MAIN
 
 
         <div class="form-grid">
+
 
             <div class="form-group">
 
@@ -2532,7 +2378,9 @@ MAIN
 </section>
 
 
-<!-- SLIDER -->
+<!-- =========================================================
+SLIDER
+========================================================= -->
 
 <section
     class="page"
@@ -2559,8 +2407,7 @@ MAIN
         </strong>
 
         O painel salva os caminhos das imagens.
-        Ele não substitui fisicamente os arquivos
-        publicados no Netlify.
+        Os arquivos precisam existir no projeto.
 
     </div>
 
@@ -2667,7 +2514,9 @@ MAIN
 </section>
 
 
-<!-- REGISTROS -->
+<!-- =========================================================
+REGISTROS
+========================================================= -->
 
 <section
     class="page"
@@ -2755,7 +2604,9 @@ MAIN
 </main>
 
 
-<!-- TOAST -->
+<!-- =========================================================
+TOAST
+========================================================= -->
 
 <div
     class="toast"
@@ -2783,16 +2634,13 @@ function verificarLogin(){
             "bloqueio"
         );
 
-
     if(logado === "true"){
 
-        bloqueio.style.display =
-            "none";
+        bloqueio.style.display = "none";
 
     }else{
 
-        bloqueio.style.display =
-            "flex";
+        bloqueio.style.display = "flex";
 
     }
 
@@ -2815,11 +2663,7 @@ function carregarAdministrador(){
             "nomeAdministrador"
         );
 
-
-    if(
-        elemento &&
-        usuario
-    ){
+    if(elemento && usuario){
 
         elemento.innerHTML =
             '<i class="fas fa-user-shield"></i> ' +
@@ -2932,10 +2776,8 @@ function mostrarToast(mensagem){
             "toast"
         );
 
-
     toast.textContent =
         mensagem;
-
 
     toast.classList.add(
         "show"
@@ -3327,25 +3169,25 @@ function carregarDados(){
         function(d){
 
             if(d.titulo)
-                indexTitulo.value=d.titulo;
+                document.getElementById("indexTitulo").value=d.titulo;
 
             if(d.data)
-                indexData.value=d.data;
+                document.getElementById("indexData").value=d.data;
 
             if(d.texto)
-                indexTexto.value=d.texto;
+                document.getElementById("indexTexto").value=d.texto;
 
             if(d.eventoData)
-                indexEventoData.value=d.eventoData;
+                document.getElementById("indexEventoData").value=d.eventoData;
 
             if(d.local)
-                indexLocal.value=d.local;
+                document.getElementById("indexLocal").value=d.local;
 
             if(d.vagas)
-                indexVagas.value=d.vagas;
+                document.getElementById("indexVagas").value=d.vagas;
 
             if(d.preco)
-                indexPreco.value=d.preco;
+                document.getElementById("indexPreco").value=d.preco;
 
         }
     );
@@ -3356,10 +3198,10 @@ function carregarDados(){
         function(d){
 
             if(d.titulo)
-                historiaTitulo.value=d.titulo;
+                document.getElementById("historiaTitulo").value=d.titulo;
 
             if(d.texto)
-                historiaTexto.value=d.texto;
+                document.getElementById("historiaTexto").value=d.texto;
 
         }
     );
@@ -3370,25 +3212,25 @@ function carregarDados(){
         function(d){
 
             if(d.nome)
-                eventoNome.value=d.nome;
+                document.getElementById("eventoNome").value=d.nome;
 
             if(d.data)
-                eventoData.value=d.data;
+                document.getElementById("eventoData").value=d.data;
 
             if(d.local)
-                eventoLocal.value=d.local;
+                document.getElementById("eventoLocal").value=d.local;
 
             if(d.vagas)
-                eventoVagas.value=d.vagas;
+                document.getElementById("eventoVagas").value=d.vagas;
 
             if(d.valor)
-                eventoValor.value=d.valor;
+                document.getElementById("eventoValor").value=d.valor;
 
             if(d.status)
-                eventoStatus.value=d.status;
+                document.getElementById("eventoStatus").value=d.status;
 
             if(d.descricao)
-                eventoDescricao.value=d.descricao;
+                document.getElementById("eventoDescricao").value=d.descricao;
 
         }
     );
@@ -3399,13 +3241,13 @@ function carregarDados(){
         function(d){
 
             if(d.titulo)
-                estatutoTitulo.value=d.titulo;
+                document.getElementById("estatutoTitulo").value=d.titulo;
 
             if(d.texto)
-                estatutoTexto.value=d.texto;
+                document.getElementById("estatutoTexto").value=d.texto;
 
             if(d.pdf)
-                estatutoPdf.value=d.pdf;
+                document.getElementById("estatutoPdf").value=d.pdf;
 
         }
     );
@@ -3416,13 +3258,13 @@ function carregarDados(){
         function(d){
 
             if(d.titulo)
-                esportivaTitulo.value=d.titulo;
+                document.getElementById("esportivaTitulo").value=d.titulo;
 
             if(d.modalidade)
-                esportivaModalidade.value=d.modalidade;
+                document.getElementById("esportivaModalidade").value=d.modalidade;
 
             if(d.texto)
-                esportivaTexto.value=d.texto;
+                document.getElementById("esportivaTexto").value=d.texto;
 
         }
     );
@@ -3433,19 +3275,19 @@ function carregarDados(){
         function(d){
 
             if(d.presidente)
-                presidente.value=d.presidente;
+                document.getElementById("presidente").value=d.presidente;
 
             if(d.vice)
-                vicePresidente.value=d.vice;
+                document.getElementById("vicePresidente").value=d.vice;
 
             if(d.secretario)
-                secretario.value=d.secretario;
+                document.getElementById("secretario").value=d.secretario;
 
             if(d.tesoureiro)
-                tesoureiro.value=d.tesoureiro;
+                document.getElementById("tesoureiro").value=d.tesoureiro;
 
             if(d.texto)
-                diretoriaTexto.value=d.texto;
+                document.getElementById("diretoriaTexto").value=d.texto;
 
         }
     );
@@ -3456,13 +3298,13 @@ function carregarDados(){
         function(d){
 
             if(d.foto1)
-                foto1.value=d.foto1;
+                document.getElementById("foto1").value=d.foto1;
 
             if(d.foto2)
-                foto2.value=d.foto2;
+                document.getElementById("foto2").value=d.foto2;
 
             if(d.foto3)
-                foto3.value=d.foto3;
+                document.getElementById("foto3").value=d.foto3;
 
         }
     );
@@ -3645,7 +3487,7 @@ function limparRegistros(){
 
 
 /* =========================================================
-ESCAPE
+ESCAPE HTML
 ========================================================= */
 
 function escapeHTML(valor){
@@ -3721,6 +3563,40 @@ function atualizarDashboard(){
         "totalEventos"
     ).textContent =
         evento ? "1" : "0";
+
+
+    const slider =
+        localStorage.getItem(
+            "assga_slider"
+        );
+
+
+    if(slider){
+
+        try{
+
+            const fotos =
+                JSON.parse(slider);
+
+            let total=0;
+
+            if(fotos.foto1) total++;
+            if(fotos.foto2) total++;
+            if(fotos.foto3) total++;
+
+            document.getElementById(
+                "totalFotos"
+            ).textContent=total;
+
+        }catch(e){
+
+            document.getElementById(
+                "totalFotos"
+            ).textContent="3";
+
+        }
+
+    }
 
 }
 

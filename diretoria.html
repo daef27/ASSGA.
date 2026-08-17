@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>História - ASSGA</title>
 
-<link rel="icon" href="src/imagens/Assga_foto.jpg" type="image/jpeg">
-<link rel="shortcut icon" href="src/imagens/Assga_foto.jpg" type="image/jpeg">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>Diretoria - ASSGA</title>
+
+<link
+    rel="icon"
+    href="src/imagens/Assga_foto.jpg"
+    type="image/jpeg"
+>
+
+<link
+    rel="shortcut icon"
+    href="src/imagens/Assga_foto.jpg"
+    type="image/jpeg"
+>
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+>
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -17,73 +33,125 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background:linear-gradient(
+        135deg,
+        #f5f7fa 0%,
+        #c3cfe2 100%
+    );
+
     overflow-x:hidden;
 }
 
-h2{
-    text-align:center;
-    margin:40px 0;
-    color:#003366;
-    font-size: 2.5em;
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-}
+/* =========================
+   CABEÇALHO
+========================= */
 
 header{
-    background: linear-gradient(135deg, #003366 0%, #004aad 100%);
+
+    background:linear-gradient(
+        135deg,
+        #003366 0%,
+        #004aad 100%
+    );
+
     color:#fff;
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
+
     padding:15px 30px;
+
     position:sticky;
+
     top:0;
+
     z-index:999;
-    box-shadow: 0 8px 32px rgba(0, 51, 102, 0.3);
+
+    box-shadow:
+        0 8px 32px
+        rgba(0,51,102,0.30);
 }
+
+/* LOGO */
 
 .logo-area{
+
     display:flex;
+
     align-items:center;
+
     gap:15px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+
+    cursor:pointer;
+
+    transition:transform .3s ease;
 }
 
-.logo-area:hover {
-    transform: scale(1.05);
+.logo-area:hover{
+    transform:scale(1.05);
 }
 
 .logo-area img{
+
     width:56px;
+
     height:68px;
+
     object-fit:cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+
+    border-radius:8px;
+
+    box-shadow:
+        0 4px 12px
+        rgba(0,0,0,.2);
 }
 
 .logo{
+
     font-size:28px;
+
     font-weight:900;
-    letter-spacing: 2px;
-    background: linear-gradient(135deg, #ffd700, #ffed4e);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+
+    letter-spacing:2px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd700,
+            #ffed4e
+        );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    background-clip:text;
 }
 
+/* =========================
+   MENU
+========================= */
+
 .menu{
+
     list-style:none;
+
     display:inline-grid;
+
     grid-auto-flow:column;
+
     gap:15px;
+
     margin-left:auto;
+
     align-items:center;
 }
 
@@ -91,290 +159,879 @@ header{
     position:relative;
 }
 
-.menu a {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 700;
-    padding: 12px 20px;
-    border-radius: 25px;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    position: relative;
-    overflow: hidden;
+.menu a{
+
+    display:block;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    padding:12px 20px;
+
+    border-radius:25px;
+
+    transition:
+        all .4s
+        cubic-bezier(
+            .175,
+            .885,
+            .32,
+            1.275
+        );
 }
 
-@media (hover: hover){
-.menu a:hover {
-    color:#003366;
-    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
-    box-shadow: 0 8px 24px rgba(255, 215, 0, 0.4);
-    transform: translateY(-3px);
-}
+@media (hover:hover){
+
+    .menu a:hover{
+
+        color:#003366;
+
+        background:
+            linear-gradient(
+                135deg,
+                #ffd700 0%,
+                #ffed4e 100%
+            );
+
+        box-shadow:
+            0 8px 24px
+            rgba(255,215,0,.4);
+
+        transform:translateY(-3px);
+    }
 }
 
 .menu a:active,
 .menu a:focus{
+
     color:#003366;
-    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
-    box-shadow: 0 8px 24px rgba(255, 215, 0, 0.4);
-    transform: translateY(-3px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd700,
+            #ffed4e
+        );
+
+    box-shadow:
+        0 8px 24px
+        rgba(255,215,0,.4);
 }
 
 .menu-toggle{
+
     display:none;
+
     font-size:28px;
+
     cursor:pointer;
-    transition: transform 0.3s ease;
+
+    transition:
+        transform .3s ease;
 }
 
-.menu-toggle:hover {
-    transform: rotate(90deg);
+.menu-toggle:hover{
+    transform:rotate(90deg);
 }
 
-.historia-container{
-    max-width:1000px;
-    margin:40px auto;
+/* =========================
+   TÍTULO
+========================= */
+
+h2{
+
+    text-align:center;
+
+    margin:45px 0 15px;
+
+    color:#003366;
+
+    font-size:2.5em;
+
+    font-weight:700;
+
+    text-shadow:
+        2px 2px 4px
+        rgba(0,0,0,.1);
+}
+
+.subtitulo{
+
+    text-align:center;
+
+    color:#555;
+
+    font-size:1.05em;
+
+    margin-bottom:40px;
+
     padding:0 20px;
 }
 
-.historia-texto{
-    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
-    padding:40px;
-    border-radius:15px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-    line-height: 1.8;
-    color: #555;
-    border-left: 5px solid #004aad;
+/* =========================
+   DIRETORIA
+========================= */
+
+.diretoria-container{
+
+    max-width:1200px;
+
+    margin:0 auto;
+
+    padding:
+        0 25px
+        60px;
 }
 
-.historia-texto h3{
-    color: #003366;
-    font-size: 1.5em;
-    margin-bottom: 20px;
-}
+/* GRID */
 
-.historia-texto p{
-    margin-bottom: 15px;
-    font-size: 1.05em;
-}
+.diretoria{
 
-.responsaveis{
-    padding:60px 20px;
-    background: linear-gradient(135deg, #e9eef5 0%, #d4e1ed 100%);
-    margin-top: 40px;
-}
+    display:grid;
 
-.cards{
-    display: flex;
-    justify-content: center;
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(250px,1fr)
+        );
+
     gap:30px;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
-.card{
-    width:280px;
-    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
-    padding:30px;
-    border-radius:15px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-    border-top: 4px solid #004aad;
+/* CARD */
+
+.card-diretoria{
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #f8f9fa 100%
+        );
+
+    border-radius:18px;
+
+    padding:30px 20px;
+
     text-align:center;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    box-shadow:
+        0 8px 24px
+        rgba(0,0,0,.10);
+
+    border-top:
+        5px solid #004aad;
+
+    transition:
+        all .4s
+        cubic-bezier(
+            .175,
+            .885,
+            .32,
+            1.275
+        );
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+    animation:
+        aparecer .7s ease forwards;
 }
 
-.card:hover{
-    transform: translateY(-10px);
-    box-shadow: 0 16px 48px rgba(0, 74, 173, 0.2);
-    border-top-color: #ffd700;
+.card-diretoria:hover{
+
+    transform:
+        translateY(-10px);
+
+    box-shadow:
+        0 18px 45px
+        rgba(0,74,173,.22);
+
+    border-top-color:#ffd700;
 }
 
-.card img{
-    width:120px;
-    height:120px;
+/* FOTO */
+
+.foto-diretoria{
+
+    width:160px;
+
+    height:160px;
+
+    margin:0 auto 20px;
+
     border-radius:50%;
-    object-fit: cover;
-    border:4px solid #004aad;
-    margin-bottom: 15px;
-    transition: transform 0.3s ease;
+
+    overflow:hidden;
+
+    border:
+        5px solid #004aad;
+
+    box-shadow:
+        0 6px 20px
+        rgba(0,51,102,.20);
+
+    background:#e9eef5;
 }
 
-.card:hover img{
-    transform: scale(1.1);
+.foto-diretoria img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:
+        transform .4s ease;
 }
 
-.card h3{
-    margin:15px 0 5px;
+.card-diretoria:hover
+.foto-diretoria img{
+
+    transform:scale(1.08);
+}
+
+/* NOME */
+
+.card-diretoria h3{
+
     color:#003366;
-    font-size: 1.2em;
+
+    font-size:1.3em;
+
+    margin-bottom:8px;
 }
 
-.card p{
-    color: #666;
+/* CARGO */
+
+.card-diretoria .cargo{
+
+    color:#004aad;
+
+    font-weight:700;
+
+    font-size:1em;
+
+    margin-bottom:12px;
 }
+
+/* DESCRIÇÃO */
+
+.card-diretoria .descricao{
+
+    color:#666;
+
+    font-size:.95em;
+
+    line-height:1.6;
+}
+
+/* ANIMAÇÃO */
+
+@keyframes aparecer{
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+/* =========================
+   SEÇÃO ORGANIZAÇÃO
+========================= */
+
+.info-diretoria{
+
+    max-width:900px;
+
+    margin:0 auto 60px;
+
+    padding:30px;
+
+    background:#fff;
+
+    border-radius:15px;
+
+    border-left:
+        5px solid #004aad;
+
+    box-shadow:
+        0 8px 24px
+        rgba(0,0,0,.08);
+
+    text-align:center;
+}
+
+.info-diretoria h3{
+
+    color:#003366;
+
+    margin-bottom:12px;
+
+    font-size:1.4em;
+}
+
+.info-diretoria p{
+
+    color:#555;
+
+    line-height:1.7;
+}
+
+/* =========================
+   RODAPÉ
+========================= */
 
 footer{
-    background: linear-gradient(135deg, #003366 0%, #002244 100%);
+
+    background:
+        linear-gradient(
+            135deg,
+            #003366 0%,
+            #002244 100%
+        );
+
     color:#fff;
+
     padding:30px 20px;
-    margin-top: 50px;
-    text-align: center;
+
+    margin-top:20px;
+
+    text-align:center;
+}
+
+.footer-redes{
+
+    margin-top:15px;
 }
 
 .footer-redes a{
+
     color:#fff;
-    margin-left:15px;
+
+    margin:0 8px;
+
     font-size:24px;
-    transition: all 0.3s ease;
-    display: inline-block;
+
+    transition:
+        all .3s ease;
+
+    display:inline-block;
 }
 
 .footer-redes a:hover{
+
     color:#ffd700;
-    transform: translateY(-5px) scale(1.2);
+
+    transform:
+        translateY(-5px)
+        scale(1.2);
 }
 
-@media (max-width:767px){
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:767px){
+
     header{
+
         padding:15px;
     }
 
     .logo-area img{
+
         width:48px;
+
         height:60px;
     }
 
     .logo{
+
         font-size:18px;
     }
 
     .menu-toggle{
+
         display:block;
+
         margin-left:auto;
     }
 
     .menu{
+
         display:none;
+
         flex-direction:column;
+
         position:absolute;
+
         top:75px;
+
         left:15px;
+
         right:15px;
-        width: calc(100% - 30px);
-        background: linear-gradient(135deg, rgba(0, 51, 102, 0.95), rgba(0, 74, 173, 0.95));
-        border-radius: 12px;
-        padding: 15px;
-        backdrop-filter: blur(10px);
+
+        width:
+            calc(100% - 30px);
+
+        background:
+            linear-gradient(
+                135deg,
+                rgba(0,51,102,.97),
+                rgba(0,74,173,.97)
+            );
+
+        border-radius:12px;
+
+        padding:15px;
+
+        backdrop-filter:
+            blur(10px);
     }
 
     .menu.active{
+
         display:flex;
     }
 
     .menu li{
+
         padding:10px 0;
+
         text-align:center;
-        width: 100%;
-    }
 
-    .menu a {
-        width: 100%;
-    }
-
-    h2 {
-        font-size: 1.8em;
-    }
-
-    .historia-texto{
-        padding: 25px;
-    }
-
-    .card{
         width:100%;
-        max-width: 340px;
     }
+
+    .menu a{
+
+        width:100%;
+    }
+
+    h2{
+
+        font-size:1.9em;
+
+        margin-top:35px;
+    }
+
+    .subtitulo{
+
+        font-size:.95em;
+    }
+
+    .diretoria-container{
+
+        padding:
+            0 15px
+            40px;
+    }
+
+    .diretoria{
+
+        grid-template-columns:
+            1fr;
+
+        gap:22px;
+    }
+
+    .card-diretoria{
+
+        max-width:380px;
+
+        width:100%;
+
+        margin:auto;
+    }
+
+    .foto-diretoria{
+
+        width:140px;
+
+        height:140px;
+    }
+
 }
+
 </style>
+
 </head>
 
 <body>
 
+<!-- =========================
+     CABEÇALHO
+========================= -->
+
 <header>
 
-<div class="logo-area">
-    <a href="index.html"><img src="src/imagens/Assga_foto.jpg" alt="Logo"></a>
-<div class="logo">ASSGA</div>
-</div>
+    <div class="logo-area">
 
-<div class="menu-toggle" onclick="toggleMenu()">
-☰
-</div>
+        <a href="index.html">
 
-<nav>
-<ul class="menu" id="menu">
+            <img
+                src="src/imagens/Assga_foto.jpg"
+                alt="Logo ASSGA"
+            >
 
-<li><a href="index.html">Home</a></li>
+        </a>
 
-<li><a href="historia.html">História</a></li>
+        <div class="logo">
+            ASSGA
+        </div>
 
-<li><a href="esportiva.html">Esportiva</a></li>
+    </div>
 
-<li><a href="evento.html">Eventos</a></li>
 
-<li><a href="estatuto.html">Estatuto</a></li>
+    <div
+        class="menu-toggle"
+        onclick="toggleMenu()"
+    >
+        ☰
+    </div>
 
-<li><a href="diretoria.html">Diretoria</a></li>
 
-</ul>
-</nav>
+    <nav>
+
+        <ul
+            class="menu"
+            id="menu"
+        >
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="historia.html">
+                    História
+                </a>
+            </li>
+
+            <li>
+                <a href="esportiva.html">
+                    Esportiva
+                </a>
+            </li>
+
+            <li>
+                <a href="evento.html">
+                    Eventos
+                </a>
+            </li>
+
+            <li>
+                <a href="estatuto.html">
+                    Estatuto
+                </a>
+            </li>
+
+            <li>
+                <a href="diretoria.html">
+                    Diretoria
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
 
 </header>
 
-<h2>Diretoria</h2>
-<section class="Diretoria">
+
+<!-- =========================
+     TÍTULO
+========================= -->
+
+<h2>
+    Diretoria
+</h2>
+
+<p class="subtitulo">
+    Conheça os membros da Diretoria da ASSGA.
+</p>
 
 
-<p>Diretoria novo breve</p>
-<p>Confira os próximos Diretoria.</p>
+<!-- =========================
+     INFORMAÇÃO
+========================= -->
 
+<section class="info-diretoria">
+
+    <h3>
+        Diretoria da ASSGA
+    </h3>
+
+    <p>
+        Nesta página são apresentados os membros
+        responsáveis pela administração e organização
+        da Associação.
+    </p>
 
 </section>
 
 
+<!-- =========================
+     CARDS DA DIRETORIA
+========================= -->
+
+<main class="diretoria-container">
+
+    <section class="diretoria">
+
+
+        <!-- PRESIDENTE -->
+
+        <article class="card-diretoria">
+
+            <div class="foto-diretoria">
+
+                <img
+                    src="src/imagens/diretoria/presidente.jpg"
+                    alt="Foto do Presidente"
+                    onerror="
+                        this.src='src/imagens/Assga_foto.jpg'
+                    "
+                >
+
+            </div>
+
+            <h3>
+                Nome do Presidente
+            </h3>
+
+            <p class="cargo">
+                Presidente
+            </p>
+
+            <p class="descricao">
+                Responsável pela presidência
+                e representação da ASSGA.
+            </p>
+
+        </article>
+
+
+        <!-- VICE-PRESIDENTE -->
+
+        <article class="card-diretoria">
+
+            <div class="foto-diretoria">
+
+                <img
+                    src="src/imagens/diretoria/vice-presidente.jpg"
+                    alt="Foto do Vice-Presidente"
+                    onerror="
+                        this.src='src/imagens/Assga_foto.jpg'
+                    "
+                >
+
+            </div>
+
+            <h3>
+                Nome do Vice-Presidente
+            </h3>
+
+            <p class="cargo">
+                Vice-Presidente
+            </p>
+
+            <p class="descricao">
+                Auxilia a presidência nas
+                atividades da associação.
+            </p>
+
+        </article>
+
+
+        <!-- SECRETÁRIO -->
+
+        <article class="card-diretoria">
+
+            <div class="foto-diretoria">
+
+                <img
+                    src="src/imagens/diretoria/secretario.jpg"
+                    alt="Foto do Secretário"
+                    onerror="
+                        this.src='src/imagens/Assga_foto.jpg'
+                    "
+                >
+
+            </div>
+
+            <h3>
+                Nome do Secretário
+            </h3>
+
+            <p class="cargo">
+                Secretário
+            </p>
+
+            <p class="descricao">
+                Responsável pela organização
+                documental e administrativa.
+            </p>
+
+        </article>
+
+
+        <!-- TESOUREIRO -->
+
+        <article class="card-diretoria">
+
+            <div class="foto-diretoria">
+
+                <img
+                    src="src/imagens/diretoria/tesoureiro.jpg"
+                    alt="Foto do Tesoureiro"
+                    onerror="
+                        this.src='src/imagens/Assga_foto.jpg'
+                    "
+                >
+
+            </div>
+
+            <h3>
+                Nome do Tesoureiro
+            </h3>
+
+            <p class="cargo">
+                Tesoureiro
+            </p>
+
+            <p class="descricao">
+                Responsável pela organização
+                financeira da associação.
+            </p>
+
+        </article>
+
+
+        <!-- DIRETOR ESPORTIVO -->
+
+        <article class="card-diretoria">
+
+            <div class="foto-diretoria">
+
+                <img
+                    src="src/imagens/diretoria/diretor-esportivo.jpg"
+                    alt="Foto do Diretor Esportivo"
+                    onerror="
+                        this.src='src/imagens/Assga_foto.jpg'
+                    "
+                >
+
+            </div>
+
+            <h3>
+                Nome do Diretor Esportivo
+            </h3>
+
+            <p class="cargo">
+                Diretor Esportivo
+            </p>
+
+            <p class="descricao">
+                Responsável pelas atividades
+                esportivas da ASSGA.
+            </p>
+
+        </article>
+
+
+        <!-- DIRETOR SOCIAL -->
+
+        <article class="card-diretoria">
+
+            <div class="foto-diretoria">
+
+                <img
+                    src="src/imagens/diretoria/diretor-social.jpg"
+                    alt="Foto do Diretor Social"
+                    onerror="
+                        this.src='src/imagens/Assga_foto.jpg'
+                    "
+                >
+
+            </div>
+
+            <h3>
+                Nome do Diretor Social
+            </h3>
+
+            <p class="cargo">
+                Diretor Social
+            </p>
+
+            <p class="descricao">
+                Responsável pelas ações sociais
+                e atividades da associação.
+            </p>
+
+        </article>
+
+
+    </section>
+
+</main>
+
+
+<!-- =========================
+     RODAPÉ
+========================= -->
+
 <footer>
 
-© 2026 ASSGA - Todos os direitos reservados
+    © 2026 ASSGA - Todos os direitos reservados
+
+    <div class="footer-redes">
+
+        <a href="#" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+        </a>
+
+        <a href="#" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="#" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+    </div>
 
 </footer>
+
 
 <script>
 
 function toggleMenu(){
 
-document.getElementById("menu").classList.toggle("active");
-
-}
-
-window.onload=function(){
-
-const cards=document.querySelectorAll(".card");
-
-cards.forEach((card,index)=>{
-
-setTimeout(()=>{
-
-card.style.opacity="1";
-card.style.transform="translateY(0)";
-
-},index*300);
-
-});
+    document
+        .getElementById("menu")
+        .classList
+        .toggle("active");
 
 }
 
 </script>
 
 </body>
+
 </html>

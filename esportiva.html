@@ -1,15 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+    name="description"
+    content="Atividades Esportivas da ASSGA - Associação Desportiva"
+>
+
 <title>Esportiva - ASSGA</title>
 
-<link rel="icon" href="src/imagens/Assga_foto.jpg" type="image/jpeg">
-<link rel="shortcut icon" href="src/imagens/Assga_foto.jpg" type="image/jpeg">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link
+    rel="icon"
+    href="src/imagens/Assga_foto.jpg"
+    type="image/jpeg"
+>
+
+<link
+    rel="shortcut icon"
+    href="src/imagens/Assga_foto.jpg"
+    type="image/jpeg"
+>
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+>
 
 <style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
 *{
     margin:0;
     padding:0;
@@ -17,364 +47,1455 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background:
+        linear-gradient(
+            135deg,
+            #f5f7fa 0%,
+            #dce8f6 100%
+        );
+
+    color:#333;
+
     overflow-x:hidden;
 }
 
-h2{
-    text-align:center;
-    margin:40px 0;
-    color:#003366;
-    font-size: 2.5em;
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-}
+
+/* =========================================================
+   HEADER
+========================================================= */
 
 header{
-    background: linear-gradient(135deg, #003366 0%, #004aad 100%);
+
+    background:
+        linear-gradient(
+            135deg,
+            #003366 0%,
+            #004aad 100%
+        );
+
     color:#fff;
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
+
     padding:15px 30px;
+
     position:sticky;
+
     top:0;
+
     z-index:999;
-    box-shadow: 0 8px 32px rgba(0, 51, 102, 0.3);
+
+    box-shadow:
+        0 8px 32px
+        rgba(0,51,102,.30);
 }
+
+
+/* =========================================================
+   LOGO
+========================================================= */
 
 .logo-area{
+
     display:flex;
+
     align-items:center;
+
     gap:15px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+
+    cursor:pointer;
+
+    transition:
+        transform .3s ease;
 }
 
-.logo-area:hover {
-    transform: scale(1.05);
+.logo-area:hover{
+
+    transform:
+        scale(1.03);
+}
+
+.logo-area a{
+
+    display:flex;
+
+    text-decoration:none;
 }
 
 .logo-area img{
+
     width:56px;
+
     height:68px;
+
     object-fit:cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+
+    border-radius:8px;
+
+    background:#fff;
+
+    box-shadow:
+        0 4px 12px
+        rgba(0,0,0,.20);
 }
 
 .logo{
+
     font-size:28px;
+
     font-weight:900;
-    letter-spacing: 2px;
-    background: linear-gradient(135deg, #ffd700, #ffed4e);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+
+    letter-spacing:2px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd700,
+            #ffed4e
+        );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    background-clip:text;
 }
 
+
+/* =========================================================
+   MENU
+========================================================= */
+
 .menu{
+
     list-style:none;
+
     display:inline-grid;
+
     grid-auto-flow:column;
+
     gap:15px;
+
     margin-left:auto;
+
     align-items:center;
 }
 
 .menu li{
+
     position:relative;
 }
 
-.menu a {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 700;
-    padding: 12px 20px;
-    border-radius: 25px;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    position: relative;
-    overflow: hidden;
+.menu a{
+
+    display:block;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    padding:12px 20px;
+
+    border-radius:25px;
+
+    transition:
+        all .3s ease;
 }
 
-@media (hover: hover){
-.menu a:hover {
+.menu a:hover{
+
     color:#003366;
-    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
-    box-shadow: 0 8px 24px rgba(255, 215, 0, 0.4);
-    transform: translateY(-3px);
-}
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd700,
+            #ffed4e
+        );
+
+    box-shadow:
+        0 8px 24px
+        rgba(255,215,0,.35);
+
+    transform:
+        translateY(-2px);
 }
 
-.menu a:active,
-.menu a:focus{
-    color:#003366;
-    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
-    box-shadow: 0 8px 24px rgba(255, 215, 0, 0.4);
-    transform: translateY(-3px);
-}
+
+/* =========================================================
+   MENU MOBILE
+========================================================= */
 
 .menu-toggle{
+
     display:none;
+
     font-size:28px;
+
     cursor:pointer;
-    transition: transform 0.3s ease;
+
+    margin-left:auto;
 }
 
-.menu-toggle:hover {
-    transform: rotate(90deg);
-}
 
-.historia-container{
-    max-width:1000px;
-    margin:40px auto;
-    padding:0 20px;
-}
+/* =========================================================
+   TÍTULO
+========================================================= */
 
-.historia-texto{
-    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
-    padding:40px;
-    border-radius:15px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-    line-height: 1.8;
-    color: #555;
-    border-left: 5px solid #004aad;
-}
+.titulo-pagina{
 
-.historia-texto h3{
-    color: #003366;
-    font-size: 1.5em;
-    margin-bottom: 20px;
-}
-
-.historia-texto p{
-    margin-bottom: 15px;
-    font-size: 1.05em;
-}
-
-.responsaveis{
-    padding:60px 20px;
-    background: linear-gradient(135deg, #e9eef5 0%, #d4e1ed 100%);
-    margin-top: 40px;
-}
-
-.cards{
-    display: flex;
-    justify-content: center;
-    gap:30px;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.card{
-    width:280px;
-    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
-    padding:30px;
-    border-radius:15px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-    border-top: 4px solid #004aad;
     text-align:center;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    padding:
+        55px 20px 25px;
 }
 
-.card:hover{
-    transform: translateY(-10px);
-    box-shadow: 0 16px 48px rgba(0, 74, 173, 0.2);
-    border-top-color: #ffd700;
-}
+.titulo-pagina h1{
 
-.card img{
-    width:120px;
-    height:120px;
-    border-radius:50%;
-    object-fit: cover;
-    border:4px solid #004aad;
-    margin-bottom: 15px;
-    transition: transform 0.3s ease;
-}
-
-.card:hover img{
-    transform: scale(1.1);
-}
-
-.card h3{
-    margin:15px 0 5px;
     color:#003366;
-    font-size: 1.2em;
+
+    font-size:
+        clamp(2rem,5vw,3rem);
+
+    font-weight:900;
+
+    margin-bottom:12px;
 }
 
-.card p{
-    color: #666;
+.titulo-pagina h1 i{
+
+    color:#004aad;
+
+    margin-right:8px;
 }
+
+.titulo-pagina p{
+
+    max-width:750px;
+
+    margin:auto;
+
+    color:#607080;
+
+    font-size:17px;
+
+    line-height:1.7;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.esportivas-container{
+
+    width:
+        min(1200px,92%);
+
+    margin:
+        20px auto 70px;
+}
+
+
+/* =========================================================
+   CARD PRINCIPAL
+========================================================= */
+
+.esportiva-destaque{
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:35px;
+
+    align-items:center;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 12px 35px
+        rgba(0,0,0,.12);
+
+    margin-bottom:45px;
+}
+
+
+/* =========================================================
+   IMAGEM DESTAQUE
+========================================================= */
+
+.esportiva-destaque-imagem{
+
+    height:400px;
+
+    overflow:hidden;
+}
+
+.esportiva-destaque-imagem img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:
+        transform .5s ease;
+}
+
+.esportiva-destaque:hover
+.esportiva-destaque-imagem img{
+
+    transform:
+        scale(1.05);
+}
+
+
+/* =========================================================
+   TEXTO DESTAQUE
+========================================================= */
+
+.esportiva-destaque-texto{
+
+    padding:35px;
+}
+
+.esportiva-destaque-texto h2{
+
+    text-align:left;
+
+    color:#003366;
+
+    font-size:30px;
+
+    margin:0 0 15px;
+}
+
+.esportiva-destaque-texto h2 i{
+
+    color:#004aad;
+
+    margin-right:8px;
+}
+
+.esportiva-destaque-texto p{
+
+    color:#555;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+    margin-bottom:15px;
+}
+
+
+/* =========================================================
+   BOTÃO
+========================================================= */
+
+.btn-esportiva{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin-top:10px;
+
+    padding:12px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #003366,
+            #004aad
+        );
+
+    color:#fff;
+
+    text-decoration:none;
+
+    border-radius:10px;
+
+    font-weight:800;
+
+    transition:.3s;
+}
+
+.btn-esportiva:hover{
+
+    background:
+        linear-gradient(
+            135deg,
+            #004aad,
+            #0066cc
+        );
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(0,74,173,.25);
+}
+
+
+/* =========================================================
+   TÍTULO DAS ATIVIDADES
+========================================================= */
+
+.titulo-atividades{
+
+    text-align:center;
+
+    color:#003366;
+
+    font-size:30px;
+
+    margin:
+        20px 0 30px;
+}
+
+.titulo-atividades i{
+
+    color:#004aad;
+
+    margin-right:8px;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.cards-esportivos{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:25px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.card-esportivo{
+
+    background:#fff;
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0,0,0,.10);
+
+    transition:
+        all .35s ease;
+
+    border-top:
+        4px solid #004aad;
+}
+
+.card-esportivo:hover{
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 18px 40px
+        rgba(0,74,173,.20);
+
+    border-top-color:#ffd700;
+}
+
+
+/* =========================================================
+   IMAGEM CARD
+========================================================= */
+
+.card-esportivo img{
+
+    width:100%;
+
+    height:210px;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:
+        transform .4s ease;
+}
+
+.card-esportivo:hover img{
+
+    transform:
+        scale(1.05);
+}
+
+
+/* =========================================================
+   CONTEÚDO CARD
+========================================================= */
+
+.card-esportivo-conteudo{
+
+    padding:22px;
+}
+
+.card-esportivo-conteudo h3{
+
+    color:#003366;
+
+    font-size:21px;
+
+    margin-bottom:10px;
+}
+
+.card-esportivo-conteudo h3 i{
+
+    color:#004aad;
+
+    margin-right:7px;
+}
+
+.card-esportivo-conteudo p{
+
+    color:#666;
+
+    line-height:1.7;
+
+    font-size:15px;
+}
+
+
+/* =========================================================
+   SEÇÃO INFORMAÇÕES
+========================================================= */
+
+.informacoes-esportivas{
+
+    margin-top:45px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #003366,
+            #004aad
+        );
+
+    color:#fff;
+
+    border-radius:18px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:
+        0 12px 30px
+        rgba(0,51,102,.25);
+}
+
+.informacoes-esportivas h2{
+
+    color:#fff;
+
+    margin:
+        0 0 15px;
+
+    font-size:28px;
+}
+
+.informacoes-esportivas p{
+
+    max-width:800px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+    font-size:16px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
 
 footer{
-    background: linear-gradient(135deg, #003366 0%, #002244 100%);
+
+    background:
+        linear-gradient(
+            135deg,
+            #003366 0%,
+            #002244 100%
+        );
+
     color:#fff;
-    padding:30px 20px;
-    margin-top: 50px;
-    text-align: center;
+
+    padding:35px 20px;
+
+    margin-top:50px;
+
+    text-align:center;
+}
+
+.footer-logo{
+
+    font-size:24px;
+
+    font-weight:900;
+
+    margin-bottom:10px;
+}
+
+.footer-redes{
+
+    margin-top:15px;
 }
 
 .footer-redes a{
+
     color:#fff;
-    margin-left:15px;
-    font-size:24px;
-    transition: all 0.3s ease;
-    display: inline-block;
+
+    margin:0 8px;
+
+    font-size:23px;
+
+    transition:.3s;
+
+    display:inline-block;
 }
 
 .footer-redes a:hover{
+
     color:#ffd700;
-    transform: translateY(-5px) scale(1.2);
+
+    transform:
+        translateY(-4px)
+        scale(1.15);
 }
 
-@media (max-width:767px){
+
+/* =========================================================
+   RESPONSIVO TABLET
+========================================================= */
+
+@media(max-width:1000px){
+
+    .menu{
+
+        gap:5px;
+    }
+
+    .menu a{
+
+        padding:
+            10px 12px;
+
+        font-size:14px;
+    }
+
+    .esportiva-destaque{
+
+        grid-template-columns:1fr;
+    }
+
+    .esportiva-destaque-imagem{
+
+        height:350px;
+    }
+
+    .cards-esportivos{
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVO MOBILE
+========================================================= */
+
+@media(max-width:767px){
+
     header{
-        padding:15px;
+
+        padding:
+            12px 15px;
     }
 
     .logo-area img{
-        width:48px;
-        height:60px;
+
+        width:46px;
+
+        height:56px;
     }
 
     .logo{
-        font-size:18px;
+
+        font-size:19px;
     }
 
     .menu-toggle{
+
         display:block;
-        margin-left:auto;
+    }
+
+    nav{
+
+        position:absolute;
+
+        top:80px;
+
+        left:0;
+
+        right:0;
     }
 
     .menu{
+
         display:none;
-        flex-direction:column;
+
         position:absolute;
-        top:75px;
+
         left:15px;
+
         right:15px;
-        width: calc(100% - 30px);
-        background: linear-gradient(135deg, rgba(0, 51, 102, 0.95), rgba(0, 74, 173, 0.95));
-        border-radius: 12px;
-        padding: 15px;
-        backdrop-filter: blur(10px);
+
+        width:
+            calc(100% - 30px);
+
+        grid-auto-flow:row;
+
+        gap:4px;
+
+        margin:0;
+
+        padding:12px;
+
+        background:
+            linear-gradient(
+                135deg,
+                rgba(0,51,102,.98),
+                rgba(0,74,173,.98)
+            );
+
+        border-radius:15px;
+
+        box-shadow:
+            0 15px 30px
+            rgba(0,0,0,.25);
     }
 
     .menu.active{
-        display:flex;
+
+        display:grid;
     }
 
     .menu li{
-        padding:10px 0;
-        text-align:center;
-        width: 100%;
-    }
 
-    .menu a {
-        width: 100%;
-    }
-
-    h2 {
-        font-size: 1.8em;
-    }
-
-    .historia-texto{
-        padding: 25px;
-    }
-
-    .card{
         width:100%;
-        max-width: 340px;
+    }
+
+    .menu a{
+
+        text-align:center;
+
+        width:100%;
+    }
+
+    .titulo-pagina{
+
+        padding:
+            40px 15px 20px;
+    }
+
+    .titulo-pagina p{
+
+        font-size:15px;
+    }
+
+    .esportivas-container{
+
+        width:
+            min(94%,1200px);
+    }
+
+    .esportiva-destaque-imagem{
+
+        height:250px;
+    }
+
+    .esportiva-destaque-texto{
+
+        padding:25px;
+    }
+
+    .esportiva-destaque-texto h2{
+
+        font-size:24px;
+    }
+
+    .cards-esportivos{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .card-esportivo img{
+
+        height:220px;
+    }
+
+    .informacoes-esportivas{
+
+        padding:30px 20px;
+    }
+
+}
+
+
+/* =========================================================
+   ACESSIBILIDADE
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    *{
+
+        scroll-behavior:auto !important;
+
+        transition:none !important;
+
+        animation:none !important;
     }
 }
+
 </style>
+
 </head>
+
 
 <body>
 
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
 <header>
 
-<div class="logo-area">
-    <a href="index.html"><img src="src/imagens/Assga_foto.jpg" alt="Logo"></a>
-<div class="logo">ASSGA</div>
-</div>
+    <div class="logo-area">
 
-<div class="menu-toggle" onclick="toggleMenu()">
-☰
-</div>
+        <a href="index.html">
 
-<nav>
-<ul class="menu" id="menu">
+            <img
+                src="src/imagens/Assga_foto.jpg"
+                alt="Logo ASSGA"
+            >
 
-<li><a href="index.html">Home</a></li>
+        </a>
 
-<li><a href="historia.html">História</a></li>
+        <div class="logo">
+            ASSGA
+        </div>
 
-<li><a href="esportiva.html">Esportiva</a></li>
+    </div>
 
-<li><a href="evento.html">Eventos</a></li>
 
-<li><a href="estatuto.html">Estatuto</a></li>
+    <div
+        class="menu-toggle"
+        onclick="toggleMenu()"
+        aria-label="Abrir menu"
+    >
+        <i class="fas fa-bars"></i>
+    </div>
 
-<li><a href="diretoria.html">Diretoria</a></li>
 
-</ul>
-</nav>
+    <nav>
+
+        <ul
+            class="menu"
+            id="menu"
+        >
+
+            <li>
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="historia.html">
+                    <i class="fas fa-book"></i>
+                    História
+                </a>
+            </li>
+
+            <li>
+                <a href="esportiva.html">
+                    <i class="fas fa-futbol"></i>
+                    Esportiva
+                </a>
+            </li>
+
+            <li>
+                <a href="evento.html">
+                    <i class="fas fa-calendar"></i>
+                    Eventos
+                </a>
+            </li>
+
+            <li>
+                <a href="estatuto.html">
+                    <i class="fas fa-file-alt"></i>
+                    Estatuto
+                </a>
+            </li>
+
+            <li>
+                <a href="diretoria.html">
+                    <i class="fas fa-users"></i>
+                    Diretoria
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
 
 </header>
 
-<h2>Atividades Esportivas</h2>
-<section class="Esportivas">
 
+<!-- =========================================================
+     TÍTULO
+========================================================= -->
 
-<p>Esportivas novo breve</p>
-<p>Confira os próximos Esportivas.</p>
+<section class="titulo-pagina">
 
+    <h1>
+
+        <i class="fas fa-futbol"></i>
+
+        Atividades Esportivas
+
+    </h1>
+
+    <p>
+
+        Conheça as atividades esportivas,
+        modalidades e ações promovidas pela
+        ASSGA.
+
+    </p>
 
 </section>
 
 
+<!-- =========================================================
+     CONTEÚDO
+========================================================= -->
+
+<main class="esportivas-container">
+
+
+    <!-- =====================================================
+         DESTAQUE
+    ====================================================== -->
+
+    <section class="esportiva-destaque">
+
+
+        <div class="esportiva-destaque-imagem">
+
+            <img
+                src="src/imagens/esportiva.jpg"
+                alt="Atividades esportivas da ASSGA"
+                onerror="imagemAlternativa(this)"
+            >
+
+        </div>
+
+
+        <div class="esportiva-destaque-texto">
+
+            <h2>
+
+                <i class="fas fa-running"></i>
+
+                ASSGA Esportiva
+
+            </h2>
+
+
+            <p>
+
+                A ASSGA promove atividades esportivas
+                voltadas para integração, participação
+                social, lazer e desenvolvimento da
+                comunidade.
+
+            </p>
+
+
+            <p>
+
+                As atividades buscam incentivar a
+                prática esportiva e proporcionar
+                momentos de convivência entre os
+                participantes.
+
+            </p>
+
+
+            <a
+                href="evento.html"
+                class="btn-esportiva"
+            >
+
+                <i class="fas fa-calendar-check"></i>
+
+                Ver eventos
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         TÍTULO
+    ====================================================== -->
+
+    <h2 class="titulo-atividades">
+
+        <i class="fas fa-medal"></i>
+
+        Nossas Atividades
+
+    </h2>
+
+
+    <!-- =====================================================
+         CARDS
+    ====================================================== -->
+
+    <section class="cards-esportivos">
+
+
+        <!-- FUTSAL -->
+
+        <article class="card-esportivo">
+
+            <img
+                src="src/imagens/futsal.jpg"
+                alt="Futsal ASSGA"
+                onerror="imagemAlternativa(this)"
+            >
+
+            <div class="card-esportivo-conteudo">
+
+                <h3>
+
+                    <i class="fas fa-futbol"></i>
+
+                    Futsal
+
+                </h3>
+
+                <p>
+
+                    Atividades de futsal para incentivar
+                    o esporte, a integração e a participação
+                    dos associados e da comunidade.
+
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- FUTEBOL -->
+
+        <article class="card-esportivo">
+
+            <img
+                src="src/imagens/futebol.jpg"
+                alt="Futebol ASSGA"
+                onerror="imagemAlternativa(this)"
+            >
+
+            <div class="card-esportivo-conteudo">
+
+                <h3>
+
+                    <i class="fas fa-futbol"></i>
+
+                    Futebol
+
+                </h3>
+
+                <p>
+
+                    Práticas esportivas voltadas ao futebol,
+                    promovendo lazer, convivência e
+                    desenvolvimento esportivo.
+
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- INTEGRAÇÃO -->
+
+        <article class="card-esportivo">
+
+            <img
+                src="src/imagens/integracao.jpg"
+                alt="Integração esportiva ASSGA"
+                onerror="imagemAlternativa(this)"
+            >
+
+            <div class="card-esportivo-conteudo">
+
+                <h3>
+
+                    <i class="fas fa-people-group"></i>
+
+                    Integração
+
+                </h3>
+
+                <p>
+
+                    Ações esportivas e atividades de
+                    integração para fortalecer a amizade,
+                    participação e convivência.
+
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- EVENTOS -->
+
+        <article class="card-esportivo">
+
+            <img
+                src="src/imagens/evento-esportivo.jpg"
+                alt="Eventos esportivos ASSGA"
+                onerror="imagemAlternativa(this)"
+            >
+
+            <div class="card-esportivo-conteudo">
+
+                <h3>
+
+                    <i class="fas fa-trophy"></i>
+
+                    Eventos Esportivos
+
+                </h3>
+
+                <p>
+
+                    Competições, encontros e eventos
+                    esportivos realizados pela ASSGA
+                    durante o ano.
+
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- COMUNIDADE -->
+
+        <article class="card-esportivo">
+
+            <img
+                src="src/imagens/comunidade.jpg"
+                alt="Esporte e comunidade"
+                onerror="imagemAlternativa(this)"
+            >
+
+            <div class="card-esportivo-conteudo">
+
+                <h3>
+
+                    <i class="fas fa-users"></i>
+
+                    Esporte e Comunidade
+
+                </h3>
+
+                <p>
+
+                    O esporte como ferramenta de
+                    participação, inclusão, lazer e
+                    aproximação da comunidade.
+
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- LAZER -->
+
+        <article class="card-esportivo">
+
+            <img
+                src="src/imagens/lazer.jpg"
+                alt="Lazer esportivo ASSGA"
+                onerror="imagemAlternativa(this)"
+            >
+
+            <div class="card-esportivo-conteudo">
+
+                <h3>
+
+                    <i class="fas fa-heart"></i>
+
+                    Lazer
+
+                </h3>
+
+                <p>
+
+                    Momentos de lazer e diversão por meio
+                    das atividades físicas e esportivas.
+
+                </p>
+
+            </div>
+
+        </article>
+
+
+    </section>
+
+
+    <!-- =====================================================
+         INFORMAÇÕES
+    ====================================================== -->
+
+    <section class="informacoes-esportivas">
+
+        <h2>
+
+            <i class="fas fa-star"></i>
+
+            Esporte, integração e participação
+
+        </h2>
+
+        <p>
+
+            A ASSGA acredita no esporte como uma
+            importante ferramenta de integração,
+            convivência, saúde, lazer e participação
+            social.
+
+            Confira nossos eventos e acompanhe as
+            novidades da associação.
+
+        </p>
+
+    </section>
+
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
 <footer>
 
-© 2026 ASSGA - Todos os direitos reservados
+    <div class="footer-logo">
+        ASSGA
+    </div>
+
+    <p>
+        © 2026 ASSGA - Todos os direitos reservados
+    </p>
+
+
+    <div class="footer-redes">
+
+        <a
+            href="#"
+            aria-label="Facebook"
+        >
+            <i class="fab fa-facebook"></i>
+        </a>
+
+        <a
+            href="#"
+            aria-label="Instagram"
+        >
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a
+            href="#"
+            aria-label="WhatsApp"
+        >
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+    </div>
 
 </footer>
 
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
 <script>
+
+/* =========================================================
+   MENU MOBILE
+========================================================= */
 
 function toggleMenu(){
 
-document.getElementById("menu").classList.toggle("active");
+    const menu =
+        document.getElementById("menu");
+
+    menu.classList.toggle("active");
 
 }
 
-window.onload=function(){
 
-const cards=document.querySelectorAll(".card");
+/* =========================================================
+   FECHAR MENU AO CLICAR
+========================================================= */
 
-cards.forEach((card,index)=>{
+document
+    .querySelectorAll(".menu a")
+    .forEach(function(link){
 
-setTimeout(()=>{
+        link.addEventListener(
+            "click",
+            function(){
 
-card.style.opacity="1";
-card.style.transform="translateY(0)";
+                document
+                    .getElementById("menu")
+                    .classList.remove("active");
 
-},index*300);
+            }
+        );
 
-});
+    });
+
+
+/* =========================================================
+   IMAGEM ALTERNATIVA
+========================================================= */
+
+function imagemAlternativa(imagem){
+
+    imagem.onerror = null;
+
+    imagem.src =
+        "src/imagens/Assga_foto.jpg";
 
 }
+
+
+/* =========================================================
+   ANIMAÇÃO DOS CARDS
+========================================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function(){
+
+        const cards =
+            document.querySelectorAll(
+                ".card-esportivo"
+            );
+
+
+        cards.forEach(
+            function(card,index){
+
+                card.style.opacity = "0";
+
+                card.style.transform =
+                    "translateY(20px)";
+
+
+                setTimeout(
+                    function(){
+
+                        card.style.transition =
+                            "all .5s ease";
+
+                        card.style.opacity =
+                            "1";
+
+                        card.style.transform =
+                            "translateY(0)";
+
+                    },
+                    index * 120
+                );
+
+            }
+        );
+
+    }
+);
 
 </script>
+
 
 </body>
 </html>
